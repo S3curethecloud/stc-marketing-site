@@ -63,27 +63,43 @@ export default function ProductDropdown() {
         <div
           id={menuId}
           role="menu"
-          className="absolute left-0 top-full z-50 mt-3 w-[24rem] rounded-3xl border border-white/10 bg-stc-ink/95 p-3 shadow-2xl shadow-black/30 backdrop-blur-xl"
+          className="absolute left-0 top-full z-50 pt-2"
         >
-          <div className="grid gap-2">
-            {productNavItems.map((item) => (
+          <div className="w-[24rem] rounded-3xl border border-white/10 bg-stc-ink/95 p-3 shadow-2xl shadow-black/30 backdrop-blur-xl">
+            <div className="grid gap-2">
               <Link
-                key={item.href}
-                href={item.href}
+                href="/products"
                 role="menuitem"
                 onClick={() => setIsOpen(false)}
                 className="rounded-2xl border border-transparent px-4 py-3 transition-colors hover:border-white/10 hover:bg-white/[0.04] focus:outline-none focus-visible:border-white/10 focus-visible:bg-white/[0.04]"
               >
                 <div className="text-sm font-semibold text-white">
-                  {item.label}
+                  All Products
                 </div>
-                {item.description ? (
-                  <div className="mt-1 text-xs leading-5 text-stc-muted">
-                    {item.description}
-                  </div>
-                ) : null}
+                <div className="mt-1 text-xs leading-5 text-stc-muted">
+                  View the full SecureTheCloud product portfolio.
+                </div>
               </Link>
-            ))}
+
+              {productNavItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  role="menuitem"
+                  onClick={() => setIsOpen(false)}
+                  className="rounded-2xl border border-transparent px-4 py-3 transition-colors hover:border-white/10 hover:bg-white/[0.04] focus:outline-none focus-visible:border-white/10 focus-visible:bg-white/[0.04]"
+                >
+                  <div className="text-sm font-semibold text-white">
+                    {item.label}
+                  </div>
+                  {item.description ? (
+                    <div className="mt-1 text-xs leading-5 text-stc-muted">
+                      {item.description}
+                    </div>
+                  ) : null}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       ) : null}
