@@ -15,12 +15,12 @@ export default function SiteHeader() {
         <Link
           href="/"
           aria-label={`${siteConfig.name} homepage`}
-          className="flex items-center gap-3 font-semibold text-stc-text"
+          className="flex min-w-0 items-center gap-3 font-semibold text-stc-text transition-colors hover:text-cyan-200"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-cyan-400/30 bg-cyan-400/10 text-sm text-cyan-200">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-cyan-400/30 bg-cyan-400/10 text-sm text-cyan-200">
             {siteConfig.shortName}
           </span>
-          <span className="text-sm sm:text-base">{siteConfig.name}</span>
+          <span className="truncate text-sm sm:text-base">{siteConfig.name}</span>
         </Link>
 
         <nav
@@ -33,7 +33,7 @@ export default function SiteHeader() {
               key={item.href}
               href={item.href}
               label={item.label}
-              className="text-sm text-stc-muted"
+              className="text-sm font-medium text-stc-muted"
             />
           ))}
         </nav>

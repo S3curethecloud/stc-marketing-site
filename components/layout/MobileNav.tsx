@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { mainNavItems, productNavItems } from "@/content/navigation";
 import { siteConfig } from "@/content/site";
@@ -9,12 +9,26 @@ export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [productOpen, setProductOpen] = useState(false);
 
+  useEffect(() => {
+    if (!isOpen) return;
+
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+        setProductOpen(false);
+      }
+    }
+
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [isOpen]);
+
   const handleClose = () => {
     setIsOpen(false);
     setProductOpen(false);
   };
 
-  const topLevelItems = mainNavItems.filter((item) => item.label !== "Product");
+  const navItems = mainNavItems.filter((item) => item.label !== "Product");
 
   return (
     <div className="relative lg:hidden">
@@ -24,9 +38,12 @@ export default function MobileNav() {
         aria-expanded={isOpen}
         aria-controls="mobile-nav-panel"
         onClick={() => setIsOpen((open) => !open)}
-        className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-white transition-colors hover:border-cyan-300/40 hover:text-cyan-200"
+        className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-white transition-colors hover:border-cyan-300/40 hover:text-cyan-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/50"
       >
-        <span className="text-sm font-semibold">{isOpen ? "×" : "≡"}</span>
+        <span className="text-base font-semibold" aria-hidden="true">
+          {isOpen ? "×" : "≡"}
+        </span>
+        <span className="sr-only">Toggle navigation</span>
       </button>
 
       {isOpen ? (
@@ -39,10 +56,12 @@ export default function MobileNav() {
               type="button"
               aria-expanded={productOpen}
               onClick={() => setProductOpen((open) => !open)}
-              className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-left text-sm font-semibold text-white transition-colors hover:border-cyan-300/40 hover:text-cyan-200"
+              className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-left text-sm font-semibold text-white transition-colors hover:border-cyan-300/40 hover:text-cyan-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/50"
             >
               <span>Product</span>
-              <span className="text-xs">{productOpen ? "▴" : "▾"}</span>
+              <span className="text-xs" aria-hidden="true">
+                {productOpen ? "▴" : "▾"}
+              </span>
             </button>
 
             {productOpen ? (
@@ -52,7 +71,7 @@ export default function MobileNav() {
                     key={item.href}
                     href={item.href}
                     onClick={handleClose}
-                    className="rounded-2xl px-3 py-3 transition-colors hover:bg-white/[0.04]"
+                    className="rounded-2xl px-3 py-3 transition-colors hover:bg-white/[0.04] focus:outline-none focus-visible:bg-white/[0.04]"
                   >
                     <div className="text-sm font-semibold text-white">
                       {item.label}
@@ -67,12 +86,12 @@ export default function MobileNav() {
               </div>
             ) : null}
 
-            {topLevelItems.map((item) => (
+            {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={handleClose}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm font-semibold text-white transition-colors hover:border-cyan-300/40 hover:text-cyan-200"
+                className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm font-semibold text-white transition-colors hover:border-cyan-300/40 hover:text-cyan-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/50"
               >
                 {item.label}
               </Link>
