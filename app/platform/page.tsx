@@ -98,6 +98,7 @@ export default function PlatformPage() {
               height={1200}
               className="h-auto w-full"
               priority
+              unoptimized
             />
           </div>
         </Container>
