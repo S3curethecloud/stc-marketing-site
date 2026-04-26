@@ -1,19 +1,40 @@
-type AnalyticsPayload = Record<string, unknown>;
+declare global {
+  interface Window {
+    plausible?: (event: string, options?: { props?: Record<string, string> }) => void;
+  }
+}
 
-const isDevelopment = process.env.NODE_ENV !== "production";
+type AnalyticsProps = Record<string, string | number | boolean | null | undefined>;
 
-export function trackEvent(eventName: string, payload: AnalyticsPayload = {}) {
-  if (isDevelopment) {
-    console.debug("[analytics event]", eventName, payload);
+function normalizeProps(props?: AnalyticsProps): Record<string, string> | undefined {
+  if (!props) return undefined;
+
+  return Object.fromEntries(
+    Object.entries(props)
+      .filter(([, value]) => value !== undefined && value !== null)
+      .map(([key, value]) => [key, String(value)])
+  );
+}
+
+export function trackEvent(eventName: string, props?: AnalyticsProps) {
+  const normalized = normalizeProps(props);
+
+  if (typeof window === "undefined") return;
+
+  if (typeof window.plausible === "function") {
+    window.plausible(eventName, normalized ? { props: normalized } : undefined);
+    return;
   }
 
-  // Placeholder for future analytics integration.
+  if (process.env.NODE_ENV !== "production") {
+    console.debug("[analytics event]", eventName, normalized ?? {});
+  }
 }
 
 export function trackPageView(path: string) {
-  if (isDevelopment) {
+  if (typeof window === "undefined") return;
+
+  if (process.env.NODE_ENV !== "production") {
     console.debug("[analytics pageview]", path);
   }
-
-  // Placeholder for future analytics integration.
 }
