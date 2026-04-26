@@ -1,16 +1,17 @@
-import type { Metadata } from "next";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import CTASection from "@/components/marketing/CTASection";
 import FeatureGrid from "@/components/marketing/FeatureGrid";
 import ProductHero from "@/components/marketing/ProductHero";
 import SectionIntro from "@/components/marketing/SectionIntro";
+import { buildPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Copilot Voice Intelligence",
   description:
     "Copilot Voice Intelligence delivers voice-narrated deterministic intelligence for executives, analysts, and architects working with governed runtime security workflows.",
-};
+  path: "/products/copilot-voice-intelligence",
+});
 
 const modes = [
   {
@@ -137,7 +138,7 @@ export default function CopilotVoiceIntelligencePage() {
         headline="Hear deterministic intelligence in action."
         subheadline="See how Copilot Voice Intelligence turns runtime facts, decision records, and architecture context into narrated operational understanding."
         primaryCta={{ label: "Open Copilot", href: "/request-demo" }}
-        secondaryCta={{ label: "View Product Portfolio", href: "/products" }}
+        secondaryCta={{ label: "Try Voice Mode", href: "/request-demo" }}
       />
     </>
   );

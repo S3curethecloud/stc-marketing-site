@@ -1,16 +1,17 @@
-import type { Metadata } from "next";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import CTASection from "@/components/marketing/CTASection";
 import FeatureGrid from "@/components/marketing/FeatureGrid";
 import ProductHero from "@/components/marketing/ProductHero";
 import SectionIntro from "@/components/marketing/SectionIntro";
+import { buildPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "SecureTheCloud for Kubernetes",
   description:
     "SecureTheCloud for Kubernetes extends the core runtime model into Kubernetes-native environments with workload identity, OPA sidecars, policy bundles, cluster intelligence, and SIEM-ready telemetry.",
-};
+  path: "/products/kubernetes",
+});
 
 const problemCards = [
   {

@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import CTASection from "@/components/marketing/CTASection";
 import Hero from "@/components/marketing/Hero";
 import SectionIntro from "@/components/marketing/SectionIntro";
 import { useCasesContent } from "@/content/useCases";
+import { buildPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: useCasesContent.meta.title,
   description: useCasesContent.meta.description,
-};
+  path: "/use-cases",
+});
 
 export default function UseCasesPage() {
   const c = useCasesContent;

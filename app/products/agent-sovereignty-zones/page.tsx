@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import CTASection from "@/components/marketing/CTASection";
@@ -6,12 +5,14 @@ import FeatureGrid from "@/components/marketing/FeatureGrid";
 import ProductHero from "@/components/marketing/ProductHero";
 import SectionIntro from "@/components/marketing/SectionIntro";
 import ArchitectureFlow from "@/components/marketing/ArchitectureFlow";
+import { buildPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Agent Sovereignty Zones",
   description:
     "Agent Sovereignty Zones extends SecureTheCloud Aegis Runtime into cross-organization trust with signed assertions, trust registries, local policy verification, and dual audit anchoring.",
-};
+  path: "/products/agent-sovereignty-zones",
+});
 
 const handshakeSteps = [
   "Foreign zone presents signed assertion",

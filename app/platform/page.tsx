@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
@@ -6,12 +5,14 @@ import CTASection from "@/components/marketing/CTASection";
 import FeatureGrid from "@/components/marketing/FeatureGrid";
 import Hero from "@/components/marketing/Hero";
 import SectionIntro from "@/components/marketing/SectionIntro";
+import { buildPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Platform",
   description:
     "Explore the SecureTheCloud platform: a coordinated system for runtime governance, control-plane authority, deterministic authorization, and governed product layers.",
-};
+  path: "/platform",
+});
 
 const planes = [
   {

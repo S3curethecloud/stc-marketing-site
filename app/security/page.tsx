@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import CTASection from "@/components/marketing/CTASection";
 import Hero from "@/components/marketing/Hero";
 import SectionIntro from "@/components/marketing/SectionIntro";
 import { securityContent } from "@/content/security";
+import { buildPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: securityContent.meta.title,
   description: securityContent.meta.description,
-};
+  path: "/security",
+});
 
 export default function SecurityPage() {
   const c = securityContent;

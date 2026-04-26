@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
@@ -7,11 +6,13 @@ import Hero from "@/components/marketing/Hero";
 import SectionIntro from "@/components/marketing/SectionIntro";
 import { productPortfolio } from "@/content/products";
 import { companyContent } from "@/content/company";
+import { buildPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: companyContent.meta.title,
   description: companyContent.meta.description,
-};
+  path: "/company",
+});
 
 export default function CompanyPage() {
   const c = companyContent;

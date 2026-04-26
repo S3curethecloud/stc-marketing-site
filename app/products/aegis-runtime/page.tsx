@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import CTASection from "@/components/marketing/CTASection";
@@ -7,11 +6,13 @@ import ProductHero from "@/components/marketing/ProductHero";
 import SectionIntro from "@/components/marketing/SectionIntro";
 import ArchitectureFlow from "@/components/marketing/ArchitectureFlow";
 import { aegisRuntimeContent } from "@/content/products";
+import { buildPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: aegisRuntimeContent.meta.title,
   description: aegisRuntimeContent.meta.description,
-};
+  path: "/products/aegis-runtime",
+});
 
 export default function AegisRuntimePage() {
   const c = aegisRuntimeContent;

@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import DemoRequestForm from "@/components/forms/DemoRequestForm";
+import { buildPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Request Demo",
   description:
     "Request a private SecureTheCloud demo for runtime governance, deterministic authorization, and zero-trust AI agent control.",
-};
+  path: "/request-demo",
+});
 
 export default function RequestDemoPage() {
   return (

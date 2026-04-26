@@ -1,16 +1,17 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import CTASection from "@/components/marketing/CTASection";
 import SectionIntro from "@/components/marketing/SectionIntro";
 import { productPortfolio } from "@/content/products";
+import { buildPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Products",
   description:
     "Explore the SecureTheCloud product portfolio for deterministic runtime governance, operational intelligence, Kubernetes security, and cross-domain trust.",
-};
+  path: "/products",
+});
 
 export default function ProductsPage() {
   const featuredProduct = productPortfolio[0];
