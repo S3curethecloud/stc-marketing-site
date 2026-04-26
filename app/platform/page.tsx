@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import CTASection from "@/components/marketing/CTASection";
@@ -80,6 +81,27 @@ export default function PlatformPage() {
         primaryCta={{ label: "Request Private Demo", href: "/request-demo" }}
         secondaryCta={{ label: "Schedule Architecture Review", href: "/architecture" }}
       />
+
+      <Section className="border-y border-white/10 bg-white/[0.02]">
+        <Container>
+          <SectionIntro
+            eyebrow="PLATFORM VISUAL"
+            title="A live view of the SecureTheCloud platform command center."
+            body="This interface represents the platform-wide command surface for runtime posture, authorization decisions, RiskDNA replay, blast-radius visibility, and active session control."
+          />
+
+          <div className="mt-10 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] shadow-2xl shadow-black/20">
+            <Image
+              src="/images/platform/platform.png"
+              alt="SecureTheCloud Platform Command Center dashboard"
+              width={1600}
+              height={1200}
+              className="h-auto w-full"
+              priority
+            />
+          </div>
+        </Container>
+      </Section>
 
       <Section className="border-y border-white/10 bg-white/[0.02]">
         <Container>

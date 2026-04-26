@@ -8,18 +8,19 @@ export const siteConfig = {
   tagline: "The governance layer for autonomous systems.",
   primaryCta: {
     label: "Request Private Demo",
-    href: "/request-demo"
+    href: "/request-demo",
   },
   secondaryCta: {
-    label: "Schedule Architecture Review",
-    href: "/architecture"
+    label: "View Products",
+    href: "/products",
   },
   contact: {
-    salesEmail: "",
-    demoPath: "/request-demo"
+    salesEmail: "contact@securethecloud.dev",
+    demoPath: "/request-demo",
   },
   social: {
     youtube: "https://www.youtube.com/@SecureTheCloud-dev",
-    linkedin: "https://www.linkedin.com/company/113012228/admin/dashboard/"
-  }
+    linkedin: "https://www.linkedin.com/company/113012228/admin/dashboard/",
+    ogImage: "/images/og/stc-og-default.png",
+  },
 } as const;

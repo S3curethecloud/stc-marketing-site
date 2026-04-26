@@ -5,20 +5,19 @@ type MetadataInput = {
   title: string;
   description: string;
   path?: string;
+  image?: string;
 };
-
-function normalizePath(path: string) {
-  if (!path) return "";
-  return path.startsWith("/") ? path : `/${path}`;
-}
 
 export function buildPageMetadata({
   title,
   description,
   path = "",
+  image = "/images/og/stc-og-default.png",
 }: MetadataInput): Metadata {
-  const normalizedPath = normalizePath(path);
-  const url = `${siteConfig.url}${normalizedPath}`;
+  const url = `${siteConfig.url}${path}`;
+  const imageUrl = image.startsWith("http")
+    ? image
+    : `${siteConfig.url}${image}`;
 
   return {
     title,
@@ -32,11 +31,20 @@ export function buildPageMetadata({
       url,
       siteName: siteConfig.name,
       type: "website",
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${title} | ${siteConfig.name}`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [imageUrl],
     },
   };
 }

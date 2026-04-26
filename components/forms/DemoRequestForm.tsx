@@ -9,7 +9,7 @@ type DemoRequestFormProps = {
 };
 
 export default function DemoRequestForm({
-  action = "https://formspree.io/f/YOUR_FORM_ID",
+  action = "https://formspree.io/f/mzdjyodg",
   redirectUrl = `${siteConfig.url}/request-demo/success`,
   className = "",
 }: DemoRequestFormProps) {
@@ -21,6 +21,13 @@ export default function DemoRequestForm({
       className={`rounded-3xl border border-white/10 bg-stc-panel/80 p-6 shadow-2xl shadow-black/20 sm:p-8 ${className}`}
     >
       <input type="hidden" name="_redirect" value={redirectUrl} />
+      <input type="hidden" name="_subject" value="SecureTheCloud demo request" />
+      <input type="hidden" name="source" value="securethecloud.dev" />
+
+      <label className="hidden">
+        Leave this field empty
+        <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" />
+      </label>
 
       <div className="grid gap-5">
         <InputField
@@ -94,11 +101,6 @@ export default function DemoRequestForm({
         >
           Request Private Demo
         </button>
-
-        <p className="text-xs leading-5 text-stc-muted">
-          Replace <code>YOUR_FORM_ID</code> with your Formspree form ID before
-          production.
-        </p>
       </div>
     </form>
   );
