@@ -39,7 +39,7 @@ export const productPortfolio: readonly ProductPortfolioItem[] = [
   },
   {
     name: "Agent Sovereignty Zones",
-    href: "/products/agent-sovereignty-zones",
+    href: "https://asz.securethecloud.dev",
     eyebrow: "CROSS-DOMAIN TRUST",
     description:
       "Cross-domain trust infrastructure with signed assertions, trust registries, local policy verification, and dual audit anchoring.",

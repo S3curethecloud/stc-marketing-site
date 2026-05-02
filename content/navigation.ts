@@ -27,7 +27,7 @@ export const productNavItems: NavItem[] = [
   },
   {
     label: "Agent Sovereignty Zones",
-    href: "/products/agent-sovereignty-zones",
+    href: "https://asz.securethecloud.dev",
     description: "Cross-domain trust with signed assertions, trust registries, local policy verification, and dual audit anchoring."
   }
 ];
