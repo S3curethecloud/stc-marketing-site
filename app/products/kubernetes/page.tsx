@@ -7,9 +7,9 @@ import SectionIntro from "@/components/marketing/SectionIntro";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "SecureTheCloud for Kubernetes",
+  title: "Kubernetes Sentinel",
   description:
-    "SecureTheCloud for Kubernetes extends the core runtime model into Kubernetes-native environments with workload identity, OPA sidecars, policy bundles, cluster intelligence, and SIEM-ready telemetry.",
+    "Kubernetes Sentinel extends the core runtime model into Kubernetes-native environments with workload identity, OPA sidecars, policy bundles, cluster intelligence, and SIEM-ready telemetry.",
   path: "/products/kubernetes",
 });
 
@@ -161,7 +161,7 @@ export default function KubernetesPage() {
       <ProductHero
         eyebrow="KUBERNETES GOVERNANCE"
         headline="Bring Zero-Trust Runtime Enforcement Into Kubernetes"
-        subheadline="SecureTheCloud for Kubernetes extends the core runtime model into cluster, workload, identity, and runtime policy domains — without destabilizing the existing control-plane baseline."
+        subheadline="Kubernetes Sentinel extends the core runtime model into cluster, workload, identity, and runtime policy domains — without destabilizing the existing control-plane baseline."
         primaryCta={{ label: "Request Kubernetes Preview", href: "/request-demo" }}
         secondaryCta={{ label: "View Architecture", href: "/architecture" }}
       />
@@ -184,7 +184,7 @@ export default function KubernetesPage() {
           <SectionIntro
             eyebrow="POSITIONING"
             title="A Kubernetes Enforcement Layer Built on SecureTheCloud Core"
-            body="SecureTheCloud for Kubernetes extends the core control-plane model into Kubernetes-native environments. Core remains the governance source of truth. Kubernetes becomes the enforcement and evidence layer for workloads, clusters, and runtime policy activity."
+            body="Kubernetes Sentinel extends the core control-plane model into Kubernetes-native environments. Core remains the governance source of truth. Kubernetes becomes the enforcement and evidence layer for workloads, clusters, and runtime policy activity."
           />
         </Container>
       </Section>
@@ -194,7 +194,7 @@ export default function KubernetesPage() {
           <SectionIntro
             eyebrow="ARCHITECTURE"
             title="Designed Around Proven Kubernetes Enforcement Patterns"
-            body="SecureTheCloud for Kubernetes is built around runtime deployment, OPA sidecars, policy bundle distribution, external state, optional L7 enforcement, and verifiable workload identity."
+            body="Kubernetes Sentinel is built around runtime deployment, OPA sidecars, policy bundle distribution, external state, optional L7 enforcement, and verifiable workload identity."
           />
           <div className="mt-10">
             <FeatureGrid items={architectureModules} />
@@ -286,14 +286,14 @@ export default function KubernetesPage() {
           <SectionIntro
             eyebrow="DIFFERENTIATION"
             title="Why This Is Different"
-            body="SecureTheCloud for Kubernetes is positioned as a governed runtime extension, not a disconnected Kubernetes security add-on."
+            body="Kubernetes Sentinel is positioned as a governed runtime extension, not a disconnected Kubernetes security add-on."
           />
           <div className="mt-10 overflow-hidden rounded-3xl border border-white/10">
             <div className="grid grid-cols-2 bg-white/[0.05] text-sm font-semibold uppercase tracking-[0.2em] text-white/85">
               <div className="border-r border-white/10 px-6 py-4">
                 Traditional Kubernetes Security
               </div>
-              <div className="px-6 py-4">SecureTheCloud for Kubernetes</div>
+              <div className="px-6 py-4">Kubernetes Sentinel</div>
             </div>
             {differentiationRows.map((row) => (
               <div

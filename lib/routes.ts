@@ -7,18 +7,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;
 
   const routes = [
-    { path: "/", changeFrequency: "weekly", priority: 1 },
+    { path: "/", changeFrequency: "weekly", priority: 1.0 },
+    { path: "/ecosystem", changeFrequency: "monthly", priority: 0.95 },
+    { path: "/platform", changeFrequency: "monthly", priority: 0.9 },
     { path: "/products", changeFrequency: "monthly", priority: 0.9 },
     { path: "/products/aegis-runtime", changeFrequency: "monthly", priority: 0.9 },
-    { path: "/products/copilot-voice-intelligence", changeFrequency: "monthly", priority: 0.8 },
-    { path: "/products/kubernetes", changeFrequency: "monthly", priority: 0.8 },
-    { path: "/products/agent-sovereignty-zones", changeFrequency: "monthly", priority: 0.8 },
-    { path: "/platform", changeFrequency: "monthly", priority: 0.8 },
-    { path: "/use-cases", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/products/kubernetes", changeFrequency: "monthly", priority: 0.85 },
+    { path: "/products/agent-sovereignty-zones", changeFrequency: "monthly", priority: 0.85 },
+    { path: "/products/agent-blackbox", changeFrequency: "monthly", priority: 0.85 },
+    { path: "/products/agent-risk-exchange", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/products/riskdna", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/products/veracity", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/products/safp", changeFrequency: "monthly", priority: 0.75 },
+    { path: "/products/copilot-voice-intelligence", changeFrequency: "monthly", priority: 0.75 },
     { path: "/architecture", changeFrequency: "monthly", priority: 0.8 },
-    { path: "/security", changeFrequency: "monthly", priority: 0.7 },
-    { path: "/company", changeFrequency: "monthly", priority: 0.7 },
-    { path: "/request-demo", changeFrequency: "monthly", priority: 0.6 },
+    { path: "/security", changeFrequency: "monthly", priority: 0.75 },
+    { path: "/use-cases", changeFrequency: "monthly", priority: 0.75 },
+    { path: "/company", changeFrequency: "monthly", priority: 0.65 },
+    { path: "/request-demo", changeFrequency: "monthly", priority: 0.7 },
+    { path: "/request-demo/success", changeFrequency: "monthly", priority: 0.3 },
   ] as const;
 
   return routes.map((route) => ({

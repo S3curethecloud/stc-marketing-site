@@ -35,7 +35,7 @@ export const useCasesContent = {
       eyebrow: "KUBERNETES ENFORCEMENT",
       title: "Extend Governance Into Cluster and Workload Boundaries",
       body:
-        "SecureTheCloud for Kubernetes expands the baseline runtime model into clusters, service accounts, workloads, and SIEM-connected detection flows.",
+        "Kubernetes Sentinel expands the baseline runtime model into clusters, service accounts, workloads, and SIEM-connected detection flows.",
     },
     {
       eyebrow: "REGULATED ENVIRONMENTS",

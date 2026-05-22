@@ -19,36 +19,71 @@ export const productPortfolio: readonly ProductPortfolioItem[] = [
   {
     name: "Aegis Runtime",
     href: "/products/aegis-runtime",
-    eyebrow: "FLAGSHIP PRODUCT",
+    eyebrow: "FLAGSHIP RUNTIME",
     description:
-      "Deterministic zero-trust runtime governance for AI agents with policy-backed authorization, predictive risk, and verifiable decisions.",
+      "Runtime authority and deterministic governance for AI-agent actions before execution with policy-backed authorization, predictive risk, and verifiable decisions.",
   },
   {
-    name: "Copilot Voice Intelligence",
-    href: "/products/copilot-voice-intelligence",
-    eyebrow: "OPERATIONAL INTELLIGENCE",
-    description:
-      "Voice-narrated deterministic intelligence for executives, analysts, and architects operating governed security workflows.",
-  },
-  {
-    name: "SecureTheCloud for Kubernetes",
+    name: "Kubernetes Sentinel",
     href: "/products/kubernetes",
     eyebrow: "KUBERNETES GOVERNANCE",
     description:
-      "Kubernetes-native enforcement, workload identity, cluster intelligence, and SIEM-ready telemetry built on the SecureTheCloud baseline.",
+      "Enterprise Kubernetes governance, runtime enforcement, workload intelligence, and deterministic policy orchestration for autonomous systems.",
   },
   {
     name: "Agent Sovereignty Zones",
-    href: "https://asz.securethecloud.dev",
-    eyebrow: "CROSS-DOMAIN TRUST",
+    href: "/products/agent-sovereignty-zones",
+    eyebrow: "SOVEREIGN TRUST",
     description:
-      "Cross-domain trust infrastructure with signed assertions, trust registries, local policy verification, and dual audit anchoring.",
+      "Cross-zone trust verification with signed assertions, trust registries, local policy verification, and dual audit anchoring.",
+  },
+  {
+    name: "Agent Blackbox",
+    href: "/products/agent-blackbox",
+    eyebrow: "EVIDENCE AND AUDIT",
+    description:
+      "Audit-ready evidence capture, decision replay, authority-boundary visibility, and governance proof for autonomous systems.",
+  },
+  {
+    name: "Agent Risk Exchange",
+    href: "/products/agent-risk-exchange",
+    eyebrow: "RISK AND TRUST EXCHANGE",
+    description:
+      "Governed risk and trust exchange layer for autonomous-agent ecosystems, evidence review, and insurance-readiness workflows.",
+  },
+  {
+    name: "RiskDNA",
+    href: "/products/riskdna",
+    eyebrow: "RISK INTELLIGENCE",
+    description:
+      "Predictive risk scoring, blast-radius intelligence, and autonomous-action exposure analysis before execution.",
+  },
+  {
+    name: "Aegis Veracity Engine",
+    href: "/products/veracity",
+    eyebrow: "TRUTH VERIFICATION",
+    description:
+      "Claim-to-evidence verification, source-of-truth alignment, and audit-ready truth review for governed autonomous systems.",
+  },
+  {
+    name: "SecureTheCloud Trust Intelligence Copilot",
+    href: "/products/copilot-voice-intelligence",
+    eyebrow: "TRUST INTELLIGENCE",
+    description:
+      "Ecosystem Evidence & Readiness Navigator for governed explanations, evidence tracing, authority-boundary review, and customer-safe summaries.",
+  },
+  {
+    name: "SAFP",
+    href: "/products/safp",
+    eyebrow: "FEDERATION READINESS",
+    description:
+      "Sovereign agent federation readiness for signed assertions, trust registries, evidence exchange, and cross-boundary governance planning.",
   },
 ] as const;
 
 export const aegisRuntimeContent = {
   meta: {
-    title: "Aegis Runtime | SecureTheCloud",
+     title: "Aegis Runtime",
     description:
       "Aegis Runtime is the SecureTheCloud flagship product: a deterministic zero-trust runtime for AI agents with policy-backed authorization, predictive risk, and verifiable decisions.",
   },

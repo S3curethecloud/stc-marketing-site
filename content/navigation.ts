@@ -13,75 +13,80 @@ export const productNavItems: NavItem[] = [
   {
     label: "Aegis Runtime",
     href: "/products/aegis-runtime",
-    description: "Zero-Trust Runtime for AI Agents."
+    description:
+      "Runtime authority and deterministic governance for AI-agent actions before execution.",
   },
   {
-    label: "Copilot Voice Intelligence",
-    href: "/products/copilot-voice-intelligence",
-    description: "Voice-narrated deterministic intelligence for executives, analysts, and architects."
-  },
-  {
-    label: "SecureTheCloud for Kubernetes",
+    label: "Kubernetes Sentinel",
     href: "/products/kubernetes",
-    description: "Kubernetes-native enforcement, workload identity, cluster intelligence, and SIEM-ready telemetry."
+    description:
+      "Enterprise Kubernetes governance, runtime enforcement, workload intelligence, and deterministic policy orchestration.",
   },
   {
     label: "Agent Sovereignty Zones",
-    href: "https://asz.securethecloud.dev",
-    description: "Cross-domain trust with signed assertions, trust registries, local policy verification, and dual audit anchoring."
-  }
+    href: "/products/agent-sovereignty-zones",
+    description:
+      "Cross-zone trust verification with signed assertions, trust registries, local policy verification, and dual audit anchoring.",
+  },
+  {
+    label: "SecureTheCloud Trust Intelligence Copilot",
+    href: "/products/copilot-voice-intelligence",
+    description:
+      "Ecosystem Evidence & Readiness Navigator for governed explanations, evidence tracing, and authority-boundary review.",
+  },
 ];
 
 export const mainNavItems: NavItem[] = [
   {
     label: "Product",
-    href: "/products"
+    href: "/products",
   },
   {
-    label: "Aegis Runtime",
-    href: "/products/aegis-runtime"
+    label: "Ecosystem",
+    href: "/ecosystem",
   },
   {
     label: "Platform",
-    href: "/platform"
+    href: "/platform",
   },
   {
     label: "Use Cases",
-    href: "/use-cases"
+    href: "/use-cases",
   },
   {
     label: "Architecture",
-    href: "/architecture"
+    href: "/architecture",
   },
   {
     label: "Security",
-    href: "/security"
+    href: "/security",
   },
   {
     label: "Company",
-    href: "/company"
-  }
+    href: "/company",
+  },
 ];
 
 export const footerNavGroups: FooterNavGroup[] = [
   {
     title: "Products",
-    items: productNavItems
+    items: productNavItems,
   },
   {
-    title: "Platform",
+    title: "Control Plane",
     items: [
+      { label: "Ecosystem", href: "/ecosystem" },
       { label: "Platform", href: "/platform" },
       { label: "Architecture", href: "/architecture" },
       { label: "Security", href: "/security" },
-      { label: "Use Cases", href: "/use-cases" }
-    ]
+      { label: "Use Cases", href: "/use-cases" },
+    ],
   },
   {
     title: "Company",
     items: [
       { label: "Company", href: "/company" },
-      { label: "Request Demo", href: "/request-demo" }
-    ]
-  }
+      { label: "Request Demo", href: "/request-demo" },
+    ],
+  },
 ];

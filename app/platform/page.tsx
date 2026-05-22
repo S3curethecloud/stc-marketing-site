@@ -49,14 +49,14 @@ const runtimeLayers = [
     cta: "View Architecture",
   },
   {
-    title: "Copilot Voice Intelligence",
+    title: "SecureTheCloud Trust Intelligence Copilot",
     body:
       "A narrated intelligence layer that interprets deterministic runtime truth for executives, analysts, and architects without weakening the underlying decision model.",
     href: "/products/copilot-voice-intelligence",
     cta: "Explore Copilot",
   },
   {
-    title: "SecureTheCloud for Kubernetes",
+    title: "Kubernetes Sentinel",
     body:
       "A serious v2 extension that brings the baseline governance model into clusters, workloads, workload identity, and SIEM-connected telemetry.",
     href: "/products/kubernetes",

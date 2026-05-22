@@ -7,50 +7,50 @@ import SectionIntro from "@/components/marketing/SectionIntro";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "Copilot Voice Intelligence",
+  title: "SecureTheCloud Trust Intelligence Copilot",
   description:
-    "Copilot Voice Intelligence delivers voice-narrated deterministic intelligence for executives, analysts, and architects working with governed runtime security workflows.",
+    "SecureTheCloud Trust Intelligence Copilot is an ecosystem evidence and readiness navigator for governed explanations, evidence tracing, authority-boundary review, and customer-safe summaries.",
   path: "/products/copilot-voice-intelligence",
 });
 
 const modes = [
   {
-    title: "Executive Mode",
+    title: "Evidence Navigation",
     body:
-      "High-level summaries, impact framing, and decision-ready narration for leadership and governance stakeholders.",
+      "Trace platform evidence across Aegis Runtime, Kubernetes Sentinel, Agent Blackbox, RiskDNA, ASZ, Veracity, ARE, and SAFP readiness surfaces.",
   },
   {
-    title: "Analyst Mode",
+    title: "Authority Boundary Review",
     body:
-      "Security-oriented explanation with context around severity, attack path, control gaps, and guided investigation.",
+      "Explain what a platform can and cannot do without granting runtime authority, issuing credentials, activating federation, or mutating production systems.",
   },
   {
-    title: "Academy Mode",
+    title: "Customer-Safe Summaries",
     body:
-      "Guided explanation designed to teach first-principles cloud and runtime security concepts through narrated walkthroughs.",
+      "Prepare buyer, auditor, and executive-ready explanations grounded in approved evidence, source-of-truth records, and governance boundaries.",
   },
 ] as const;
 
 const useCases = [
   {
-    title: "Executive review and risk communication",
+    title: "Explain each platform’s role",
     body:
-      "Narrated posture summaries and governance context for decision-makers who need fast clarity without losing technical grounding.",
+      "Translate the SecureTheCloud ecosystem into clear descriptions of what each platform does, what it proves, and where its authority ends.",
   },
   {
-    title: "Analyst explanation during investigation",
+    title: "Trace evidence across the ecosystem",
     body:
-      "Deterministic records, risk context, and runtime events translated into guided operational explanation.",
+      "Follow evidence from runtime decisions, risk signals, audit records, source-of-truth files, and readiness layers into governed explanations.",
   },
   {
-    title: "Architecture walkthroughs and system briefings",
+    title: "Check authority boundaries",
     body:
-      "Explain platform flows, trust boundaries, and runtime control paths in a format suited for technical reviews.",
+      "Help teams understand when a capability is read-only, evidence-only, readiness-only, or not authorized for runtime enforcement.",
   },
   {
-    title: "Training and guided learning",
+    title: "Support SageMaker readiness planning",
     body:
-      "Use narrated walkthroughs to teach governed security operations without weakening the truth model underneath.",
+      "Explain future offline risk intelligence and SageMaker readiness without claiming live training, live inference authority, or production activation.",
   },
 ] as const;
 
@@ -58,19 +58,19 @@ export default function CopilotVoiceIntelligencePage() {
   return (
     <>
       <ProductHero
-        eyebrow="OPERATIONAL INTELLIGENCE"
-        headline="Copilot Voice Intelligence: Narrated Intelligence Grounded in Deterministic Truth"
-        subheadline="Copilot Voice Intelligence interprets deterministic SecureTheCloud records and runtime context to deliver narrated security posture, attack-path explanation, and architecture guidance for executives, analysts, and architects."
-        primaryCta={{ label: "Open Copilot", href: "/request-demo" }}
-        secondaryCta={{ label: "Try Voice Mode", href: "/request-demo" }}
+        eyebrow="TRUST INTELLIGENCE COPILOT"
+        headline="SecureTheCloud Trust Intelligence Copilot"
+        subheadline="Ecosystem Evidence & Readiness Navigator for governed explanations, evidence tracing, authority-boundary review, customer-safe summaries, and future SageMaker readiness planning."
+        primaryCta={{ label: "Request Private Demo", href: "/request-demo" }}
+        secondaryCta={{ label: "Explore Ecosystem", href: "/ecosystem" }}
       />
 
       <Section>
         <Container>
           <SectionIntro
             eyebrow="WHAT IT IS"
-            title="A Voice Interface for Governed Security Intelligence"
-            body="Copilot Voice Intelligence is not a generic chatbot. It is a voice and narration layer designed to explain anchored runtime truth. It helps teams interpret deterministic decision records, risk context, attack-path insights, and architectural posture in a more accessible operational format."
+            title="A read-only intelligence layer for the SecureTheCloud ecosystem."
+            body="SecureTheCloud Trust Intelligence Copilot explains the ecosystem, traces evidence, validates authority boundaries, and prepares customer-safe summaries. It is not a generic chatbot, interview tutor, credential broker, federation broker, or runtime mutation engine."
           />
         </Container>
       </Section>
@@ -78,9 +78,9 @@ export default function CopilotVoiceIntelligencePage() {
       <Section className="border-y border-white/10 bg-white/[0.02]">
         <Container>
           <SectionIntro
-            eyebrow="MODES"
-            title="Built for Multiple Operating Contexts"
-            body="Copilot Voice Intelligence is designed to support leadership, analysts, and learning workflows without disconnecting the explanation layer from deterministic runtime facts."
+            eyebrow="OPERATING MODES"
+            title="Built for evidence, readiness, and governed understanding."
+            body="Trust Intelligence Copilot helps operators, buyers, auditors, and executives understand the SecureTheCloud ecosystem without weakening the deterministic authority model underneath."
           />
           <div className="mt-10">
             <FeatureGrid items={modes} />
@@ -91,12 +91,12 @@ export default function CopilotVoiceIntelligencePage() {
       <Section>
         <Container>
           <SectionIntro
-            eyebrow="DETERMINISTIC PRINCIPLE"
-            title="Copilot Explains Anchored Facts — It Does Not Invent Them"
-            body="Copilot Voice Intelligence is designed to interpret deterministic runtime facts generated by SecureTheCloud. Decisions remain explainable even if the voice layer is unavailable, because the underlying decision path, reason codes, and governance records remain intact."
+            eyebrow="DOCTRINE"
+            title="Evidence proves. Risk informs. OPA decides. Runtime enforces. Copilot explains."
+            body="Trust Intelligence Copilot can explain governed context and retrieve evidence, but it does not authorize execution, enforce policy, issue credentials, mutate runtime systems, activate live federation, run live SageMaker training, or connect to production systems."
           />
           <p className="mt-8 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-            If Copilot is offline, the deterministic record still explains the decision.
+            If Copilot is offline, deterministic records, audit chains, evidence trails, and source-of-truth records still provide the complete explanation path.
           </p>
         </Container>
       </Section>
@@ -104,9 +104,9 @@ export default function CopilotVoiceIntelligencePage() {
       <Section className="border-y border-white/10 bg-white/[0.02]">
         <Container>
           <SectionIntro
-            eyebrow="VOICE EXPERIENCE"
-            title="Narration for Security Posture, Attack Paths, and Architecture"
-            body="Use Copilot Voice Intelligence to hear runtime posture, blast-radius implications, governance decisions, and system architecture summarized in real time. The experience is designed for teams who need clearer operational understanding without giving up control over accuracy."
+            eyebrow="ECOSYSTEM COVERAGE"
+            title="Explains the platforms inside the Sovereign Agent Control Plane."
+            body="Trust Intelligence Copilot helps teams understand ASZ, Aegis Runtime, RiskDNA, Kubernetes Sentinel, Agent Blackbox, Agent Risk Exchange, SAFP, Aegis Veracity Engine, and future SageMaker offline risk intelligence planning."
           />
         </Container>
       </Section>
@@ -115,8 +115,8 @@ export default function CopilotVoiceIntelligencePage() {
         <Container>
           <SectionIntro
             eyebrow="USE CASES"
-            title="Where Voice Intelligence Adds Operational Value"
-            body="Voice narration is most valuable when teams need faster operational understanding without replacing the deterministic truth model behind SecureTheCloud."
+            title="Where Trust Intelligence Copilot adds value."
+            body="The Copilot is designed for governed explanation, evidence navigation, readiness planning, and safe customer-facing summaries — not enforcement or production authority."
           />
           <div className="mt-10">
             <FeatureGrid items={useCases} />
@@ -127,18 +127,18 @@ export default function CopilotVoiceIntelligencePage() {
       <Section className="border-y border-white/10 bg-white/[0.02]">
         <Container>
           <SectionIntro
-            eyebrow="CLOSING"
-            title="Voice-Narrated Intelligence for Governed Security Workflows"
-            body="Copilot Voice Intelligence makes deterministic SecureTheCloud context easier to interpret across technical and executive audiences without weakening the truth model underneath."
+            eyebrow="AUTHORITY BOUNDARY"
+            title="The Copilot explains only. It does not govern or enforce."
+            body="Runtime authority remains with deterministic governance and policy-backed execution paths. Risk scoring informs. OPA decides. Runtime enforces. Frontend surfaces render backend truth only. LLM layers explain governed evidence and retrieve approved context only."
           />
         </Container>
       </Section>
 
       <CTASection
-        headline="Hear deterministic intelligence in action."
-        subheadline="See how Copilot Voice Intelligence turns runtime facts, decision records, and architecture context into narrated operational understanding."
-        primaryCta={{ label: "Open Copilot", href: "/request-demo" }}
-        secondaryCta={{ label: "Try Voice Mode", href: "/request-demo" }}
+        headline="Navigate ecosystem evidence without authority drift."
+        subheadline="See how SecureTheCloud Trust Intelligence Copilot explains platform roles, traces evidence, validates boundaries, and prepares customer-safe summaries across the Sovereign Agent Control Plane."
+        primaryCta={{ label: "Request Private Demo", href: "/request-demo" }}
+        secondaryCta={{ label: "Explore Ecosystem", href: "/ecosystem" }}
       />
     </>
   );

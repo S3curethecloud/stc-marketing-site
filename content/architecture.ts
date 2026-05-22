@@ -55,7 +55,7 @@ export const architectureContent = {
   kubernetes: {
     title: "Kubernetes Extends the Baseline, Not Replaces It",
     body:
-      "SecureTheCloud for Kubernetes is positioned as a serious v2 extension product that carries the existing governance model into clusters, workloads, and workload identity without changing the baseline doctrine.",
+      "Kubernetes Sentinel is positioned as a serious ecosystem extension that carries the existing governance model into clusters, workloads, and workload identity without changing the baseline doctrine.",
   },
   crossZone: {
     title: "Trust Between Systems Requires Verification, Not Assumption",

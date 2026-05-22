@@ -94,7 +94,7 @@ export default function ProductsPage() {
           <SectionIntro
             eyebrow="PRODUCT RELATIONSHIP"
             title="One runtime baseline. Multiple product layers."
-            body="Aegis Runtime provides the governed baseline. Copilot Voice Intelligence interprets deterministic records. SecureTheCloud for Kubernetes extends enforcement into cluster environments. Agent Sovereignty Zones extends trust across domain boundaries."
+            body="Aegis Runtime provides the governed baseline. SecureTheCloud Trust Intelligence Copilot explains governed evidence. Kubernetes Sentinel extends enforcement into cluster environments. Agent Sovereignty Zones extends trust across domain boundaries."
             align="center"
           />
         </Container>
