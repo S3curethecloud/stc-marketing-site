@@ -1,316 +1,287 @@
 export const homepageContent = {
   meta: {
-    title: "SecureTheCloud Sovereign Agent Control Plane",
+    title: "SecureTheCloud Enterprise Product Portfolio",
     description:
-      "Enterprise-grade governance, runtime enforcement, evidence capture, trust verification, and audit readiness for autonomous AI-agent systems.",
+      "SecureTheCloud is a modular enterprise security portfolio for autonomous systems, runtime governance, evidence, risk, federation, secrets, and trust intelligence.",
   },
+
   hero: {
     eyebrow: "SOVEREIGN AGENT CONTROL PLANE",
-    headline:
-      "Prove, Govern, and Enforce AI-Agent Behavior Before It Becomes Production Risk",
+    headline: "The Modular Security Portfolio for Autonomous Systems",
     subheadline:
-      "SecureTheCloud is an enterprise AI-agent governance and runtime control platform that verifies trust, scores risk, enforces policy, captures evidence, and establishes audit-ready governance across autonomous systems.",
+      "SecureTheCloud delivers runtime governance, evidence, trust, risk intelligence, federation readiness, secret custody, and explainable security intelligence through modular platforms that can deploy independently or together.",
     primaryCta: {
-      label: "Request Private Demo",
-      href: "/request-demo",
+      label: "Explore the Portfolio",
+      href: "#portfolio",
     },
     secondaryCta: {
-      label: "Explore Ecosystem",
-      href: "/ecosystem",
+      label: "Request Private Demo",
+      href: "/request-demo",
     },
     trustLine:
-      "Built for enterprises deploying autonomous systems across cloud, Kubernetes, runtime, and multi-agent environments.",
+      "Govern. Prove. Trust. Before autonomous systems become production risk.",
   },
-  ecosystem: {
-    title: "A Unified Control Plane for Autonomous Systems",
-    body:
-      "SecureTheCloud connects runtime governance, policy enforcement, sovereign trust verification, evidence intelligence, risk scoring, and federation readiness into one deterministic control-plane ecosystem.",
-    layers: [
-      "Runtime Governance",
-      "Policy Enforcement",
-      "Risk Intelligence",
-      "Evidence Verification",
-      "Cross-Zone Trust",
-      "Federation Readiness",
+
+  principles: {
+    title: "Portfolio Principles",
+    items: [
+      "Modular, not monolithic",
+      "Deploy independently or together",
+      "Evidence-first governance",
+      "Deterministic policy and trust controls",
+      "Enterprise auditability and operational readiness",
     ],
   },
+
   proof: [
-    "Deterministic runtime governance",
-    "Policy enforcement before execution",
-    "Verifiable decision records",
-    "Cryptographic trust boundaries",
-    "Audit-ready evidence capture",
+    "Evidence-first",
+    "Deterministic trust",
+    "Runtime enforced",
+    "Enterprise ready",
   ],
-  problem: {
-    title: "AI Agents Can Act — But Most Systems Cannot Prove Why",
-    intro:
-      "AI systems can issue transactions, modify infrastructure, access sensitive systems, and trigger downstream workflows. In most environments, those actions are monitored after execution instead of governed before action. SecureTheCloud changes that control model.",
-    cards: [
-      {
-        title: "Autonomous Actions",
-        body:
-          "AI agents can operate across tools, APIs, systems, and data boundaries faster than traditional control models can keep up.",
-      },
-      {
-        title: "Missing Runtime Control",
-        body:
-          "Most organizations can observe AI activity after execution, but they cannot deterministically authorize or deny action before it happens.",
-      },
-      {
-        title: "No Verifiable Explanation",
-        body:
-          "When an agent is approved or denied, teams often cannot reconstruct the exact reason in a deterministic, policy-backed way.",
-      },
-    ],
-    punchline:
-      "If an AI agent takes an action today, can your organization prove why it was allowed?",
-  },
-  categoryShift: {
-    title: "From AI Observability to AI Control",
-    before: {
-      title: "Before",
-      summary: "Monitor what AI already did",
-      items: [
-        "log review",
-        "post-event alerting",
-        "fragmented evidence",
-        "incomplete accountability",
-      ],
-    },
-    after: {
-      title: "After",
-      summary: "Control what AI is allowed to do",
-      items: [
-        "pre-execution authorization",
-        "deterministic policy enforcement",
-        "risk-aware decisions",
-        "verifiable audit chain",
-      ],
-    },
-    closing:
-      "SecureTheCloud introduces sovereign control-plane infrastructure for autonomous systems.",
-  },
-  howItWorks: {
-    title: "Every Action Passes Through a Deterministic Control Path",
-    intro:
-      "Every action is evaluated before execution, scored for risk, simulated for impact, enforced by policy, and recorded in a verifiable governance trail.",
-    steps: [
-      "Agent Request",
-      "RiskDNA",
-      "Blast Radius",
-      "OPA Policy",
-      "DDR",
-      "Audit Anchor",
-      "Execution or Denial",
-    ],
+
+  trustFabric: {
+    eyebrow: "SHARED TRUST FABRIC",
+    title: "Common services. Separate products. Modular deployment.",
     body:
-      "SecureTheCloud combines runtime governance, predictive risk synthesis, blast-radius analysis, deterministic decision records, policy enforcement, and tamper-evident governance into one control path.",
-  },
-  pillars: {
-    title: "Built for Enforcement — Not Observation",
+      "SecureTheCloud products connect through approved policy, evidence, risk, identity, context, and integration workflows without collapsing product authority into one monolithic block.",
     items: [
       {
-        title: "Runtime Governance",
-        body:
-          "Every agent request is evaluated before action. Approved requests receive session-bound authorization only where an approved runtime authority exists. Denied requests fail closed.",
+        title: "Governance & Policy",
+        body: "Policy, approval, control posture, and governance authority.",
       },
       {
-        title: "Predictive Risk Intelligence",
-        body:
-          "RiskDNA and Blast Radius simulation calculate risk and downstream impact before the system permits execution.",
+        title: "Evidence & Audit",
+        body: "Decision records, audit trails, proof artifacts, and review surfaces.",
       },
       {
-        title: "Deterministic Explanation",
-        body:
-          "Every decision produces a deterministic decision record that can explain what happened without relying on generative inference.",
+        title: "Risk Intelligence",
+        body: "RiskDNA scoring, blast-radius insight, and exposure intelligence.",
       },
       {
-        title: "Tamper-Evident Governance",
-        body:
-          "Admin mutations, policy changes, decisions, and cross-zone events are hash-linked and independently verifiable.",
+        title: "Identity / Context",
+        body: "Tenant, principal, workload, zone, and trust context.",
+      },
+      {
+        title: "Integration APIs & Event Flow",
+        body: "Governed integration points and evidence/event movement.",
       },
     ],
-    strongLine: "This is not an AI tool. This is infrastructure.",
   },
-  aegisCore: {
-    title: "Aegis Runtime: The Enforcement Kernel for AI Agents",
-    subtitle:
-      "Aegis Runtime brings SecureTheCloud governance directly into the execution environment — enforcing identity, policy, cryptographic assertions, and runtime trust before autonomous workloads can act.",
-    strongLine: "SecureTheCloud governs. Aegis Runtime enforces.",
+
+  portfolio: {
+    eyebrow: "CUSTOMER-OFFERABLE PRODUCT SUITES",
+    title: "Buy the module, suite, or full enterprise portfolio.",
+    body:
+      "Each SecureTheCloud product can stand alone, join a suite, or connect into a governed portfolio for enterprise-wide autonomous-system control.",
+    suites: [
+      {
+        title: "Runtime Governance & Enforcement Suite",
+        tone: "cyan",
+        products: [
+          {
+            name: "Aegis Runtime",
+            description: "Runtime governance baseline",
+            status: "Production Ready",
+            href: "/products/aegis-runtime",
+          },
+          {
+            name: "RiskDNA",
+            description: "Deterministic runtime risk scoring",
+            status: "Production Ready",
+            href: "/products/riskdna",
+          },
+          {
+            name: "Kubernetes Sentinel",
+            description: "Enforcement adapter and secure control point",
+            status: "Production Ready",
+            href: "/products/kubernetes",
+          },
+          {
+            name: "Agent Sovereignty Zones (ASZ)",
+            description: "Cross-zone trust and verified handoff",
+            status: "Production Ready",
+            href: "/products/agent-sovereignty-zones",
+          },
+        ],
+      },
+      {
+        title: "Evidence, Audit & Investigation Suite",
+        tone: "green",
+        products: [
+          {
+            name: "Agent Blackbox",
+            description: "Evidence, replay, audit, and investigation",
+            status: "Production Ready",
+            href: "/products/agent-blackbox",
+          },
+          {
+            name: "Agent Risk Exchange (ARE)",
+            description: "Trust, evidence, risk, and assurance exchange",
+            status: "Production Ready",
+            href: "/products/agent-risk-exchange",
+          },
+        ],
+      },
+      {
+        title: "Federation, Secrets & Trust Services",
+        tone: "amber",
+        products: [
+          {
+            name: "SAFP",
+            description: "Sovereign federation protocol and trust orchestration",
+            status: "Production Ready",
+            href: "/products/safp",
+          },
+          {
+            name: "Secret Vault",
+            description: "Governed secret custody and controlled reference retrieval",
+            status: "Production Ready",
+            href: "/ecosystem",
+          },
+        ],
+      },
+      {
+        title: "Intelligence & AI Readiness Suite",
+        tone: "purple",
+        products: [
+          {
+            name: "Trust Intelligence Copilot",
+            description: "Read-only evidence and readiness navigator",
+            status: "Production Ready",
+            href: "/products/copilot-voice-intelligence",
+          },
+          {
+            name: "SageMaker Risk Intelligence Pipeline",
+            description: "Offline risk intelligence and model pipeline",
+            status: "Production Stage",
+            href: "/ecosystem",
+          },
+        ],
+      },
+    ],
+  },
+
+  composition: {
+    eyebrow: "COMPOSITION LAYER",
+    title: "Smart assembly with secure defaults.",
+    body:
+      "The Composition Layer connects components through approved interfaces. It does not merge authorities.",
     items: [
       {
-        title: "Runtime Enforcement Kernel",
-        body:
-          "Ensures agent workloads cannot bypass SecureTheCloud authorization before executing sensitive actions.",
+        title: "Module orchestration",
+        body: "Assemble product capabilities without making them one monolith.",
       },
       {
-        title: "Kubernetes-Native Guardrail",
-        body:
-          "Integrates with admission control, sidecar injection, and workload validation to enforce governance inside the cluster.",
+        title: "Default policy & configuration",
+        body: "Start with secure baseline configuration and governed defaults.",
       },
       {
-        title: "Cryptographic Assertion Validator",
-        body:
-          "Verifies signed authorization assertions, policy digests, timestamps, and replay protection before allowing cross-zone actions.",
+        title: "Boundary & doctrine enforcement",
+        body: "Preserve ownership, authority, and evidence boundaries.",
       },
       {
-        title: "Agent Boundary Controller",
-        body:
-          "Controls how agents interact with services, APIs, tools, and other agents across governed trust boundaries.",
+        title: "Observability bootstrap",
+        body: "Surface posture, decisions, and evidence flow for review.",
       },
     ],
-    cta: {
-      label: "Explore Aegis Runtime",
-      href: "/architecture",
-    },
   },
-  kubernetes: {
-    title: "Kubernetes Sentinel",
-    subtitle:
-      "Extend SecureTheCloud governance into clusters, workloads, identity, and runtime policy domains without destabilizing the existing control-plane baseline.",
-    cta: {
-      label: "View Kubernetes Sentinel",
-      href: "/products/kubernetes",
-    },
-  },
-  sovereigntyZones: {
-    title: "Trust Between Autonomous Systems Without Shared Infrastructure",
+
+  sentinel: {
+    eyebrow: "SENTINEL ADAPTER",
+    title: "Boundary protection for enforcement and vault reference resolution.",
     body:
-      "Agent Sovereignty Zones extends the SecureTheCloud baseline into cross-domain trust with signed assertions, trust registries, local policy verification, and dual-zone audit anchoring.",
-    quote: "Agents do not trust each other. They verify each other.",
-    cta: {
-      label: "Explore Sovereignty Zones",
-      href: "/products/agent-sovereignty-zones",
-    },
+      "SENTINEL protects cross-component boundaries by validating, forwarding, and producing evidence for governed actions.",
+    items: [
+      "Enforcement + validation + forwarding",
+      "Exclusive Vault reference resolution",
+      "Evidence generated for all actions",
+      "Cross-component boundary protection",
+    ],
   },
-  controlPlane: {
-    title: "Real-Time Governance Console",
-    subtitle:
-      "Observe runtime state, tenant risk, agent sessions, policy decisions, and blast-radius impact from a single control plane.",
-    body:
-      "The console is backed by deterministic runtime governance, policy decisions, evidence records, risk intelligence, and verifiable governance events.",
-  },
-  portfolioPreview: {
-    title: "Explore the SecureTheCloud Control-Plane Ecosystem",
+
+  adoption: {
+    eyebrow: "ADOPTION MODEL",
+    title: "How customers adopt the platform.",
     items: [
       {
-        title: "Aegis Runtime",
-        body:
-          "Runtime governance and enforcement for AI-agent actions before execution.",
-        ctaLabel: "View Aegis Runtime",
-        href: "/products/aegis-runtime",
+        title: "Buy standalone modules",
+        body: "Pick the control, evidence, trust, or intelligence component needed first.",
       },
       {
-        title: "Kubernetes Sentinel",
-        body:
-          "Enterprise Kubernetes governance, runtime enforcement, workload intelligence, and deterministic policy orchestration for autonomous systems.",
-        ctaLabel: "View Kubernetes Sentinel",
-        href: "/products/kubernetes",
+        title: "Buy by suite",
+        body: "Deploy integrated suites for runtime governance, trust operations, evidence, or readiness.",
       },
       {
-        title: "Agent Sovereignty Zones",
-        body:
-          "Cross-zone trust verification with signed assertions, trust registries, and local policy proof.",
-        ctaLabel: "Explore Sovereignty Zones",
-        href: "/products/agent-sovereignty-zones",
-      },
-      {
-        title: "Agent Blackbox",
-        body:
-          "Audit-ready evidence capture, decision replay, and governance proof for autonomous systems.",
-        ctaLabel: "View Agent Blackbox",
-        href: "/products/agent-blackbox",
-      },
-      {
-        title: "Agent Risk Exchange",
-        body:
-          "Risk and trust exchange layer for governed autonomous-agent ecosystems.",
-        ctaLabel: "Explore Agent Risk Exchange",
-        href: "/products/agent-risk-exchange",
-      },
-      {
-        title: "RiskDNA",
-        body:
-          "Risk intelligence that scores runtime behavior, blast radius, and autonomous action exposure.",
-        ctaLabel: "Explore RiskDNA",
-        href: "/products/riskdna",
-      },
-      {
-        title: "Aegis Veracity Engine",
-        body:
-          "Evidence verification, source-of-truth alignment, and claim integrity for audit-ready governance.",
-        ctaLabel: "Explore Veracity",
-        href: "/products/veracity",
-      },
-      {
-        title: "SecureTheCloud Trust Intelligence Copilot",
-        body:
-          "Ecosystem Evidence & Readiness Navigator for governed explanations, evidence tracing, authority-boundary review, and customer-safe ecosystem summaries.",
-        ctaLabel: "Explore Trust Intelligence Copilot",
-        href: "/products/copilot-voice-intelligence",
-      },
-      {
-        title: "SAFP",
-        body:
-          "Federation readiness for sovereign agent systems, cross-boundary trust, and ecosystem-scale governance.",
-        ctaLabel: "Explore SAFP",
-        href: "/products/safp",
+        title: "Deploy as an integrated enterprise portfolio",
+        body: "Unify autonomous-system control across runtime, Kubernetes, federation, evidence, and intelligence.",
       },
     ],
   },
-  enterpriseProof: {
-    title: "Designed for Production-Grade Autonomous Systems",
-    body:
-      "SecureTheCloud is built from the control plane outward: runtime governance first, policy enforcement second, cryptographic trust third, audit-ready evidence fourth, and intelligence as an interpreter of anchored facts.",
-  },
-  copilot: {
-    title: "SecureTheCloud Trust Intelligence Copilot",
-    subtitle: "Ecosystem Evidence & Readiness Navigator",
-    body:
-      "SecureTheCloud Trust Intelligence Copilot explains the SecureTheCloud ecosystem, traces evidence, validates authority boundaries, prepares customer-safe summaries, and supports future SageMaker readiness planning without becoming an authority source.",
-    explanation:
-      "If Copilot is offline, deterministic decision records, audit chains, evidence trails, and source-of-truth records still provide the complete explanation path.",
-  },
-  useCases: {
-    title: "Built for High-Risk Autonomous Workflows",
+
+  outcomes: {
+    eyebrow: "ENTERPRISE OUTCOMES",
+    title: "What the portfolio delivers.",
     items: [
       {
-        title: "Financial Automation",
-        body:
-          "Govern refunds, payments, and transaction workflows before execution.",
+        title: "Runtime trust",
+        body: "Enforce deterministic policies at runtime.",
       },
       {
-        title: "Cloud Operations",
-        body:
-          "Control AI-driven infrastructure changes with policy-bound execution and blast-radius containment.",
+        title: "Cross-zone governance",
+        body: "Maintain trust across agents and zones.",
       },
       {
-        title: "Kubernetes Enforcement",
-        body:
-          "Extend runtime governance into workload identity, runtime policy, and cluster-native operations.",
+        title: "Audit-ready evidence",
+        body: "Prove what happened with confidence.",
       },
       {
-        title: "Multi-Agent Systems",
-        body:
-          "Establish trust between autonomous systems through explicit verification and governed boundaries.",
+        title: "Explainable enterprise AI security",
+        body: "Understand, justify, and act with clarity.",
       },
     ],
   },
-  differentiation: {
-    title: "Why SecureTheCloud Is Different",
-    rows: [
-      ["Timing", "Post-execution", "Pre-execution"],
-      ["Control", "Monitor and alert", "Govern and enforce"],
-      ["Decision Model", "Probabilistic", "Deterministic"],
-      ["Explanation", "AI-generated", "DDR-based"],
-      ["Audit Trail", "Logs", "Hash-linked chain"],
-      ["Cross-Zone Trust", "Implicit", "Cryptographic"],
+
+  buyers: {
+    eyebrow: "WHO BUYS WHAT",
+    title: "Map each buyer to the right entry point.",
+    items: [
+      {
+        buyer: "Security / IAM teams",
+        need: "Runtime Governance",
+        body: "Enforce identity, policy, and runtime control.",
+      },
+      {
+        buyer: "Platform / DevSecOps teams",
+        need: "Trust Operations",
+        body: "Build and ship with secure boundaries and attestations.",
+      },
+      {
+        buyer: "GRC / Audit / Forensics teams",
+        need: "Evidence & Audit",
+        body: "Investigate, prove, and satisfy compliance review.",
+      },
+      {
+        buyer: "Executives / Field / Solutions teams",
+        need: "Intelligence & Readiness",
+        body: "Explain product value with trusted, evidence-backed clarity.",
+      },
     ],
   },
+
+  doctrine: [
+    "Evidence proves",
+    "Risk informs",
+    "OPA decides",
+    "Runtime enforces",
+    "Frontend renders backend truth",
+    "LLM explains only",
+  ],
+
   cta: {
-    headline: "Start Governing Autonomous Systems Before They Become Production Risk",
+    headline: "Deploy secure, modular trust infrastructure for autonomous systems.",
     subheadline:
-      "Request a private technical demo and see how SecureTheCloud unifies runtime governance, policy enforcement, cryptographic trust, risk intelligence, and audit-ready evidence for AI-agent systems.",
+      "See how SecureTheCloud products can be adopted independently, by suite, or as a connected enterprise portfolio for runtime governance, evidence, risk, federation, secrets, and intelligence.",
     primaryCta: {
       label: "Request Private Demo",
       href: "/request-demo",
@@ -319,7 +290,5 @@ export const homepageContent = {
       label: "Explore Ecosystem",
       href: "/ecosystem",
     },
-    footerTrustText:
-      "Built for AI infrastructure teams, platform security teams, and enterprises moving from automation to autonomous systems.",
   },
 } as const;

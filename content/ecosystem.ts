@@ -24,8 +24,8 @@ export const ecosystemContent = {
     body:
       "The SecureTheCloud ecosystem is designed so runtime authority, evidence review, risk intelligence, and explanation layers do not collapse into one unsafe AI decision path.",
     image: {
-      src: "/images/ecosystem/ecosystem-architecture.webp",
-      alt: "SecureTheCloud Sovereign Agent Control Plane ecosystem architecture",
+      src: "/images/portfolio/securethecloud-enterprise-product-portfolio.webp",
+      alt: "SecureTheCloud Enterprise Product Portfolio diagram",
     },
   },
   doctrine: {
