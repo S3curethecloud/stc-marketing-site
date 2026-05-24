@@ -61,6 +61,16 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://securethecloud.dev/products/secret-vault</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://securethecloud.dev/products/sagemaker-risk-intelligence</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://securethecloud.dev/products/copilot-voice-intelligence</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>

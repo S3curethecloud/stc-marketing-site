@@ -19,6 +19,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/products/riskdna", changeFrequency: "monthly", priority: 0.8 },
     { path: "/products/veracity", changeFrequency: "monthly", priority: 0.8 },
     { path: "/products/safp", changeFrequency: "monthly", priority: 0.75 },
+    { path: "/products/secret-vault", changeFrequency: "monthly", priority: 0.75 },
+    { path: "/products/sagemaker-risk-intelligence", changeFrequency: "monthly", priority: 0.7 },
     { path: "/products/copilot-voice-intelligence", changeFrequency: "monthly", priority: 0.75 },
     { path: "/architecture", changeFrequency: "monthly", priority: 0.8 },
     { path: "/security", changeFrequency: "monthly", priority: 0.75 },
