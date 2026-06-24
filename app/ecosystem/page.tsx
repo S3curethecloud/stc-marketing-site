@@ -68,7 +68,31 @@ export default function EcosystemPage() {
 
       <Section className="border-y border-white/10 bg-white/[0.02]">
         <Container>
-          <SectionIntro
+          <div id="phase-2-roadmap">
+        <Section className="border-y border-white/10 bg-white/[0.02]">
+          <Container>
+            <SectionIntro
+              eyebrow="PHASE 2 ROADMAP"
+              title="Active adversarial immunization and provenance assurance."
+              body="SecureTheCloud Phase 2 extends the enterprise product portfolio with governed capability layers for streaming evidence, detection fabric, runtime challenge and containment, agent identity registry, provenance assurance, AI chaos validation, and policy feedback loops. The roadmap preserves the core doctrine: evidence proves, risk informs, OPA decides, runtime enforces, frontend renders governed truth, and LLMs explain only."
+            />
+
+            <div className="mt-10 overflow-hidden rounded-3xl border border-cyan-300/20 bg-slate-950/50 p-3 shadow-2xl shadow-cyan-950/20">
+              <Image
+                src="/images/roadmap/securethecloud-phase-2-roadmap.png"
+                alt="SecureTheCloud Enterprise Product Portfolio Phase 2 Roadmap showing active adversarial immunization, provenance assurance, shared trust fabric, Phase 2 capability layer, active immune loop, SENTINEL adapter, and governed enterprise outcomes."
+                width={2400}
+                height={1600}
+                className="h-auto w-full rounded-[1.5rem] border border-white/10"
+                sizes="100vw"
+                unoptimized
+              />
+            </div>
+          </Container>
+        </Section>
+      </div>
+
+      <SectionIntro
             eyebrow="GOVERNANCE DOCTRINE"
             title={c.doctrine.title}
             body={c.doctrine.body}
