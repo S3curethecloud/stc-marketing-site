@@ -23,6 +23,34 @@ type FormspreeResponse = {
   errors?: FormspreeError[];
 };
 
+const consultationAreas = [
+  "Enterprise AI security architecture",
+  "Cloud governance and platform security",
+  "Secure AI adoption strategy",
+  "AI governance and compliance readiness",
+  "Healthcare or regulated AI workflows",
+  "Executive advisory and solution design",
+  "Other / not sure yet",
+] as const;
+
+const buyerRoles = [
+  "CISO / security leader",
+  "CTO / CIO / technology executive",
+  "AI, data, or innovation leader",
+  "Cloud or platform engineering leader",
+  "GRC, risk, privacy, or compliance leader",
+  "Healthcare or regulated-operations leader",
+  "Founder / business sponsor",
+  "Other",
+] as const;
+
+const timelines = [
+  "Immediate / active initiative",
+  "Next 30 days",
+  "This quarter",
+  "Exploring for future planning",
+] as const;
+
 export default function DemoRequestForm({
   action = "https://formspree.io/f/mzdjyodg",
   redirectUrl = `${siteConfig.url}/request-demo/success`,
@@ -73,98 +101,156 @@ export default function DemoRequestForm({
 
   return (
     <form
-      aria-label="Request private demo form"
+      aria-label="Request consultation form"
       action={action}
       method="POST"
       onSubmit={handleSubmit}
-      className={`rounded-3xl border border-white/10 bg-stc-panel/80 p-6 shadow-2xl shadow-black/20 sm:p-8 ${className}`}
+      className={`rounded-[2rem] border border-white/10 bg-[#060a15]/90 p-6 shadow-2xl shadow-violet-950/20 sm:p-8 ${className}`}
     >
       <input type="hidden" name="_redirect" value={redirectUrl} />
-      <input type="hidden" name="_subject" value="SecureTheCloud demo request" />
+      <input type="hidden" name="_subject" value="SecureTheCloud consultation request" />
       <input type="hidden" name="source" value="securethecloud.dev" />
+      <input type="hidden" name="requestType" value="enterprise consultation" />
 
       <label className="hidden">
         Leave this field empty
         <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" />
       </label>
 
-      <div className="grid gap-5">
-        <InputField
-          label="Full name"
-          name="fullName"
-          required
-          autoComplete="name"
-        />
+      <div>
+        <p className="text-sm font-black uppercase tracking-[0.35em] text-cyan-300">
+          Consultation intake
+        </p>
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-white">
+          Tell us what you are trying to build, secure, govern, or modernize.
+        </h2>
+        <p className="mt-3 text-sm leading-6 text-slate-400">
+          The stronger the context, the better we can route the conversation and prepare for a useful first discussion.
+        </p>
+      </div>
 
-        <InputField
-          label="Work email"
-          name="email"
-          type="email"
-          required
-          autoComplete="email"
-        />
+      <div className="mt-8 grid gap-5">
+        <div className="grid gap-5 sm:grid-cols-2">
+          <InputField
+            label="Full name"
+            name="fullName"
+            required
+            autoComplete="name"
+          />
 
-        <InputField
-          label="Company"
-          name="company"
-          required
-          autoComplete="organization"
-        />
+          <InputField
+            label="Work email"
+            name="email"
+            type="email"
+            required
+            autoComplete="email"
+          />
+        </div>
 
-        <InputField
-          label="Role"
-          name="role"
-          autoComplete="organization-title"
-        />
+        <div className="grid gap-5 sm:grid-cols-2">
+          <InputField
+            label="Company"
+            name="company"
+            required
+            autoComplete="organization"
+          />
+
+          <InputField
+            label="Role / title"
+            name="role"
+            autoComplete="organization-title"
+          />
+        </div>
 
         <label className="grid gap-2 text-sm font-medium text-white/90">
-          <span>What are you evaluating?</span>
+          <span>Your role in the initiative</span>
           <select
             required
-            name="usecase"
+            name="buyerRole"
             defaultValue=""
             className="rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none transition-colors focus:border-cyan-300"
           >
             <option value="" disabled>
-              Select an option
+              Select your role
             </option>
-            <option value="AI agent runtime governance">
-              AI agent runtime governance
+            {buyerRoles.map((role) => (
+              <option key={role} value={role}>
+                {role}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label className="grid gap-2 text-sm font-medium text-white/90">
+          <span>Primary consultation area</span>
+          <select
+            required
+            name="consultationArea"
+            defaultValue=""
+            className="rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none transition-colors focus:border-cyan-300"
+          >
+            <option value="" disabled>
+              Select an area
             </option>
-            <option value="Zero-trust authorization">
-              Zero-trust authorization
+            {consultationAreas.map((area) => (
+              <option key={area} value={area}>
+                {area}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label className="grid gap-2 text-sm font-medium text-white/90">
+          <span>Timeline</span>
+          <select
+            required
+            name="timeline"
+            defaultValue=""
+            className="rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none transition-colors focus:border-cyan-300"
+          >
+            <option value="" disabled>
+              Select timeline
             </option>
-            <option value="Kubernetes runtime governance">
-              Kubernetes runtime governance
-            </option>
-            <option value="Autonomous system control plane">
-              Autonomous system control plane
-            </option>
-            <option value="Cross-domain trust">
-              Cross-domain trust
-            </option>
-            <option value="Other">Other</option>
+            {timelines.map((timeline) => (
+              <option key={timeline} value={timeline}>
+                {timeline}
+              </option>
+            ))}
           </select>
         </label>
 
         <TextAreaField
-          label="Message"
-          name="message"
+          label="What business, security, cloud, AI, or compliance problem are you trying to solve?"
+          name="problemStatement"
           rows={5}
-          placeholder="Tell us what you are evaluating, the environment you operate in, or the architecture review you want."
+          required
+          placeholder="Example: We are deploying GenAI workflows across multiple teams and need secure architecture, governance, controls, and implementation guidance before production."
+        />
+
+        <TextAreaField
+          label="What systems, clouds, AI platforms, or regulated workflows are involved?"
+          name="environmentContext"
+          rows={4}
+          placeholder="Example: AWS, Azure OpenAI, OpenAI API, Anthropic Claude, RAG pipelines, Kubernetes, EHR workflows, sensitive data, SOC 2, HIPAA, or internal governance requirements."
         />
 
         {errorMessage ? (
-          <p className="text-sm text-red-300">{errorMessage}</p>
+          <p className="rounded-2xl border border-red-400/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+            {errorMessage}
+          </p>
         ) : null}
 
         <button
           type="submit"
           disabled={isSubmitting}
-          className="mt-2 inline-flex items-center justify-center rounded-full bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-cyan-200 disabled:cursor-not-allowed disabled:opacity-70"
+          className="mt-2 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-400 px-6 py-3 text-sm font-black text-white shadow-lg shadow-violet-950/30 transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
         >
-          {isSubmitting ? "Submitting..." : "Request Private Demo"}
+          {isSubmitting ? "Submitting..." : "Request Consultation"}
         </button>
+
+        <p className="text-xs leading-5 text-slate-500">
+          By submitting this form, you are requesting a business consultation. Do not include passwords, credentials, protected health information, or highly sensitive production data.
+        </p>
       </div>
     </form>
   );
