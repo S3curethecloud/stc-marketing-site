@@ -2,12 +2,11 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { mainNavItems, productNavItems } from "@/content/navigation";
+import { mainNavItems } from "@/content/navigation";
 import { siteConfig } from "@/content/site";
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
-  const [productOpen, setProductOpen] = useState(false);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -15,7 +14,6 @@ export default function MobileNav() {
     function handleEscape(event: KeyboardEvent) {
       if (event.key === "Escape") {
         setIsOpen(false);
-        setProductOpen(false);
       }
     }
 
@@ -25,10 +23,7 @@ export default function MobileNav() {
 
   const handleClose = () => {
     setIsOpen(false);
-    setProductOpen(false);
   };
-
-  const navItems = mainNavItems.filter((item) => item.label !== "Product");
 
   return (
     <div className="relative lg:hidden">
@@ -38,7 +33,7 @@ export default function MobileNav() {
         aria-expanded={isOpen}
         aria-controls="mobile-nav-panel"
         onClick={() => setIsOpen((open) => !open)}
-        className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-white transition-colors hover:border-cyan-300/40 hover:text-cyan-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/50"
+        className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-white transition-colors hover:border-cyan-300/40 hover:text-cyan-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/50"
       >
         <span className="text-base font-semibold" aria-hidden="true">
           {isOpen ? "×" : "≡"}
@@ -49,44 +44,10 @@ export default function MobileNav() {
       {isOpen ? (
         <div
           id="mobile-nav-panel"
-          className="absolute right-0 top-full z-50 mt-3 w-[min(24rem,calc(100vw-2rem))] rounded-3xl border border-white/10 bg-stc-ink/95 p-4 shadow-2xl shadow-black/30 backdrop-blur-xl"
+          className="absolute right-0 top-full z-50 mt-3 w-[min(24rem,calc(100vw-2rem))] rounded-3xl border border-white/10 bg-[#050816]/95 p-4 shadow-2xl shadow-black/40 backdrop-blur-xl"
         >
           <div className="grid gap-3">
-            <button
-              type="button"
-              aria-expanded={productOpen}
-              onClick={() => setProductOpen((open) => !open)}
-              className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-left text-sm font-semibold text-white transition-colors hover:border-cyan-300/40 hover:text-cyan-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/50"
-            >
-              <span>Product</span>
-              <span className="text-xs" aria-hidden="true">
-                {productOpen ? "▴" : "▾"}
-              </span>
-            </button>
-
-            {productOpen ? (
-              <div className="grid gap-2 rounded-2xl border border-white/10 bg-white/[0.02] p-3">
-                {productNavItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={handleClose}
-                    className="rounded-2xl px-3 py-3 transition-colors hover:bg-white/[0.04] focus:outline-none focus-visible:bg-white/[0.04]"
-                  >
-                    <div className="text-sm font-semibold text-white">
-                      {item.label}
-                    </div>
-                    {item.description ? (
-                      <div className="mt-1 text-xs leading-5 text-stc-muted">
-                        {item.description}
-                      </div>
-                    ) : null}
-                  </Link>
-                ))}
-              </div>
-            ) : null}
-
-            {navItems.map((item) => (
+            {mainNavItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -100,7 +61,7 @@ export default function MobileNav() {
             <Link
               href={siteConfig.primaryCta.href}
               onClick={handleClose}
-              className="mt-2 inline-flex items-center justify-center rounded-full bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-cyan-200"
+              className="mt-2 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-400 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-violet-950/40"
             >
               {siteConfig.primaryCta.label}
             </Link>

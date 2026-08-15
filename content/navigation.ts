@@ -23,43 +23,35 @@ export const productNavItems: NavItem[] = [
       "Enterprise Kubernetes governance, runtime enforcement, workload intelligence, and deterministic policy orchestration.",
   },
   {
-    label: "Agent Sovereignty Zones",
-    href: "/products/agent-sovereignty-zones",
+    label: "Agent Blackbox",
+    href: "/products/agent-blackbox",
     description:
-      "Cross-zone trust verification with signed assertions, trust registries, local policy verification, and dual audit anchoring.",
+      "Audit-ready evidence capture, replay, and investigation for autonomous systems.",
   },
   {
-    label: "SecureTheCloud Trust Intelligence Copilot",
-    href: "/products/copilot-voice-intelligence",
+    label: "RiskDNA",
+    href: "/products/riskdna",
     description:
-      "Ecosystem Evidence & Readiness Navigator for governed explanations, evidence tracing, and authority-boundary review.",
+      "Predictive risk scoring, blast-radius intelligence, and autonomous-action exposure analysis.",
   },
 ];
 
 export const mainNavItems: NavItem[] = [
   {
-    label: "Product",
-    href: "/products",
+    label: "Services",
+    href: "/services",
   },
   {
-    label: "Ecosystem",
-    href: "/ecosystem",
+    label: "Industries",
+    href: "/industries",
   },
   {
-    label: "Platform",
-    href: "/platform",
+    label: "Insights",
+    href: "/insights",
   },
   {
-    label: "Use Cases",
-    href: "/use-cases",
-  },
-  {
-    label: "Architecture",
-    href: "/architecture",
-  },
-  {
-    label: "Security",
-    href: "/security",
+    label: "Careers",
+    href: "/careers",
   },
   {
     label: "Company",
@@ -69,24 +61,32 @@ export const mainNavItems: NavItem[] = [
 
 export const footerNavGroups: FooterNavGroup[] = [
   {
-    title: "Products",
-    items: productNavItems,
+    title: "Services",
+    items: [
+      { label: "AI Security Architecture", href: "/services#ai-security-architecture" },
+      { label: "Cloud Governance", href: "/services#cloud-governance" },
+      { label: "Secure AI Adoption", href: "/services#secure-ai-adoption" },
+      { label: "Governance and Compliance", href: "/services#governance-compliance" },
+      { label: "Executive Advisory", href: "/services#executive-advisory" },
+    ],
   },
   {
-    title: "Control Plane",
+    title: "Industries",
     items: [
-      { label: "Ecosystem", href: "/ecosystem" },
-      { label: "Platform", href: "/platform" },
-      { label: "Architecture", href: "/architecture" },
-      { label: "Security", href: "/security" },
-      { label: "Use Cases", href: "/use-cases" },
+      { label: "Healthcare", href: "/industries#healthcare" },
+      { label: "Financial Services", href: "/industries#financial-services" },
+      { label: "Technology and SaaS", href: "/industries#technology" },
+      { label: "Retail", href: "/industries#retail" },
+      { label: "Regulated Environments", href: "/industries#regulated" },
     ],
   },
   {
     title: "Company",
     items: [
       { label: "Company", href: "/company" },
-      { label: "Request Demo", href: "/request-demo" },
+      { label: "Insights", href: "/insights" },
+      { label: "Careers", href: "/careers" },
+      { label: "Request Consultation", href: "/request-demo" },
     ],
   },
 ];
