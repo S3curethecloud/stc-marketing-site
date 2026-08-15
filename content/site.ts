@@ -1,23 +1,23 @@
 export const siteConfig = {
   name: "SecureTheCloud",
   shortName: "STC",
-  platformName: "Sovereign Agent Control Plane",
-  fullName: "SecureTheCloud Sovereign Agent Control Plane",
-  category: "AI Agent Governance & Runtime Control Platform",
-  suiteName: "Agent Trust, Evidence, and Enforcement Suite",
+  platformName: "Enterprise AI Security Architecture Services",
+  fullName: "SecureTheCloud Enterprise AI Security Architecture Services",
+  category: "Enterprise AI Security, Cloud Governance, and Secure AI Adoption Services",
+  suiteName: "Secure AI Architecture and Governance Services",
   domain: "securethecloud.dev",
   url: "https://securethecloud.dev",
   description:
-    "SecureTheCloud is a sovereign agent control plane for AI-agent governance, runtime enforcement, evidence capture, trust verification, and audit-ready autonomous systems.",
+    "SecureTheCloud helps enterprises design, govern, and implement secure AI systems across cloud, healthcare, regulated, and distributed client environments.",
   tagline:
-    "Prove, govern, and enforce AI-agent behavior before it becomes production risk.",
+    "Lead secure AI adoption with enterprise-grade architecture, governance, and implementation-ready design.",
   primaryCta: {
-    label: "Request Private Demo",
+    label: "Request Consultation",
     href: "/request-demo",
   },
   secondaryCta: {
-    label: "Explore Control Plane",
-    href: "/ecosystem",
+    label: "Explore Services",
+    href: "/services",
   },
   contact: {
     salesEmail: "contact@securethecloud.dev",
@@ -25,7 +25,7 @@ export const siteConfig = {
   },
   social: {
     youtube: "https://www.youtube.com/@SecureTheCloud-dev",
-    linkedin: "https://www.linkedin.com/company/113012228/admin/dashboard/",
+    linkedin: "https://www.linkedin.com/company/113012228/",
     ogImage: "/images/og/stc-og-default.png",
   },
 } as const;
