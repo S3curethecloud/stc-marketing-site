@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Container from "@/components/layout/Container";
+import { careerRoles } from "@/content/careers";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
@@ -8,44 +9,6 @@ export const metadata = buildPageMetadata({
     "Build secure AI systems, cloud governance architectures, and implementation-ready designs for enterprise clients with SecureTheCloud.",
   path: "/careers",
 });
-
-const roles = [
-  {
-    title: "Lead Enterprise AI Security Architect",
-    type: "Future role",
-    body:
-      "Lead client-facing AI security architecture, cloud governance, and secure adoption engagements across distributed enterprise environments.",
-    focus: ["AI security architecture", "Client leadership", "Governance design"],
-  },
-  {
-    title: "Cloud Governance Architect",
-    type: "Future role",
-    body:
-      "Design cloud governance, IAM, platform security, Kubernetes, policy, and secure operating models for AI-enabled environments.",
-    focus: ["Cloud governance", "Platform security", "Implementation design"],
-  },
-  {
-    title: "Secure AI Engineer",
-    type: "Future role",
-    body:
-      "Build and validate secure AI patterns across LLM applications, RAG systems, AI gateways, agentic workflows, and evaluation pipelines.",
-    focus: ["LLM systems", "Secure engineering", "AI workflow controls"],
-  },
-  {
-    title: "AI Governance Consultant",
-    type: "Future role",
-    body:
-      "Translate AI risk, compliance, privacy, and governance needs into practical control models and client-ready operating guidance.",
-    focus: ["AI governance", "Risk mapping", "Stakeholder alignment"],
-  },
-  {
-    title: "Healthcare AI Workflow Architect",
-    type: "Future role",
-    body:
-      "Design secure, reviewable AI workflows for healthcare, behavioral health, telehealth, and regulated clinical operations.",
-    focus: ["Healthcare AI", "Sensitive data", "Human review"],
-  },
-] as const;
 
 const traits = [
   "Client-facing architecture leadership",
@@ -104,10 +67,10 @@ export default function CareersPage() {
               <span className="ml-2" aria-hidden="true">-&gt;</span>
             </a>
             <Link
-              href="/request-demo"
+              href="/careers/join"
               className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-black text-white hover:border-cyan-300/60 hover:text-cyan-200"
             >
-              Start a conversation
+              Join talent network
               <span className="ml-2" aria-hidden="true">-&gt;</span>
             </Link>
           </div>
@@ -167,18 +130,19 @@ export default function CareersPage() {
               Future roles
             </p>
             <h2 className="mt-5 text-4xl font-black tracking-tight text-white sm:text-5xl">
-              We are building the talent bench for enterprise AI security delivery.
+              Click a role. Review the track. Express interest.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-400">
-              These tracks represent the capabilities we are building toward. Formal openings will be posted as hiring plans are finalized.
+              These tracks represent the capabilities we are building toward. Formal openings will be posted as hiring plans are finalized, but serious builders can join the talent network now.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {roles.map((role) => (
-              <article
-                key={role.title}
-                className="rounded-[2rem] border border-white/10 bg-[#060a15] p-6 shadow-2xl shadow-black/10"
+            {careerRoles.map((role) => (
+              <Link
+                key={role.slug}
+                href={`/careers/${role.slug}`}
+                className="group rounded-[2rem] border border-white/10 bg-[#060a15] p-6 shadow-2xl shadow-black/10 transition-transform hover:-translate-y-1 hover:border-cyan-300/30"
               >
                 <p className="text-xs font-black uppercase tracking-[0.35em] text-cyan-300">
                   {role.type}
@@ -186,9 +150,12 @@ export default function CareersPage() {
                 <h3 className="mt-4 text-2xl font-black tracking-tight text-white">
                   {role.title}
                 </h3>
-                <p className="mt-4 text-sm leading-6 text-slate-400">{role.body}</p>
+                <p className="mt-2 text-sm font-bold text-slate-500">
+                  {role.level} | {role.location}
+                </p>
+                <p className="mt-4 text-sm leading-6 text-slate-400">{role.summary}</p>
                 <div className="mt-6 flex flex-wrap gap-2">
-                  {role.focus.map((item) => (
+                  {role.impactAreas.slice(0, 3).map((item) => (
                     <span
                       key={item}
                       className="rounded-full border border-violet-300/20 bg-violet-500/10 px-3 py-1 text-xs font-bold text-violet-200"
@@ -197,7 +164,10 @@ export default function CareersPage() {
                     </span>
                   ))}
                 </div>
-              </article>
+                <p className="mt-8 text-sm font-black text-cyan-300 transition-transform group-hover:translate-x-1">
+                  View role -&gt;
+                </p>
+              </Link>
             ))}
           </div>
         </Container>
@@ -209,19 +179,19 @@ export default function CareersPage() {
             <div className="absolute inset-y-0 right-0 hidden w-[50%] bg-[radial-gradient(circle_at_55%_50%,rgba(56,189,248,0.22),transparent_18rem)] lg:block" />
             <div className="relative max-w-4xl">
               <p className="text-sm font-black uppercase tracking-[0.45em] text-violet-200">
-                Talent conversations
+                Talent network
               </p>
               <h2 className="mt-5 text-4xl font-black tracking-tight text-white sm:text-5xl">
-                Serious builders are welcome early.
+                Don&apos;t see the perfect role yet?
               </h2>
               <p className="mt-5 max-w-3xl text-base leading-7 text-slate-300">
-                If your background combines cybersecurity, cloud architecture, AI systems, governance, and client-facing delivery, start a conversation.
+                Join the SecureTheCloud talent network. Share your background and the kind of work you want to do across AI security, cloud governance, secure engineering, healthcare AI, or client advisory.
               </p>
               <Link
-                href="/request-demo"
+                href="/careers/join"
                 className="mt-8 inline-flex rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-400 px-6 py-3 text-sm font-black text-white"
               >
-                Start a conversation
+                Join talent network
                 <span className="ml-2" aria-hidden="true">-&gt;</span>
               </Link>
             </div>
