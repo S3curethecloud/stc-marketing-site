@@ -4,43 +4,83 @@ import DemoRequestForm from "@/components/forms/DemoRequestForm";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "Request Demo",
+  title: "Request Consultation",
   description:
-    "Request a private SecureTheCloud demo for runtime governance, deterministic authorization, and zero-trust AI agent control.",
+    "Request a SecureTheCloud consultation for enterprise AI security architecture, cloud governance, secure AI adoption, and implementation-ready technical design.",
   path: "/request-demo",
 });
 
+const consultationFit = [
+  "You are planning or scaling GenAI, agentic AI, RAG, or AI-enabled workflows.",
+  "You need secure architecture across cloud, identity, data, governance, and compliance.",
+  "You need help translating vague AI ambition into implementation-ready technical design.",
+  "You operate in healthcare, financial services, SaaS, cloud, or another regulated environment.",
+  "You need executive-ready and engineering-ready artifacts for delivery alignment.",
+] as const;
+
+const whatHappensNext = [
+  {
+    title: "We review your context",
+    body:
+      "We look at your business goal, AI use case, security posture, compliance pressure, and delivery constraints.",
+  },
+  {
+    title: "We identify the right conversation",
+    body:
+      "We route the discussion toward architecture review, cloud governance, secure AI adoption, regulated workflow design, or executive advisory.",
+  },
+  {
+    title: "We shape a practical next step",
+    body:
+      "The goal is not a generic demo. The goal is a serious consultation path that can lead to an assessment, workshop, architecture package, or delivery roadmap.",
+  },
+] as const;
+
 export default function RequestDemoPage() {
   return (
-    <Section>
-      <Container>
+    <Section className="relative overflow-hidden bg-[#030711]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(168,85,247,0.25),transparent_30rem),radial-gradient(circle_at_85%_25%,rgba(56,189,248,0.18),transparent_30rem)]" />
+      <Container className="relative">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">
-              REQUEST PRIVATE DEMO
+            <p className="text-sm font-black uppercase tracking-[0.45em] text-cyan-300">
+              Request Consultation
             </p>
 
-            <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white sm:text-6xl">
-              See deterministic runtime governance in action.
+            <h1 className="mt-6 text-5xl font-black tracking-tight text-white sm:text-7xl">
+              Let&apos;s shape your secure AI architecture.
             </h1>
 
-            <p className="mt-6 text-lg leading-8 text-stc-muted">
-              Walk through how SecureTheCloud governs AI agent execution before
-              action, preserves explicit policy authority, and produces
-              verifiable decision records for enterprise control-plane
-              operations.
+            <p className="mt-6 text-lg leading-8 text-slate-300">
+              Talk with SecureTheCloud about enterprise AI security architecture, cloud governance, secure AI adoption, regulated AI workflows, and implementation-ready technical design.
             </p>
 
-            <div className="mt-8 rounded-3xl border border-white/10 bg-white/[0.03] p-6 text-sm leading-6 text-stc-muted">
-              <p className="font-semibold text-white">
-                Best fit for teams evaluating:
+            <div className="mt-8 rounded-[2rem] border border-white/10 bg-white/[0.035] p-6 text-sm leading-6 text-slate-300">
+              <p className="font-black uppercase tracking-[0.25em] text-violet-300">
+                Best fit when
               </p>
-              <ul className="mt-4 space-y-2">
-                <li>• Runtime authorization for AI agents</li>
-                <li>• Zero-trust control paths for autonomous workflows</li>
-                <li>• Policy-backed governance before execution</li>
-                <li>• Audit-ready decision records and telemetry</li>
+              <ul className="mt-5 grid gap-3">
+                {consultationFit.map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span className="mt-1 text-cyan-300">✦</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
+            </div>
+
+            <div className="mt-6 rounded-[2rem] border border-cyan-300/20 bg-cyan-300/5 p-6">
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-cyan-300">
+                What happens next
+              </p>
+              <div className="mt-5 grid gap-4">
+                {whatHappensNext.map((item) => (
+                  <div key={item.title}>
+                    <h2 className="text-base font-black text-white">{item.title}</h2>
+                    <p className="mt-1 text-sm leading-6 text-slate-400">{item.body}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
