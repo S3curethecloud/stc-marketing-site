@@ -1,18 +1,17 @@
 import Link from "next/link";
 import Container from "@/components/layout/Container";
 import MobileNav from "@/components/layout/MobileNav";
-import NavLink from "@/components/navigation/NavLink";
 import { mainNavItems } from "@/content/navigation";
 import { siteConfig } from "@/content/site";
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#030711]/85 backdrop-blur-2xl">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#02040b]/90 backdrop-blur-2xl">
       <Container className="flex h-[76px] items-center justify-between gap-4">
         <Link
           href="/"
           aria-label={`${siteConfig.name} homepage`}
-          className="flex min-w-0 items-center gap-3 font-semibold text-white transition-colors hover:text-cyan-200"
+          className="flex min-w-0 items-center gap-3 rounded-2xl px-2 py-2 font-semibold text-white transition-colors hover:text-cyan-200"
         >
           <span className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-cyan-300 via-violet-500 to-fuchsia-500 shadow-lg shadow-violet-950/40">
             <span className="absolute inset-0 bg-white/10" />
@@ -20,32 +19,43 @@ export default function SiteHeader() {
               STC
             </span>
           </span>
-          <span className="truncate text-sm font-bold tracking-tight sm:text-base">
+          <span className="truncate text-sm font-black tracking-tight sm:text-base">
             {siteConfig.name}
           </span>
         </Link>
 
         <nav
           aria-label="Primary navigation"
-          className="hidden items-center gap-7 lg:flex"
+          className="hidden items-center gap-8 lg:flex"
         >
           {mainNavItems.map((item) => (
-            <NavLink
+            <Link
               key={item.href}
               href={item.href}
-              label={item.label}
-              className="text-sm font-semibold text-slate-300 hover:text-white"
-            />
+              className="group inline-flex items-center gap-1 text-sm font-bold text-slate-300 transition-colors hover:text-white"
+            >
+              {item.label}
+              <span className="text-xs text-slate-500 transition-colors group-hover:text-cyan-300">
+                v
+              </span>
+            </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-3">
+          <span className="hidden h-10 w-10 items-center justify-center rounded-full border border-white/10 text-slate-300 lg:inline-flex">
+            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-3.5-3.5" />
+            </svg>
+          </span>
+
           <Link
             href={siteConfig.primaryCta.href}
-            className="hidden items-center justify-center rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-400 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-violet-950/40 transition-transform hover:-translate-y-0.5 sm:inline-flex"
+            className="hidden items-center justify-center rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-400 px-5 py-2.5 text-sm font-black text-white shadow-lg shadow-violet-950/40 transition-transform hover:-translate-y-0.5 sm:inline-flex"
           >
             {siteConfig.primaryCta.label}
-            <span className="ml-2" aria-hidden="true">→</span>
+            <span className="ml-2" aria-hidden="true">-&gt;</span>
           </Link>
 
           <MobileNav />

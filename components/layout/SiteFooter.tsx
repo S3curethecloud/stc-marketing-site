@@ -7,34 +7,34 @@ export default function SiteFooter() {
   return (
     <footer className="border-t border-white/10 bg-[#02040b]">
       <Container className="py-14 lg:py-16">
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_2fr_0.9fr]">
+        <div className="grid gap-12 lg:grid-cols-[1.1fr_2fr_0.95fr]">
           <div>
             <Link
               href="/"
               aria-label={`${siteConfig.name} homepage`}
               className="flex items-center gap-3 font-semibold text-white"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-cyan-300 via-violet-500 to-fuchsia-500 text-xs font-black text-white">
+              <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-cyan-300 via-violet-500 to-fuchsia-500 text-xs font-black text-white shadow-lg shadow-violet-950/30">
                 STC
               </span>
-              <span className="text-base font-bold">{siteConfig.name}</span>
+              <span className="text-base font-black">{siteConfig.name}</span>
             </Link>
 
             <p className="mt-5 max-w-md text-sm leading-6 text-slate-400">
               We help enterprises design, govern, and implement secure AI systems that drive innovation with trust.
             </p>
 
-            <div className="mt-6 flex gap-3 text-xs font-semibold text-slate-300">
-              <span className="rounded-full border border-white/10 px-3 py-2">in</span>
-              <span className="rounded-full border border-white/10 px-3 py-2">x</span>
-              <span className="rounded-full border border-white/10 px-3 py-2">yt</span>
+            <div className="mt-6 flex gap-3 text-xs font-black text-slate-300">
+              <span className="rounded-full border border-white/10 px-3 py-2 transition-colors hover:border-cyan-300/40 hover:text-cyan-200">in</span>
+              <span className="rounded-full border border-white/10 px-3 py-2 transition-colors hover:border-cyan-300/40 hover:text-cyan-200">x</span>
+              <span className="rounded-full border border-white/10 px-3 py-2 transition-colors hover:border-cyan-300/40 hover:text-cyan-200">yt</span>
             </div>
           </div>
 
           <div className="grid gap-8 sm:grid-cols-3">
             {footerNavGroups.map((group) => (
               <div key={group.title}>
-                <h3 className="text-sm font-bold text-white">{group.title}</h3>
+                <h3 className="text-sm font-black text-white">{group.title}</h3>
                 <ul className="mt-4 space-y-3 text-sm text-slate-400">
                   {group.items.map((item) => (
                     <li key={item.href}>
@@ -51,17 +51,17 @@ export default function SiteFooter() {
             ))}
           </div>
 
-          <div className="rounded-3xl border border-violet-400/20 bg-white/[0.03] p-6 shadow-2xl shadow-violet-950/20">
-            <h3 className="text-lg font-bold text-white">Let&apos;s build securely.</h3>
+          <div className="rounded-[2rem] border border-violet-400/20 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.16),transparent_12rem)] p-6 shadow-2xl shadow-violet-950/20">
+            <h3 className="text-xl font-black text-white">Let&apos;s build securely.</h3>
             <p className="mt-3 text-sm leading-6 text-slate-400">
               Talk to our experts about your AI security, cloud governance, and secure adoption goals.
             </p>
             <Link
               href={siteConfig.primaryCta.href}
-              className="mt-6 inline-flex rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-400 px-5 py-3 text-sm font-bold text-white"
+              className="mt-6 inline-flex rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-400 px-5 py-3 text-sm font-black text-white"
             >
               Request Consultation
-              <span className="ml-2" aria-hidden="true">→</span>
+              <span className="ml-2" aria-hidden="true">-&gt;</span>
             </Link>
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function SiteFooter() {
           <p>
             © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
-          <p>Privacy Policy · Terms of Use · Cookie Policy</p>
+          <p>Privacy Policy | Terms of Use | Cookie Policy</p>
         </div>
       </Container>
     </footer>
