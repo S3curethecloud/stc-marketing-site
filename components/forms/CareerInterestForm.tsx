@@ -275,7 +275,11 @@ export default function CareerInterestForm({
         </button>
 
         <p className="text-xs leading-5 text-slate-500">
-          This is a talent interest form, not a guarantee of employment. Do not include passwords, credentials, protected health information, or highly sensitive production data.
+          This is a talent interest form, not a guarantee of employment. Resume files are not uploaded through this website form. If a candidate is not selected, resume files are deleted once the decision is final. Do not include passwords, credentials, protected health information, or highly sensitive production data. Review the{" "}
+          <a href="/careers/privacy" className="font-bold text-cyan-300 hover:text-cyan-200">
+            careers privacy notice
+          </a>
+          .
         </p>
       </div>
     </form>
