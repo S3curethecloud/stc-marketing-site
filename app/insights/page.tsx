@@ -15,12 +15,14 @@ const featured = [
     title: "Why secure AI adoption needs architecture before acceleration",
     body:
       "Enterprise AI initiatives fail when strategy, security, cloud governance, data flows, and implementation reality are treated as separate conversations.",
+    href: "/insights",
   },
   {
     type: "Architecture Note",
     title: "Designing secure agentic systems with explicit control boundaries",
     body:
       "Agentic AI requires identity, tool-use governance, authorization paths, prompt-injection defenses, and evidence trails before it can safely operate near enterprise workflows.",
+    href: "/insights",
   },
 ] as const;
 
@@ -31,6 +33,7 @@ const insights = [
     body:
       "How to align AI use cases, policies, controls, and operating decisions before adoption spreads faster than governance can follow.",
     readTime: "6 min read",
+    href: "/insights",
   },
   {
     category: "Architecture",
@@ -38,6 +41,7 @@ const insights = [
     body:
       "A practical view of identity, tool access, runtime boundaries, AI gateways, MCP gateways, and evidence capture.",
     readTime: "7 min read",
+    href: "/insights",
   },
   {
     category: "Cloud Governance",
@@ -45,6 +49,7 @@ const insights = [
     body:
       "How cloud governance, workload identity, secrets, infrastructure, and platform controls shape safe AI-enabled operations.",
     readTime: "5 min read",
+    href: "/insights",
   },
   {
     category: "Regulated AI",
@@ -52,6 +57,7 @@ const insights = [
     body:
       "How healthcare, finance, and high-compliance teams can move from experimentation to governed AI workflows.",
     readTime: "6 min read",
+    href: "/insights",
   },
   {
     category: "Healthcare AI",
@@ -59,6 +65,7 @@ const insights = [
     body:
       "Why human review, sensitive-data handling, workflow boundaries, and audit readiness matter in healthcare AI adoption.",
     readTime: "5 min read",
+    href: "/insights",
   },
   {
     category: "Compliance",
@@ -66,6 +73,7 @@ const insights = [
     body:
       "How NIST AI RMF, OWASP LLM risks, SOC 2 readiness, and internal governance can become practical delivery artifacts.",
     readTime: "8 min read",
+    href: "/insights",
   },
 ] as const;
 
@@ -111,9 +119,11 @@ export default function InsightsPage() {
         <Container>
           <div className="grid gap-6 lg:grid-cols-2">
             {featured.map((item) => (
-              <article
+              <Link
                 key={item.title}
-                className="relative overflow-hidden rounded-[2.25rem] border border-violet-400/20 bg-[linear-gradient(135deg,rgba(88,28,135,0.62),rgba(3,7,17,0.88))] p-8 shadow-2xl shadow-violet-950/30"
+                href={item.href}
+                aria-label={`Read perspective: ${item.title}`}
+                className="group relative overflow-hidden rounded-[2.25rem] border border-violet-400/20 bg-[linear-gradient(135deg,rgba(88,28,135,0.62),rgba(3,7,17,0.88))] p-8 shadow-2xl shadow-violet-950/30 transition-transform hover:-translate-y-1 hover:border-cyan-300/40 focus:outline-none focus:ring-2 focus:ring-cyan-300/70"
               >
                 <div className="absolute inset-y-0 right-0 hidden w-[45%] bg-[radial-gradient(circle_at_60%_50%,rgba(56,189,248,0.24),transparent_16rem)] md:block" />
                 <div className="relative">
@@ -126,9 +136,11 @@ export default function InsightsPage() {
                   <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300">
                     {item.body}
                   </p>
-                  <p className="mt-8 text-sm font-black text-violet-200">Read perspective -&gt;</p>
+                  <p className="mt-8 text-sm font-black text-violet-200 transition-transform group-hover:translate-x-1">
+                    Read perspective -&gt;
+                  </p>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </Container>
@@ -147,9 +159,11 @@ export default function InsightsPage() {
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {insights.map((insight) => (
-              <article
+              <Link
                 key={insight.title}
-                className="group min-h-[310px] rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,0.18),transparent_15rem)] p-6 shadow-2xl shadow-black/10 transition-transform hover:-translate-y-1 hover:border-cyan-300/30"
+                href={insight.href}
+                aria-label={`Read insight: ${insight.title}`}
+                className="group min-h-[310px] rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,0.18),transparent_15rem)] p-6 shadow-2xl shadow-black/10 transition-transform hover:-translate-y-1 hover:border-cyan-300/30 focus:outline-none focus:ring-2 focus:ring-cyan-300/70"
               >
                 <p className="text-xs font-black uppercase tracking-[0.3em] text-cyan-300">
                   {insight.category}
@@ -166,7 +180,7 @@ export default function InsightsPage() {
                     Read -&gt;
                   </span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
 
