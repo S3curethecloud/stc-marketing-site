@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "@/components/layout/Container";
 import { siteConfig } from "@/content/site";
+import { homepageInsightCards } from "@/content/insights";
 
 const valueStrip = [
   {
@@ -100,36 +101,7 @@ const services = [
   },
 ] as const;
 
-const insights = [
-  {
-    eyebrow: "AI Governance",
-    title: "Building AI governance that scales with enterprise ambition",
-    date: "May 12, 2026",
-    href: "/insights",
-    gradient: "from-cyan-400/25 via-blue-500/10 to-violet-500/20",
-  },
-  {
-    eyebrow: "Architecture",
-    title: "Designing secure agent architectures for the enterprise era",
-    date: "April 28, 2026",
-    href: "/insights",
-    gradient: "from-violet-400/25 via-fuchsia-500/10 to-cyan-500/20",
-  },
-  {
-    eyebrow: "Cloud Modernization",
-    title: "Modernizing cloud platforms for secure AI innovation",
-    date: "April 15, 2026",
-    href: "/insights",
-    gradient: "from-blue-400/25 via-cyan-500/10 to-violet-500/20",
-  },
-  {
-    eyebrow: "Regulated AI",
-    title: "Implementing AI in regulated industries with confidence",
-    date: "April 2, 2026",
-    href: "/insights",
-    gradient: "from-fuchsia-400/25 via-violet-500/10 to-cyan-500/20",
-  },
-] as const;
+const insights = homepageInsightCards;
 
 function IconGlyph({ type }: { type: string }) {
   const common =
@@ -468,7 +440,7 @@ export default function HomePage() {
               {insights.map((insight) => (
                 <Link
                   key={insight.title}
-                  href={insight.href}
+                  href={`/insights/${insight.slug}`}
                   aria-label={`Read insight: ${insight.title}`}
                   className={`group min-h-[260px] overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br ${insight.gradient} p-6 shadow-2xl shadow-black/10 transition-transform hover:-translate-y-1 hover:border-cyan-300/40 focus:outline-none focus:ring-2 focus:ring-cyan-300/70`}
                 >
@@ -481,7 +453,7 @@ export default function HomePage() {
                   </h3>
                   <div className="mt-10 h-20 rounded-2xl border border-white/10 bg-[radial-gradient(circle_at_left,rgba(56,189,248,0.25),transparent_12rem)]" />
                   <p className="mt-5 text-xs font-semibold text-slate-300">
-                    {insight.date} - 6 min read
+                    {insight.date} - {insight.readTime}
                   </p>
                   <p className="mt-4 text-sm font-bold text-violet-200 transition-transform group-hover:translate-x-1">
                     Read more -&gt;

@@ -1,5 +1,9 @@
 import Link from "next/link";
 import Container from "@/components/layout/Container";
+import {
+  featuredInsightCards,
+  researchInsightCards,
+} from "@/content/insights";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
@@ -8,74 +12,6 @@ export const metadata = buildPageMetadata({
     "SecureTheCloud perspectives on AI governance, secure agent architecture, cloud governance, healthcare AI, regulated AI adoption, and enterprise AI security.",
   path: "/insights",
 });
-
-const featured = [
-  {
-    type: "Perspective",
-    title: "Why secure AI adoption needs architecture before acceleration",
-    body:
-      "Enterprise AI initiatives fail when strategy, security, cloud governance, data flows, and implementation reality are treated as separate conversations.",
-    href: "/insights",
-  },
-  {
-    type: "Architecture Note",
-    title: "Designing secure agentic systems with explicit control boundaries",
-    body:
-      "Agentic AI requires identity, tool-use governance, authorization paths, prompt-injection defenses, and evidence trails before it can safely operate near enterprise workflows.",
-    href: "/insights",
-  },
-] as const;
-
-const insights = [
-  {
-    category: "AI Governance",
-    title: "Building AI governance that scales with enterprise ambition",
-    body:
-      "How to align AI use cases, policies, controls, and operating decisions before adoption spreads faster than governance can follow.",
-    readTime: "6 min read",
-    href: "/insights",
-  },
-  {
-    category: "Architecture",
-    title: "Designing secure agent architectures for the enterprise era",
-    body:
-      "A practical view of identity, tool access, runtime boundaries, AI gateways, MCP gateways, and evidence capture.",
-    readTime: "7 min read",
-    href: "/insights",
-  },
-  {
-    category: "Cloud Governance",
-    title: "Modernizing cloud platforms for secure AI innovation",
-    body:
-      "How cloud governance, workload identity, secrets, infrastructure, and platform controls shape safe AI-enabled operations.",
-    readTime: "5 min read",
-    href: "/insights",
-  },
-  {
-    category: "Regulated AI",
-    title: "Implementing AI in regulated industries with confidence",
-    body:
-      "How healthcare, finance, and high-compliance teams can move from experimentation to governed AI workflows.",
-    readTime: "6 min read",
-    href: "/insights",
-  },
-  {
-    category: "Healthcare AI",
-    title: "Designing reviewable AI workflows for clinical environments",
-    body:
-      "Why human review, sensitive-data handling, workflow boundaries, and audit readiness matter in healthcare AI adoption.",
-    readTime: "5 min read",
-    href: "/insights",
-  },
-  {
-    category: "Compliance",
-    title: "Turning AI risk frameworks into buildable control architecture",
-    body:
-      "How NIST AI RMF, OWASP LLM risks, SOC 2 readiness, and internal governance can become practical delivery artifacts.",
-    readTime: "8 min read",
-    href: "/insights",
-  },
-] as const;
 
 const themes = [
   "AI governance",
@@ -118,23 +54,23 @@ export default function InsightsPage() {
       <section className="border-b border-white/10 bg-[#050816] py-16 md:py-20">
         <Container>
           <div className="grid gap-6 lg:grid-cols-2">
-            {featured.map((item) => (
+            {featuredInsightCards.map((item) => (
               <Link
                 key={item.title}
-                href={item.href}
+                href={`/insights/${item.slug}`}
                 aria-label={`Read perspective: ${item.title}`}
                 className="group relative overflow-hidden rounded-[2.25rem] border border-violet-400/20 bg-[linear-gradient(135deg,rgba(88,28,135,0.62),rgba(3,7,17,0.88))] p-8 shadow-2xl shadow-violet-950/30 transition-transform hover:-translate-y-1 hover:border-cyan-300/40 focus:outline-none focus:ring-2 focus:ring-cyan-300/70"
               >
                 <div className="absolute inset-y-0 right-0 hidden w-[45%] bg-[radial-gradient(circle_at_60%_50%,rgba(56,189,248,0.24),transparent_16rem)] md:block" />
                 <div className="relative">
                   <p className="text-xs font-black uppercase tracking-[0.35em] text-cyan-300">
-                    {item.type}
+                    {item.eyebrow}
                   </p>
                   <h2 className="mt-5 text-3xl font-black tracking-tight text-white md:text-4xl">
                     {item.title}
                   </h2>
                   <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300">
-                    {item.body}
+                    {item.description}
                   </p>
                   <p className="mt-8 text-sm font-black text-violet-200 transition-transform group-hover:translate-x-1">
                     Read perspective -&gt;
@@ -158,10 +94,10 @@ export default function InsightsPage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {insights.map((insight) => (
+            {researchInsightCards.map((insight) => (
               <Link
                 key={insight.title}
-                href={insight.href}
+                href={`/insights/${insight.slug}`}
                 aria-label={`Read insight: ${insight.title}`}
                 className="group min-h-[310px] rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,0.18),transparent_15rem)] p-6 shadow-2xl shadow-black/10 transition-transform hover:-translate-y-1 hover:border-cyan-300/30 focus:outline-none focus:ring-2 focus:ring-cyan-300/70"
               >
@@ -172,7 +108,7 @@ export default function InsightsPage() {
                   {insight.title}
                 </h3>
                 <p className="mt-4 text-sm leading-6 text-slate-400">
-                  {insight.body}
+                  {insight.description}
                 </p>
                 <div className="mt-8 flex items-center justify-between text-sm font-bold">
                   <span className="text-slate-500">{insight.readTime}</span>
