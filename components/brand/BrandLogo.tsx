@@ -9,28 +9,23 @@ export default function BrandLogo({
 }: BrandLogoProps) {
   const isFooter = variant === "footer";
 
-  const iconFrameClass = isFooter
-    ? "relative h-12 w-12 shrink-0 overflow-hidden"
-    : "relative h-10 w-10 shrink-0 overflow-hidden";
-
-  const iconImageClass = isFooter
-    ? "h-12 w-auto max-w-none object-contain"
-    : "h-10 w-auto max-w-none object-contain";
+  const iconClass = isFooter
+    ? "h-12 w-12 shrink-0 object-contain"
+    : "h-9 w-9 shrink-0 object-contain sm:h-10 sm:w-10";
 
   const wordmarkClass = isFooter
-    ? "text-2xl font-black tracking-[-0.055em] sm:text-[26px]"
-    : "text-lg font-black tracking-[-0.055em] sm:text-xl";
+    ? "text-[23px] font-black leading-none tracking-[-0.05em] sm:text-[26px]"
+    : "text-[17px] font-black leading-none tracking-[-0.05em] sm:text-[19px]";
 
   return (
     <span className="inline-flex flex-col">
-      <span className="inline-flex items-center gap-2.5">
-        <span className={iconFrameClass} aria-hidden="true">
-          <img
-            src="/assets/brand/securethecloud-logo.png"
-            alt=""
-            className={iconImageClass}
-          />
-        </span>
+      <span className="inline-flex items-center gap-2.5 sm:gap-3">
+        <img
+          src="/assets/brand/securethecloud-icon.png"
+          alt=""
+          aria-hidden="true"
+          className={iconClass}
+        />
 
         <span className={wordmarkClass}>
           <span className="text-white">Secure</span>
@@ -40,7 +35,7 @@ export default function BrandLogo({
       </span>
 
       {showTagline ? (
-        <span className="mt-1 block pl-16 text-[10px] font-black uppercase tracking-[0.32em] text-slate-500">
+        <span className="mt-2 block pl-[60px] text-[9px] font-black uppercase tracking-[0.34em] text-slate-500 sm:pl-[60px] sm:text-[10px]">
           Secure | Govern | Enable
         </span>
       ) : null}
