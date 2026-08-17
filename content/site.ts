@@ -25,8 +25,7 @@ export const siteConfig = {
   },
   social: {
     youtube: "https://www.youtube.com/@SecureTheCloud-dev",
-    linkedin: "https://www.linkedin.com/company/securethecloud-dev/?viewAsMember=true",
-    x: "https://x.com/s3curethecloud",
+    linkedin: "https://www.linkedin.com/company/113012228/",
     ogImage: "/images/og/stc-og-default.png",
   },
 } as const;
