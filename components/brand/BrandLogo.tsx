@@ -10,8 +10,8 @@ export default function BrandLogo({
   const isFooter = variant === "footer";
 
   const iconFrameClass = isFooter
-    ? "relative h-12 w-14 shrink-0 overflow-hidden"
-    : "relative h-10 w-12 shrink-0 overflow-hidden";
+    ? "relative h-12 w-12 shrink-0 overflow-hidden"
+    : "relative h-10 w-10 shrink-0 overflow-hidden";
 
   const iconImageClass = isFooter
     ? "h-12 w-auto max-w-none object-contain"
