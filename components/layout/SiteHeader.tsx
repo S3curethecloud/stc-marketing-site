@@ -11,17 +11,13 @@ export default function SiteHeader() {
         <Link
           href="/"
           aria-label={`${siteConfig.name} homepage`}
-          className="flex min-w-0 items-center gap-3 rounded-2xl px-2 py-2 font-semibold text-white transition-colors hover:text-cyan-200"
+          className="flex min-w-0 items-center rounded-2xl px-2 py-2 transition-opacity hover:opacity-90"
         >
-          <span className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-cyan-300 via-violet-500 to-fuchsia-500 shadow-lg shadow-violet-950/40">
-            <span className="absolute inset-0 bg-white/10" />
-            <span className="relative text-xs font-black tracking-tight text-white">
-              STC
-            </span>
-          </span>
-          <span className="truncate text-sm font-black tracking-tight sm:text-base">
-            {siteConfig.name}
-          </span>
+          <img
+            src="/securethecloud-logo-lockup.png"
+            alt={siteConfig.name}
+            className="h-12 w-auto max-w-[220px] object-contain sm:max-w-[260px]"
+          />
         </Link>
 
         <nav

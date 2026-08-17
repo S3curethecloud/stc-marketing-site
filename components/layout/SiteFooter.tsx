@@ -12,12 +12,13 @@ export default function SiteFooter() {
             <Link
               href="/"
               aria-label={`${siteConfig.name} homepage`}
-              className="flex items-center gap-3 font-semibold text-white"
+              className="inline-flex items-center transition-opacity hover:opacity-90"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-cyan-300 via-violet-500 to-fuchsia-500 text-xs font-black text-white shadow-lg shadow-violet-950/30">
-                STC
-              </span>
-              <span className="text-base font-black">{siteConfig.name}</span>
+              <img
+                src="/securethecloud-logo-lockup.png"
+                alt={siteConfig.name}
+                className="h-14 w-auto max-w-[260px] object-contain"
+              />
             </Link>
 
             <p className="mt-5 max-w-md text-sm leading-6 text-slate-400">
@@ -25,9 +26,33 @@ export default function SiteFooter() {
             </p>
 
             <div className="mt-6 flex gap-3 text-xs font-black text-slate-300">
-              <span className="rounded-full border border-white/10 px-3 py-2 transition-colors hover:border-cyan-300/40 hover:text-cyan-200">in</span>
-              <span className="rounded-full border border-white/10 px-3 py-2 transition-colors hover:border-cyan-300/40 hover:text-cyan-200">x</span>
-              <span className="rounded-full border border-white/10 px-3 py-2 transition-colors hover:border-cyan-300/40 hover:text-cyan-200">yt</span>
+              <a
+                href={siteConfig.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="SecureTheCloud on LinkedIn"
+                className="rounded-full border border-white/10 px-3 py-2 transition-colors hover:border-cyan-300/40 hover:text-cyan-200"
+              >
+                in
+              </a>
+              <a
+                href={siteConfig.social.x}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="SecureTheCloud on X"
+                className="rounded-full border border-white/10 px-3 py-2 transition-colors hover:border-cyan-300/40 hover:text-cyan-200"
+              >
+                x
+              </a>
+              <a
+                href={siteConfig.social.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="SecureTheCloud on YouTube"
+                className="rounded-full border border-white/10 px-3 py-2 transition-colors hover:border-cyan-300/40 hover:text-cyan-200"
+              >
+                yt
+              </a>
             </div>
           </div>
 
