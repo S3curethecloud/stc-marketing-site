@@ -13,11 +13,13 @@ export default function SiteHeader() {
           aria-label={`${siteConfig.name} homepage`}
           className="flex min-w-0 shrink-0 items-center rounded-2xl px-2 py-2 transition-opacity hover:opacity-90"
         >
-          <img
-            src="/assets/brand/securethecloud-logo.png"
-            alt={siteConfig.name}
-            className="h-16 w-auto max-w-[260px] object-contain sm:max-w-[320px] lg:max-w-[360px]"
-          />
+          <span className="block h-12 w-[220px] overflow-hidden sm:w-[260px] lg:w-[285px]">
+            <img
+              src="/assets/brand/securethecloud-logo.png"
+              alt={siteConfig.name}
+              className="h-16 w-auto max-w-none -translate-y-1 object-contain"
+            />
+          </span>
         </Link>
 
         <nav
