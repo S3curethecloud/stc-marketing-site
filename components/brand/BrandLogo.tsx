@@ -17,6 +17,10 @@ export default function BrandLogo({
     ? "whitespace-nowrap text-[22px] font-black leading-none tracking-[-0.045em] sm:text-[25px]"
     : "whitespace-nowrap text-[16px] font-black leading-none tracking-[-0.045em] sm:text-[18px] xl:text-[19px]";
 
+  const taglineClass = isFooter
+    ? "mt-2 block pl-[52px] text-[9px] font-black uppercase tracking-[0.28em] text-slate-500 sm:pl-[58px] sm:text-[10px] sm:tracking-[0.32em]"
+    : "mt-1 block pl-10 text-[7px] font-black uppercase tracking-[0.24em] text-slate-500 sm:pl-[46px] sm:text-[8px] xl:pl-[52px] xl:tracking-[0.28em]";
+
   return (
     <span className="inline-flex min-w-0 flex-col">
       <span className="inline-flex min-w-0 items-center gap-2 sm:gap-2.5 xl:gap-3">
@@ -35,9 +39,7 @@ export default function BrandLogo({
       </span>
 
       {showTagline ? (
-        <span className="mt-2 block pl-[52px] text-[9px] font-black uppercase tracking-[0.28em] text-slate-500 sm:pl-[58px] sm:text-[10px] sm:tracking-[0.32em]">
-          Secure | Govern | Enable
-        </span>
+        <span className={taglineClass}>Secure | Govern | Enable</span>
       ) : null}
     </span>
   );

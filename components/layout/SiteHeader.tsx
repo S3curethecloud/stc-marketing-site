@@ -8,13 +8,13 @@ import { siteConfig } from "@/content/site";
 export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#02040b]/90 backdrop-blur-2xl">
-      <Container className="flex h-[80px] items-center justify-between gap-3 sm:h-[84px] lg:gap-5 xl:h-[88px]">
+      <Container className="flex h-[88px] items-center justify-between gap-3 sm:h-[92px] lg:gap-5 xl:h-[96px]">
         <Link
           href="/"
           aria-label={`${siteConfig.name} homepage`}
           className="flex min-w-0 shrink-0 items-center rounded-xl px-1.5 py-2 transition-opacity hover:opacity-90 sm:px-2"
         >
-          <BrandLogo variant="header" />
+          <BrandLogo variant="header" showTagline />
         </Link>
 
         <nav
