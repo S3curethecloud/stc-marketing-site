@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrandLogo from "@/components/brand/BrandLogo";
 import { footerNavGroups } from "@/content/navigation";
 import { siteConfig } from "@/content/site";
 import Container from "@/components/layout/Container";
@@ -14,13 +15,7 @@ export default function SiteFooter() {
               aria-label={`${siteConfig.name} homepage`}
               className="inline-flex transition-opacity hover:opacity-90"
             >
-              <span className="block h-12 w-[310px] overflow-hidden sm:w-[340px]">
-                <img
-                  src="/assets/brand/securethecloud-logo.png"
-                  alt={siteConfig.name}
-                  className="h-20 w-auto max-w-none -translate-y-3 object-contain"
-                />
-              </span>
+              <BrandLogo variant="footer" showTagline />
             </Link>
 
             <p className="mt-5 max-w-md text-sm leading-6 text-slate-400">
