@@ -14,11 +14,11 @@ export default function SiteFooter() {
               aria-label={`${siteConfig.name} homepage`}
               className="inline-flex transition-opacity hover:opacity-90"
             >
-              <span className="block h-16 w-[310px] overflow-hidden sm:w-[340px]">
+              <span className="block h-12 w-[310px] overflow-hidden sm:w-[340px]">
                 <img
                   src="/assets/brand/securethecloud-logo.png"
                   alt={siteConfig.name}
-                  className="h-20 w-auto max-w-none -translate-y-1 object-contain"
+                  className="h-20 w-auto max-w-none -translate-y-3 object-contain"
                 />
               </span>
             </Link>
