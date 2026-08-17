@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 108" role="img" aria-labelledby="title desc">
+  <title id="title">SecureTheCloud</title>
+  <desc id="desc">SecureTheCloud cloud and shield emblem</desc>
+  <defs>
+    <linearGradient id="blue" x1="16" y1="18" x2="78" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00A7FF"/>
+      <stop offset="1" stop-color="#0052CC"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="72" y1="34" x2="104" y2="96" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFC21A"/>
+      <stop offset="1" stop-color="#FF8A00"/>
+    </linearGradient>
+  </defs>
+  <path d="M28 84H19C9 84 2 76 2 66c0-9 6-17 15-19 3-16 16-27 32-27 13 0 25 8 30 20 3-1 6-2 10-2 17 0 31 13 31 30 0 9-4 16-10 22H95" fill="none" stroke="url(#blue)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M60 37 31 49v22l24 12v-15L43 62l17-7V37Z" fill="url(#blue)"/>
+  <path d="M60 37 88 49v20H73V58l-13-5V37Z" fill="url(#gold)"/>
+  <path d="M31 72c4 18 15 29 29 35V77L46 70l-15 2Z" fill="url(#blue)"/>
+  <path d="M60 107c15-7 25-18 28-36H73v18c-4 5-8 8-13 11v7Z" fill="url(#gold)"/>
+  <path d="M60 37v70" stroke="#07111F" stroke-width="2" opacity=".65"/>
+  <path d="M60 37 31 49v22l29 15 28-15V49L60 37Z" fill="none" stroke="#DCEBFF" stroke-opacity=".32" stroke-width="1.5"/>
+</svg>
