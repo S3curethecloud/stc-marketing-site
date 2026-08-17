@@ -12,12 +12,13 @@ export default function SiteFooter() {
             <Link
               href="/"
               aria-label={`${siteConfig.name} homepage`}
-              className="flex items-center gap-3 font-semibold text-white"
+              className="inline-flex transition-opacity hover:opacity-90"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-cyan-300 via-violet-500 to-fuchsia-500 text-xs font-black text-white shadow-lg shadow-violet-950/30">
-                STC
-              </span>
-              <span className="text-base font-black">{siteConfig.name}</span>
+              <img
+                src="/assets/brand/securethecloud-logo.png"
+                alt={siteConfig.name}
+                className="h-auto w-full max-w-[320px] object-contain"
+              />
             </Link>
 
             <p className="mt-5 max-w-md text-sm leading-6 text-slate-400">
@@ -68,7 +69,7 @@ export default function SiteFooter() {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
           <p>Privacy Policy | Terms of Use | Cookie Policy</p>
         </div>
