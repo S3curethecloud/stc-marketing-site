@@ -7,16 +7,16 @@ import { siteConfig } from "@/content/site";
 export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#02040b]/90 backdrop-blur-2xl">
-      <Container className="flex h-[76px] items-center justify-between gap-4">
+      <Container className="flex h-[88px] items-center justify-between gap-4">
         <Link
           href="/"
           aria-label={`${siteConfig.name} homepage`}
-          className="flex min-w-0 items-center rounded-2xl px-2 py-2 transition-opacity hover:opacity-90"
+          className="flex min-w-0 shrink-0 items-center rounded-2xl px-2 py-2 transition-opacity hover:opacity-90"
         >
           <img
             src="/assets/brand/securethecloud-logo.png"
             alt={siteConfig.name}
-            className="h-12 w-auto max-w-[220px] object-contain sm:max-w-[260px]"
+            className="h-16 w-auto max-w-[260px] object-contain sm:max-w-[320px] lg:max-w-[360px]"
           />
         </Link>
 
