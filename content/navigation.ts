@@ -50,8 +50,8 @@ export const mainNavItems: NavItem[] = [
     href: "/insights",
   },
   {
-    label: "Careers",
-    href: "/careers",
+    label: "Evidence",
+    href: "/evidence",
   },
   {
     label: "Company",
@@ -84,6 +84,7 @@ export const footerNavGroups: FooterNavGroup[] = [
     title: "Company",
     items: [
       { label: "Company", href: "/company" },
+      { label: "Evidence", href: "/evidence" },
       { label: "Insights", href: "/insights" },
       { label: "Careers", href: "/careers" },
       { label: "Request Consultation", href: "/request-demo" },
