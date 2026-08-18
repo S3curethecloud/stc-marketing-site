@@ -184,28 +184,28 @@ function IconGlyph({ type }: { type: string }) {
 
 function EnterpriseShieldVisual() {
   return (
-    <div className="relative min-h-[360px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#050816] shadow-2xl shadow-cyan-950/30 sm:min-h-[430px] sm:rounded-[2rem] lg:min-h-[500px] lg:rounded-[2.5rem]">
+    <div className="relative min-h-[310px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#050816] shadow-2xl shadow-cyan-950/30 sm:min-h-[430px] sm:rounded-[2rem] lg:min-h-[500px] lg:rounded-[2.5rem]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(168,85,247,0.42),transparent_18rem),radial-gradient(circle_at_70%_50%,rgba(56,189,248,0.2),transparent_22rem),radial-gradient(circle_at_35%_70%,rgba(236,72,153,0.14),transparent_18rem)]" />
-      <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(56,189,248,0.18)_1px,transparent_1px),linear-gradient(90deg,rgba(56,189,248,0.18)_1px,transparent_1px)] [background-size:36px_36px] sm:[background-size:44px_44px]" />
+      <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(56,189,248,0.18)_1px,transparent_1px),linear-gradient(90deg,rgba(56,189,248,0.18)_1px,transparent_1px)] [background-size:32px_32px] sm:[background-size:44px_44px]" />
 
-      <div className="relative grid min-h-[360px] place-items-center p-4 sm:min-h-[430px] sm:p-6 lg:min-h-[500px] lg:p-8">
-        <div className="relative aspect-square w-full max-w-[285px] sm:max-w-[330px] lg:max-w-[340px]">
+      <div className="relative grid min-h-[310px] place-items-center p-3 sm:min-h-[430px] sm:p-6 lg:min-h-[500px] lg:p-8">
+        <div className="relative aspect-square w-full max-w-[245px] sm:max-w-[330px] lg:max-w-[340px]">
           <div className="absolute inset-0 rounded-[2rem] border border-cyan-300/25 bg-white/[0.035] shadow-2xl shadow-cyan-950/40 backdrop-blur-xl sm:rounded-[2.5rem] lg:rounded-[3rem]" />
           <div className="absolute inset-[12%] rounded-[1.75rem] border border-violet-300/25 bg-black/35 backdrop-blur-xl sm:rounded-[2.25rem]" />
           <div className="absolute inset-[26%] rounded-[1.5rem] border border-cyan-300/20 bg-gradient-to-br from-cyan-400/15 via-violet-500/25 to-fuchsia-500/10 shadow-2xl shadow-violet-950/40" />
 
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <svg viewBox="0 0 120 140" className="h-24 w-24 text-cyan-200 drop-shadow-[0_0_24px_rgba(34,211,238,0.45)] sm:h-28 sm:w-28 lg:h-32 lg:w-32" fill="none" stroke="currentColor" strokeWidth="5">
+          <div className="absolute left-1/2 top-[43%] -translate-x-1/2 -translate-y-1/2 sm:top-1/2">
+            <svg viewBox="0 0 120 140" className="h-20 w-20 text-cyan-200 drop-shadow-[0_0_24px_rgba(34,211,238,0.45)] sm:h-28 sm:w-28 lg:h-32 lg:w-32" fill="none" stroke="currentColor" strokeWidth="5">
               <path d="M60 8 18 24v38c0 31 18 55 42 66 24-11 42-35 42-66V24L60 8Z" />
               <path d="M44 75h31a13 13 0 0 0 2-26 20 20 0 0 0-38-4 15 15 0 0 0 5 30Z" />
             </svg>
           </div>
 
-          <div className="absolute inset-x-3 bottom-4 grid gap-2 sm:inset-x-4 sm:bottom-5 sm:grid-cols-2 lg:inset-x-auto lg:-left-12 lg:bottom-auto lg:top-10 lg:w-52 lg:grid-cols-1">
+          <div className="absolute inset-x-2 bottom-3 grid grid-cols-2 gap-1.5 sm:inset-x-4 sm:bottom-5 sm:gap-2 lg:inset-x-auto lg:-left-12 lg:bottom-auto lg:top-10 lg:w-52 lg:grid-cols-1">
             {["AI Gateway", "Cloud Governance", "Policy Controls", "Evidence Architecture"].map((item) => (
               <div
                 key={item}
-                className="flex items-center justify-between rounded-xl border border-white/10 bg-[#10142b]/90 px-3 py-2 text-[10px] font-bold text-white shadow-xl shadow-black/20 backdrop-blur-xl sm:text-xs lg:rounded-2xl lg:px-4 lg:py-3"
+                className="flex items-center justify-between rounded-xl border border-white/10 bg-[#10142b]/90 px-2.5 py-2 text-[9px] font-bold text-white shadow-xl shadow-black/20 backdrop-blur-xl sm:px-3 sm:text-xs lg:rounded-2xl lg:px-4 lg:py-3"
               >
                 <span>{item}</span>
                 <span className="ml-2 h-2 w-2 shrink-0 rounded-full bg-cyan-300 shadow-lg shadow-cyan-300/70" />
@@ -223,20 +223,20 @@ export default function HomePage() {
     <>
       <section className="relative overflow-hidden border-b border-white/10 bg-[#030711]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(168,85,247,0.25),transparent_30rem),radial-gradient(circle_at_85%_25%,rgba(56,189,248,0.20),transparent_32rem),radial-gradient(circle_at_70%_75%,rgba(236,72,153,0.14),transparent_26rem)]" />
-        <Container className="relative py-14 sm:py-20 lg:py-28 xl:py-32">
-          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-14">
+        <Container className="relative py-12 sm:py-20 lg:py-28 xl:py-32">
+          <div className="grid gap-8 sm:gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-14">
             <div>
               <p className="text-xs font-black uppercase tracking-[0.32em] text-cyan-300 sm:text-sm sm:tracking-[0.4em]">
                 Enterprise AI Security Services
               </p>
-              <h1 className="mt-5 max-w-4xl text-[2.55rem] font-black leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-7xl">
-                Lead secure AI adoption with enterprise-grade architecture.
+              <h1 className="mt-4 max-w-4xl text-[2.35rem] font-black leading-[0.98] tracking-tight text-white sm:mt-5 sm:text-6xl lg:text-7xl">
+                Lead secure AI adoption with <span className="whitespace-nowrap">enterprise-grade</span> architecture.
               </h1>
-              <p className="mt-5 max-w-3xl text-base leading-7 text-slate-300 sm:mt-6 sm:text-lg sm:leading-8 lg:text-xl">
+              <p className="mt-4 max-w-3xl text-base leading-7 text-slate-300 sm:mt-6 sm:text-lg sm:leading-8 lg:text-xl">
                 SecureTheCloud helps enterprises design and implement secure AI systems with confidence. We deliver AI security architecture, cloud governance, secure AI adoption, and implementation-ready technical design across distributed client environments.
               </p>
 
-              <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:gap-4">
+              <div className="mt-6 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:gap-4">
                 <Link
                   href={siteConfig.primaryCta.href}
                   className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-400 px-6 py-3 text-sm font-bold text-white shadow-2xl shadow-violet-950/40 transition-transform hover:-translate-y-0.5 sm:w-auto"
@@ -278,7 +278,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="border-b border-white/10 bg-[#030711] py-12 sm:py-16 lg:py-20">
+      <section className="border-b border-white/10 bg-[#030711] py-11 sm:py-16 lg:py-20">
         <Container>
           <div className="max-w-3xl">
             <p className="text-xs font-black uppercase tracking-[0.32em] text-violet-300 sm:text-sm sm:tracking-[0.4em]">
@@ -292,7 +292,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-7 grid gap-3 sm:mt-8 sm:grid-cols-2 sm:gap-4 xl:grid-cols-4">
             {trustPillars.map((pillar) => (
               <div key={pillar.label} className="rounded-[1.75rem] border border-cyan-300/15 bg-white/[0.03] p-5 shadow-2xl shadow-black/10 sm:p-6">
                 <p className="text-xs font-black uppercase tracking-[0.24em] text-cyan-300">{pillar.label}</p>
@@ -302,7 +302,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-7 grid gap-2.5 sm:mt-8 sm:grid-cols-2 sm:gap-3 lg:grid-cols-3">
             {capabilitySignals.map((signal) => (
               <div key={signal} className="rounded-2xl border border-white/10 bg-white/[0.02] px-4 py-3 text-sm font-bold text-slate-300">
                 {signal}
@@ -312,9 +312,9 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="bg-[#030711] py-12 sm:py-16 lg:py-20">
+      <section className="bg-[#030711] py-11 sm:py-16 lg:py-20">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:gap-10">
+          <div className="grid gap-7 lg:grid-cols-[0.75fr_1.25fr] lg:gap-10">
             <div>
               <p className="text-xs font-black uppercase tracking-[0.32em] text-violet-300 sm:text-sm sm:tracking-[0.4em]">
                 What we do
@@ -322,24 +322,24 @@ export default function HomePage() {
               <h2 className="mt-4 text-3xl font-black tracking-tight text-white sm:mt-5 sm:text-5xl">
                 End-to-end services for secure AI transformation.
               </h2>
-              <Link href="/services" className="mt-6 inline-flex min-h-11 items-center text-sm font-bold text-cyan-300 hover:text-cyan-200 sm:mt-8">
+              <Link href="/services" className="mt-5 inline-flex min-h-11 items-center text-sm font-bold text-cyan-300 hover:text-cyan-200 sm:mt-8">
                 View all services <span className="ml-2" aria-hidden="true">-&gt;</span>
               </Link>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 xl:grid-cols-3">
               {services.map((service) => (
                 <Link
                   key={service.title}
                   href={service.href}
-                  className="group rounded-[1.75rem] border border-white/10 bg-white/[0.035] p-5 shadow-2xl shadow-black/10 transition-transform hover:-translate-y-1 hover:border-cyan-300/30 sm:p-6"
+                  className="group rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-4 shadow-2xl shadow-black/10 transition-transform hover:-translate-y-1 hover:border-cyan-300/30 sm:rounded-[1.75rem] sm:p-6"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400 via-violet-500 to-fuchsia-500 text-sm font-black text-white shadow-lg shadow-violet-950/30 sm:h-14 sm:w-14">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400 via-violet-500 to-fuchsia-500 text-sm font-black text-white shadow-lg shadow-violet-950/30 sm:h-14 sm:w-14">
                     {service.number}
                   </div>
-                  <h3 className="mt-5 text-xl font-black tracking-tight text-white sm:mt-6">{service.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-400">{service.body}</p>
-                  <div className="mt-5 text-2xl text-violet-300 transition-transform group-hover:translate-x-1">-&gt;</div>
+                  <h3 className="mt-4 text-xl font-black tracking-tight text-white sm:mt-6">{service.title}</h3>
+                  <p className="mt-2.5 text-sm leading-6 text-slate-400 sm:mt-3">{service.body}</p>
+                  <div className="mt-4 text-2xl text-violet-300 transition-transform group-hover:translate-x-1 sm:mt-5">-&gt;</div>
                 </Link>
               ))}
             </div>
@@ -347,11 +347,11 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="bg-[#030711] pb-12 sm:pb-16 lg:pb-20">
+      <section className="bg-[#030711] pb-11 sm:pb-16 lg:pb-20">
         <Container>
           <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.035] shadow-2xl shadow-violet-950/20 sm:rounded-[2.25rem]">
             <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
-              <div className="p-6 sm:p-8 lg:p-10">
+              <div className="p-5 sm:p-8 lg:p-10">
                 <p className="text-xs font-black uppercase tracking-[0.32em] text-violet-300 sm:text-sm sm:tracking-[0.4em]">
                   Delivery pattern
                 </p>
@@ -366,12 +366,15 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              <div className="grid gap-px border-t border-white/10 bg-white/10 sm:grid-cols-2 lg:border-l lg:border-t-0">
-                {deliveryPattern.map((step) => (
-                  <div key={step.number} className="bg-[#080b15] p-6 sm:p-7">
+              <div className="relative grid gap-px border-t border-white/10 bg-white/10 sm:grid-cols-2 lg:border-l lg:border-t-0">
+                {deliveryPattern.map((step, index) => (
+                  <div key={step.number} className="relative bg-[#080b15] p-5 sm:p-7">
+                    {index < deliveryPattern.length - 1 ? (
+                      <span className="absolute bottom-[-1px] left-5 h-px w-8 bg-cyan-300/40 sm:hidden" aria-hidden="true" />
+                    ) : null}
                     <div className="text-sm font-black text-cyan-300">{step.number}</div>
-                    <h3 className="mt-3 text-xl font-black text-white">{step.title}</h3>
-                    <p className="mt-3 text-sm leading-6 text-slate-400">{step.body}</p>
+                    <h3 className="mt-2.5 text-xl font-black text-white sm:mt-3">{step.title}</h3>
+                    <p className="mt-2.5 text-sm leading-6 text-slate-400 sm:mt-3">{step.body}</p>
                   </div>
                 ))}
               </div>
@@ -380,30 +383,30 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.02] py-12 sm:py-16 lg:py-20">
+      <section className="border-y border-white/10 bg-white/[0.02] py-11 sm:py-16 lg:py-20">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:gap-10">
+          <div className="grid gap-7 lg:grid-cols-[0.75fr_1.25fr] lg:gap-10">
             <div>
               <p className="text-xs font-black uppercase tracking-[0.32em] text-violet-300 sm:text-sm sm:tracking-[0.4em]">What we think</p>
               <h2 className="mt-4 text-3xl font-black tracking-tight text-white sm:mt-5 sm:text-4xl">
                 Insights for leaders building secure AI organizations.
               </h2>
-              <Link href="/insights" className="mt-6 inline-flex min-h-11 items-center text-sm font-bold text-cyan-300 sm:mt-8">
+              <Link href="/insights" className="mt-5 inline-flex min-h-11 items-center text-sm font-bold text-cyan-300 sm:mt-8">
                 Visit all insights <span className="ml-2" aria-hidden="true">-&gt;</span>
               </Link>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 xl:grid-cols-4">
               {insights.map((insight) => (
                 <Link
                   key={insight.title}
                   href={`/insights/${insight.slug}`}
                   aria-label={`Read insight: ${insight.title}`}
-                  className={`group min-h-[230px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-gradient-to-br ${insight.gradient} p-5 shadow-2xl shadow-black/10 transition-transform hover:-translate-y-1 hover:border-cyan-300/40 focus:outline-none focus:ring-2 focus:ring-cyan-300/70 sm:min-h-[260px] sm:p-6`}
+                  className={`group min-h-[190px] overflow-hidden rounded-[1.5rem] border border-white/10 bg-gradient-to-br ${insight.gradient} p-5 shadow-2xl shadow-black/10 transition-transform hover:-translate-y-1 hover:border-cyan-300/40 focus:outline-none focus:ring-2 focus:ring-cyan-300/70 sm:min-h-[260px] sm:rounded-[1.75rem] sm:p-6`}
                 >
                   <p className="text-xs font-black uppercase tracking-[0.22em] text-cyan-300">{insight.eyebrow}</p>
                   <h3 className="mt-4 text-lg font-black leading-6 text-white sm:mt-5">{insight.title}</h3>
-                  <div className="mt-7 h-14 rounded-2xl border border-white/10 bg-[radial-gradient(circle_at_left,rgba(56,189,248,0.25),transparent_12rem)] sm:mt-10 sm:h-20" />
+                  <div className="mt-10 hidden h-20 rounded-2xl border border-white/10 bg-[radial-gradient(circle_at_left,rgba(56,189,248,0.25),transparent_12rem)] sm:block" />
                   <p className="mt-4 text-xs font-semibold text-slate-300">{insight.date} - {insight.readTime}</p>
                   <p className="mt-3 text-sm font-bold text-violet-200 transition-transform group-hover:translate-x-1">Read more -&gt;</p>
                 </Link>
@@ -413,9 +416,9 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="bg-[#030711] py-12 sm:py-16 lg:py-20">
+      <section className="bg-[#030711] py-11 sm:py-16 lg:py-20">
         <Container>
-          <div className="relative overflow-hidden rounded-[1.75rem] border border-violet-400/20 bg-[linear-gradient(135deg,rgba(88,28,135,0.62),rgba(3,7,17,0.88))] p-6 shadow-2xl shadow-violet-950/30 sm:rounded-[2.25rem] sm:p-8 lg:p-10">
+          <div className="relative overflow-hidden rounded-[1.75rem] border border-violet-400/20 bg-[linear-gradient(135deg,rgba(88,28,135,0.62),rgba(3,7,17,0.88))] p-5 shadow-2xl shadow-violet-950/30 sm:rounded-[2.25rem] sm:p-8 lg:p-10">
             <div className="absolute inset-y-0 right-0 hidden w-[55%] bg-[radial-gradient(circle_at_60%_50%,rgba(56,189,248,0.28),transparent_18rem),linear-gradient(90deg,transparent,rgba(59,130,246,0.14))] lg:block" />
             <div className="relative max-w-3xl">
               <p className="text-xs font-black uppercase tracking-[0.32em] text-violet-200 sm:text-sm sm:tracking-[0.4em]">Careers</p>
