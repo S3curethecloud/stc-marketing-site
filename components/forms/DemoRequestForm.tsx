@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import InputField from "@/components/forms/InputField";
 import TextAreaField from "@/components/forms/TextAreaField";
 import { siteConfig } from "@/content/site";
@@ -10,6 +10,8 @@ type DemoRequestFormProps = {
   action?: string;
   redirectUrl?: string;
   className?: string;
+  defaultConsultationArea?: string;
+  sourceContext?: string;
 };
 
 type FormspreeError = {
@@ -23,7 +25,7 @@ type FormspreeResponse = {
   errors?: FormspreeError[];
 };
 
-const consultationAreas = [
+export const consultationAreas = [
   "Enterprise AI security architecture",
   "Cloud governance and platform security",
   "Secure AI adoption strategy",
@@ -32,6 +34,15 @@ const consultationAreas = [
   "Executive advisory and solution design",
   "Other / not sure yet",
 ] as const;
+
+const focusAreaMap: Record<string, (typeof consultationAreas)[number]> = {
+  "ai-security": "Enterprise AI security architecture",
+  "cloud-governance": "Cloud governance and platform security",
+  "secure-adoption": "Secure AI adoption strategy",
+  governance: "AI governance and compliance readiness",
+  regulated: "Healthcare or regulated AI workflows",
+  advisory: "Executive advisory and solution design",
+};
 
 const buyerRoles = [
   "CISO / security leader",
@@ -55,10 +66,25 @@ export default function DemoRequestForm({
   action = "https://formspree.io/f/mzdjyodg",
   redirectUrl = `${siteConfig.url}/request-demo/success`,
   className = "",
+  defaultConsultationArea = "",
+  sourceContext = "",
 }: DemoRequestFormProps) {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+
+  const focus = searchParams.get("focus") ?? "";
+  const from = searchParams.get("from") ?? "";
+  const queryArea = focusAreaMap[focus] ?? "";
+  const candidateArea = defaultConsultationArea || queryArea;
+  const validDefaultArea = consultationAreas.includes(
+    candidateArea as (typeof consultationAreas)[number]
+  )
+    ? candidateArea
+    : "";
+  const resolvedSourceContext =
+    sourceContext || (from ? `securethecloud.dev:${from}` : "securethecloud.dev");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -113,7 +139,7 @@ export default function DemoRequestForm({
     >
       <input type="hidden" name="_redirect" value={redirectUrl} />
       <input type="hidden" name="_subject" value="SecureTheCloud consultation request" />
-      <input type="hidden" name="source" value="securethecloud.dev" />
+      <input type="hidden" name="source" value={resolvedSourceContext} />
       <input type="hidden" name="requestType" value="enterprise consultation" />
 
       <label className="sr-only">
@@ -131,39 +157,22 @@ export default function DemoRequestForm({
         <p id="consultation-form-guidance" className="mt-3 text-sm leading-6 text-slate-400">
           Give us enough context to prepare for a useful architecture conversation. Fields marked with an asterisk are required.
         </p>
+        {validDefaultArea ? (
+          <p className="mt-3 border-l-2 border-cyan-300/60 pl-3 text-sm leading-6 text-slate-300">
+            We carried forward the consultation context from the page you were reviewing. You can change the selected area below.
+          </p>
+        ) : null}
       </div>
 
       <div className="mt-7 grid gap-5 sm:mt-8">
         <div className="grid gap-5 sm:grid-cols-2">
-          <InputField
-            label="Full name"
-            name="fullName"
-            required
-            autoComplete="name"
-          />
-
-          <InputField
-            label="Work email"
-            name="email"
-            type="email"
-            required
-            autoComplete="email"
-          />
+          <InputField label="Full name" name="fullName" required autoComplete="name" />
+          <InputField label="Work email" name="email" type="email" required autoComplete="email" />
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2">
-          <InputField
-            label="Company"
-            name="company"
-            required
-            autoComplete="organization"
-          />
-
-          <InputField
-            label="Role / title"
-            name="role"
-            autoComplete="organization-title"
-          />
+          <InputField label="Company" name="company" required autoComplete="organization" />
+          <InputField label="Role / title" name="role" autoComplete="organization-title" />
         </div>
 
         <label className="grid gap-2 text-sm font-medium text-white/90">
@@ -171,21 +180,9 @@ export default function DemoRequestForm({
             Your role in the initiative
             <span className="ml-1 text-cyan-300" aria-hidden="true">*</span>
           </span>
-          <select
-            required
-            aria-required="true"
-            name="buyerRole"
-            defaultValue=""
-            className={selectClassName}
-          >
-            <option value="" disabled>
-              Select your role
-            </option>
-            {buyerRoles.map((role) => (
-              <option key={role} value={role}>
-                {role}
-              </option>
-            ))}
+          <select required aria-required="true" name="buyerRole" defaultValue="" className={selectClassName}>
+            <option value="" disabled>Select your role</option>
+            {buyerRoles.map((role) => <option key={role} value={role}>{role}</option>)}
           </select>
         </label>
 
@@ -194,21 +191,9 @@ export default function DemoRequestForm({
             Primary consultation area
             <span className="ml-1 text-cyan-300" aria-hidden="true">*</span>
           </span>
-          <select
-            required
-            aria-required="true"
-            name="consultationArea"
-            defaultValue=""
-            className={selectClassName}
-          >
-            <option value="" disabled>
-              Select an area
-            </option>
-            {consultationAreas.map((area) => (
-              <option key={area} value={area}>
-                {area}
-              </option>
-            ))}
+          <select required aria-required="true" name="consultationArea" defaultValue={validDefaultArea} className={selectClassName}>
+            <option value="" disabled>Select an area</option>
+            {consultationAreas.map((area) => <option key={area} value={area}>{area}</option>)}
           </select>
         </label>
 
@@ -217,21 +202,9 @@ export default function DemoRequestForm({
             Timeline
             <span className="ml-1 text-cyan-300" aria-hidden="true">*</span>
           </span>
-          <select
-            required
-            aria-required="true"
-            name="timeline"
-            defaultValue=""
-            className={selectClassName}
-          >
-            <option value="" disabled>
-              Select timeline
-            </option>
-            {timelines.map((timeline) => (
-              <option key={timeline} value={timeline}>
-                {timeline}
-              </option>
-            ))}
+          <select required aria-required="true" name="timeline" defaultValue="" className={selectClassName}>
+            <option value="" disabled>Select timeline</option>
+            {timelines.map((timeline) => <option key={timeline} value={timeline}>{timeline}</option>)}
           </select>
         </label>
 
@@ -252,9 +225,7 @@ export default function DemoRequestForm({
 
         <div aria-live="polite" aria-atomic="true">
           {errorMessage ? (
-            <p role="alert" className="rounded-2xl border border-red-400/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">
-              {errorMessage}
-            </p>
+            <p role="alert" className="rounded-2xl border border-red-400/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">{errorMessage}</p>
           ) : isSubmitting ? (
             <p className="text-sm text-slate-400">Submitting your consultation request...</p>
           ) : null}
@@ -270,9 +241,7 @@ export default function DemoRequestForm({
 
         <div className="rounded-2xl border border-white/10 bg-white/[0.025] px-4 py-3 text-xs leading-5 text-slate-400">
           <p className="font-bold text-slate-300">Share business context, not sensitive data.</p>
-          <p className="mt-1">
-            Do not include passwords, credentials, protected health information, customer records, secrets, or highly sensitive production data. We only need enough context to prepare for the first conversation.
-          </p>
+          <p className="mt-1">Do not include passwords, credentials, protected health information, customer records, secrets, or highly sensitive production data. We only need enough context to prepare for the first conversation.</p>
         </div>
       </div>
     </form>
