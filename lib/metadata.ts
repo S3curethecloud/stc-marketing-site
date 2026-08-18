@@ -12,7 +12,7 @@ export function buildPageMetadata({
   title,
   description,
   path = "",
-  image = "/images/og/stc-og-default.png",
+  image = siteConfig.social.ogImage,
 }: MetadataInput): Metadata {
   const url = `${siteConfig.url}${path}`;
   const imageUrl = image.startsWith("http")
@@ -34,8 +34,6 @@ export function buildPageMetadata({
       images: [
         {
           url: imageUrl,
-          width: 1200,
-          height: 630,
           alt: `${title} | ${siteConfig.name}`,
         },
       ],

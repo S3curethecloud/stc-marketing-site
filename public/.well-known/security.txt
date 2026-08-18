@@ -1,0 +1,4 @@
+Contact: mailto:contact@securethecloud.dev
+Expires: 2027-08-17T23:59:59Z
+Canonical: https://securethecloud.dev/.well-known/security.txt
+Preferred-Languages: en
