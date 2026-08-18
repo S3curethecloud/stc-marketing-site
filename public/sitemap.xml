@@ -4,6 +4,7 @@
   <url><loc>https://securethecloud.dev/services</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
   <url><loc>https://securethecloud.dev/industries</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://securethecloud.dev/insights</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://securethecloud.dev/evidence</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://securethecloud.dev/company</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://securethecloud.dev/careers</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://securethecloud.dev/request-demo</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
