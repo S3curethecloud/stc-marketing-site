@@ -11,6 +11,8 @@ const inter = Inter({
   display: "swap",
 });
 
+const socialImageUrl = `${siteConfig.url}${siteConfig.social.ogImage}`;
+
 export const metadata: Metadata = {
   title: {
     default: `${siteConfig.name} | ${siteConfig.tagline}`,
@@ -27,6 +29,18 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     siteName: siteConfig.name,
     type: "website",
+    images: [
+      {
+        url: socialImageUrl,
+        alt: `${siteConfig.name} enterprise AI security architecture`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [socialImageUrl],
   },
   robots: {
     index: true,
