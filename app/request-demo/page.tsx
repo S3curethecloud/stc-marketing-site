@@ -27,11 +27,11 @@ const whatHappensNext = [
 export default function RequestDemoPage() {
   return (
     <>
-      <section className="border-b border-white/10 bg-[#030711]">
+      <section className="overflow-x-clip border-b border-white/10 bg-[#030711]">
         <Container className="py-16 sm:py-20 lg:py-24">
-          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-14">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">
+          <div className="grid min-w-0 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-14">
+            <div className="min-w-0">
+              <p className="max-w-full text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300 sm:tracking-[0.28em]">
                 Request architecture consultation
               </p>
               <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">
@@ -52,9 +52,9 @@ export default function RequestDemoPage() {
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">What happens after you submit</p>
                 <div className="mt-5 divide-y divide-white/10 border-y border-white/10">
                   {whatHappensNext.map((item) => (
-                    <div key={item.number} className="grid grid-cols-[2.5rem_1fr] gap-3 py-5">
+                    <div key={item.number} className="grid min-w-0 grid-cols-[2.5rem_minmax(0,1fr)] gap-3 py-5">
                       <div className="text-sm font-semibold text-cyan-300">{item.number}</div>
-                      <div><h2 className="text-base font-semibold text-white">{item.title}</h2><p className="mt-1 text-sm leading-6 text-slate-400">{item.body}</p></div>
+                      <div className="min-w-0"><h2 className="text-base font-semibold text-white">{item.title}</h2><p className="mt-1 text-sm leading-6 text-slate-400">{item.body}</p></div>
                     </div>
                   ))}
                 </div>
@@ -66,9 +66,11 @@ export default function RequestDemoPage() {
               </div>
             </div>
 
-            <Suspense fallback={<div className="min-h-[48rem] border border-white/10 bg-[#060a15]/90" aria-hidden="true" />}>
-              <DemoRequestForm />
-            </Suspense>
+            <div className="min-w-0">
+              <Suspense fallback={<div className="min-h-[48rem] min-w-0 border border-white/10 bg-[#060a15]/90" aria-hidden="true" />}>
+                <DemoRequestForm />
+              </Suspense>
+            </div>
           </div>
         </Container>
       </section>
