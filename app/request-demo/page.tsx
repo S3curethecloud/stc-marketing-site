@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import DemoRequestForm from "@/components/forms/DemoRequestForm";
@@ -24,24 +25,7 @@ const whatHappensNext = [
   { number: "03", title: "Practical next step", body: "If there is a fit, the conversation can lead to an assessment, architecture workshop, design package, governance engagement, or delivery roadmap." },
 ] as const;
 
-const focusMap: Record<string, { area: string; label: string }> = {
-  "ai-security": { area: "Enterprise AI security architecture", label: "Enterprise AI security architecture" },
-  "cloud-governance": { area: "Cloud governance and platform security", label: "Cloud governance and platform security" },
-  "secure-adoption": { area: "Secure AI adoption strategy", label: "Secure AI adoption strategy" },
-  governance: { area: "AI governance and compliance readiness", label: "AI governance and compliance readiness" },
-  regulated: { area: "Healthcare or regulated AI workflows", label: "Healthcare or regulated AI workflows" },
-  advisory: { area: "Executive advisory and solution design", label: "Executive advisory and solution design" },
-};
-
-type RequestDemoPageProps = {
-  searchParams: Promise<{ focus?: string; from?: string }>;
-};
-
-export default async function RequestDemoPage({ searchParams }: RequestDemoPageProps) {
-  const { focus, from } = await searchParams;
-  const context = focus ? focusMap[focus] : undefined;
-  const sourceContext = from ? `securethecloud.dev:${from}` : "securethecloud.dev";
-
+export default function RequestDemoPage() {
   return (
     <Section className="relative overflow-hidden bg-[#030711]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(168,85,247,0.25),transparent_30rem),radial-gradient(circle_at_85%_25%,rgba(56,189,248,0.18),transparent_30rem)]" />
@@ -51,13 +35,6 @@ export default async function RequestDemoPage({ searchParams }: RequestDemoPageP
             <p className="text-xs font-black uppercase tracking-[0.32em] text-cyan-300 sm:text-sm sm:tracking-[0.45em]">Request Architecture Consultation</p>
             <h1 className="mt-5 text-4xl font-black tracking-tight text-white sm:mt-6 sm:text-6xl lg:text-7xl">Bring the AI initiative. We&apos;ll help make the architecture defensible.</h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:mt-6 sm:text-lg sm:leading-8">Use this intake when you need serious help with enterprise AI security architecture, cloud governance, secure AI adoption, regulated workflows, or implementation-ready technical design.</p>
-
-            {context ? (
-              <div className="mt-6 border-l-2 border-cyan-300/60 pl-4 text-sm leading-6 text-slate-300">
-                <p className="font-semibold text-white">Consultation context carried forward</p>
-                <p className="mt-1">You arrived from a {context.label.toLowerCase()} path, so that area is preselected in the intake. You can change it at any time.</p>
-              </div>
-            ) : null}
 
             <div className="mt-7 rounded-[1.75rem] border border-white/10 bg-white/[0.035] p-5 text-sm leading-6 text-slate-300 sm:mt-8 sm:rounded-[2rem] sm:p-6">
               <p className="font-black uppercase tracking-[0.25em] text-violet-300">Best fit when</p>
@@ -84,7 +61,9 @@ export default async function RequestDemoPage({ searchParams }: RequestDemoPageP
             </div>
           </div>
 
-          <DemoRequestForm defaultConsultationArea={context?.area} sourceContext={sourceContext} />
+          <Suspense fallback={<div className="min-h-[48rem] rounded-[2rem] border border-white/10 bg-[#060a15]/90" aria-hidden="true" />}>
+            <DemoRequestForm />
+          </Suspense>
         </div>
       </Container>
     </Section>
