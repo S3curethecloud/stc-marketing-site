@@ -45,47 +45,33 @@ const culture = [
 export default function CareersPage() {
   return (
     <>
-      <section className="relative overflow-hidden border-b border-white/10 bg-[#030711]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(168,85,247,0.25),transparent_30rem),radial-gradient(circle_at_85%_25%,rgba(56,189,248,0.18),transparent_30rem)]" />
-        <Container className="relative py-24 md:py-28">
-          <p className="text-sm font-black uppercase tracking-[0.45em] text-cyan-300">
-            Careers
-          </p>
-          <h1 className="mt-6 max-w-5xl text-5xl font-black tracking-tight text-white md:text-7xl">
-            Build what&apos;s next. Secure AI systems that power the enterprise era.
-          </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-            We are building a team of architects, engineers, strategists, and advisors who can help clients turn AI ambition into governed implementation.
-          </p>
-
-          <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="#roles"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-400 px-6 py-3 text-sm font-black text-white shadow-2xl shadow-violet-950/40"
-            >
-              Explore future roles
-              <span className="ml-2" aria-hidden="true">-&gt;</span>
-            </a>
-            <Link
-              href="/careers/join"
-              className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-black text-white hover:border-cyan-300/60 hover:text-cyan-200"
-            >
-              Join talent network
-              <span className="ml-2" aria-hidden="true">-&gt;</span>
-            </Link>
+      <section className="border-b border-white/10 bg-[#030711]">
+        <Container className="py-16 sm:py-20 lg:py-24">
+          <div className="max-w-5xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Careers</p>
+            <h1 className="mt-5 text-[2.4rem] font-semibold leading-[1.05] tracking-[-0.035em] text-white sm:text-5xl lg:text-[3.5rem]">
+              Build what is next. Secure AI systems that power the enterprise era.
+            </h1>
+            <p className="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
+              We are building a team of architects, engineers, strategists, and advisors who can help clients turn AI ambition into governed implementation.
+            </p>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <a href="#roles" className="inline-flex min-h-12 items-center justify-center bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 hover:bg-cyan-200">
+                Explore future roles -&gt;
+              </a>
+              <Link href="/careers/join" className="inline-flex min-h-12 items-center text-sm font-semibold text-slate-200 hover:text-cyan-200">
+                Join talent network -&gt;
+              </Link>
+            </div>
           </div>
         </Container>
       </section>
 
-      <section className="border-b border-white/10 bg-[#050816] py-14 md:py-16">
-        <Container>
-          <div className="grid gap-3 md:grid-cols-3 lg:grid-cols-6">
+      <section className="border-b border-white/10 bg-[#050816]">
+        <Container className="py-12 sm:py-14 lg:py-16">
+          <div className="grid gap-x-8 gap-y-0 sm:grid-cols-2 lg:grid-cols-3">
             {traits.map((trait) => (
-              <div
-                key={trait}
-                className="rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-4 text-sm font-bold text-slate-200"
-              >
-                <span className="mr-2 text-cyan-300">✦</span>
+              <div key={trait} className="border-t border-white/10 py-4 text-sm font-medium text-slate-300">
                 {trait}
               </div>
             ))}
@@ -93,14 +79,12 @@ export default function CareersPage() {
         </Container>
       </section>
 
-      <section className="bg-[#030711] py-16 md:py-24">
-        <Container>
-          <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
+      <section className="border-b border-white/10 bg-[#030711]">
+        <Container className="py-14 sm:py-16 lg:py-20">
+          <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
             <div>
-              <p className="text-sm font-black uppercase tracking-[0.45em] text-violet-300">
-                How we work
-              </p>
-              <h2 className="mt-5 text-4xl font-black tracking-tight text-white">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">How we work</p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">
                 Client trust, technical depth, and implementation focus.
               </h2>
               <p className="mt-5 text-base leading-7 text-slate-400">
@@ -108,13 +92,10 @@ export default function CareersPage() {
               </p>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-0 border-t border-white/10 md:grid-cols-2">
               {culture.map((item) => (
-                <article
-                  key={item.title}
-                  className="rounded-[2rem] border border-white/10 bg-white/[0.035] p-6"
-                >
-                  <h3 className="text-2xl font-black text-white">{item.title}</h3>
+                <article key={item.title} className="border-b border-white/10 py-6 md:px-6">
+                  <h3 className="text-lg font-semibold text-white">{item.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-slate-400">{item.body}</p>
                 </article>
               ))}
@@ -123,79 +104,57 @@ export default function CareersPage() {
         </Container>
       </section>
 
-      <section id="roles" className="border-y border-white/10 bg-white/[0.02] py-16 md:py-24">
-        <Container>
-          <div className="mb-12 max-w-3xl">
-            <p className="text-sm font-black uppercase tracking-[0.45em] text-violet-300">
-              Future roles
-            </p>
-            <h2 className="mt-5 text-4xl font-black tracking-tight text-white sm:text-5xl">
-              Click a role. Review the track. Express interest.
+      <section id="roles" className="border-b border-white/10 bg-[#050816]">
+        <Container className="py-14 sm:py-16 lg:py-20">
+          <div className="mb-10 max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Future roles</p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">
+              Review the track. Understand the work. Express interest.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-400">
               These tracks represent the capabilities we are building toward. Formal openings will be posted as hiring plans are finalized, but serious builders can join the talent network now.
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="border-t border-white/10">
             {careerRoles.map((role) => (
               <Link
                 key={role.slug}
                 href={`/careers/${role.slug}`}
-                className="group rounded-[2rem] border border-white/10 bg-[#060a15] p-6 shadow-2xl shadow-black/10 transition-transform hover:-translate-y-1 hover:border-cyan-300/30"
+                className="group block border-b border-white/10 py-8 hover:bg-white/[0.015]"
               >
-                <p className="text-xs font-black uppercase tracking-[0.35em] text-cyan-300">
-                  {role.type}
-                </p>
-                <h3 className="mt-4 text-2xl font-black tracking-tight text-white">
-                  {role.title}
-                </h3>
-                <p className="mt-2 text-sm font-bold text-slate-500">
-                  {role.level} | {role.location}
-                </p>
-                <p className="mt-4 text-sm leading-6 text-slate-400">{role.summary}</p>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {role.impactAreas.slice(0, 3).map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full border border-violet-300/20 bg-violet-500/10 px-3 py-1 text-xs font-bold text-violet-200"
-                    >
-                      {item}
-                    </span>
-                  ))}
+                <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-12">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">{role.type}</p>
+                    <h3 className="mt-3 text-2xl font-semibold tracking-[-0.02em] text-white">{role.title}</h3>
+                    <p className="mt-2 text-sm font-medium text-slate-500">{role.level} | {role.location}</p>
+                  </div>
+                  <div>
+                    <p className="text-sm leading-6 text-slate-400">{role.summary}</p>
+                    <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs font-medium text-slate-400">
+                      {role.impactAreas.slice(0, 3).map((item) => <span key={item}>{item}</span>)}
+                    </div>
+                    <p className="mt-5 text-sm font-semibold text-cyan-300 group-hover:text-cyan-200">View role -&gt;</p>
+                  </div>
                 </div>
-                <p className="mt-8 text-sm font-black text-cyan-300 transition-transform group-hover:translate-x-1">
-                  View role -&gt;
-                </p>
               </Link>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className="bg-[#030711] py-16 md:py-24">
-        <Container>
-          <div className="relative overflow-hidden rounded-[2.25rem] border border-violet-400/20 bg-[linear-gradient(135deg,rgba(88,28,135,0.62),rgba(3,7,17,0.88))] p-8 shadow-2xl shadow-violet-950/30 md:p-10">
-            <div className="absolute inset-y-0 right-0 hidden w-[50%] bg-[radial-gradient(circle_at_55%_50%,rgba(56,189,248,0.22),transparent_18rem)] lg:block" />
-            <div className="relative max-w-4xl">
-              <p className="text-sm font-black uppercase tracking-[0.45em] text-violet-200">
-                Talent network
-              </p>
-              <h2 className="mt-5 text-4xl font-black tracking-tight text-white sm:text-5xl">
-                Don&apos;t see the perfect role yet?
-              </h2>
-              <p className="mt-5 max-w-3xl text-base leading-7 text-slate-300">
-                Join the SecureTheCloud talent network. Share your background and the kind of work you want to do across AI security, cloud governance, secure engineering, healthcare AI, or client advisory.
-              </p>
-              <Link
-                href="/careers/join"
-                className="mt-8 inline-flex rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-400 px-6 py-3 text-sm font-black text-white"
-              >
-                Join talent network
-                <span className="ml-2" aria-hidden="true">-&gt;</span>
-              </Link>
-            </div>
+      <section className="bg-[#030711]">
+        <Container className="grid gap-8 py-14 sm:py-16 lg:grid-cols-[1fr_auto] lg:items-end lg:py-20">
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">Talent network</p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">Do not see the right role yet?</h2>
+            <p className="mt-4 text-base leading-7 text-slate-400">
+              Join the SecureTheCloud talent network. Share your background and the kind of work you want to do across AI security, cloud governance, secure engineering, healthcare AI, or client advisory.
+            </p>
           </div>
+          <Link href="/careers/join" className="inline-flex min-h-12 items-center justify-center bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 hover:bg-cyan-200">
+            Join talent network -&gt;
+          </Link>
         </Container>
       </section>
     </>
