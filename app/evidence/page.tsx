@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/metadata";
 export const metadata = buildPageMetadata({
   title: "Evidence and Public Engineering",
   description:
-    "Reference architectures, technical labs, governance evidence, and public engineering work that show how SecureTheCloud approaches enterprise AI security, governance, RAG, evaluation, and implementation readiness.",
+    "Reference architectures, control models, governance evidence, and public engineering work that show how SecureTheCloud approaches enterprise AI security, governance, RAG, evaluation, and implementation readiness.",
   path: "/evidence",
 });
 
@@ -18,10 +18,11 @@ const proofModel = [
 
 const publicEngineering = [
   {
-    title: "Enterprise Secure RAG Lab",
+    title: "Enterprise Secure RAG Reference Architecture",
+    sourceName: "Enterprise Secure RAG Lab",
     href: "https://github.com/S3curethecloud/enterprise-rag-lab",
     type: "Secure RAG architecture",
-    proof: "A phase-gated tutorial covering RAG foundations through secure ingestion, identity and ACL-aware retrieval, context assembly, response security, evaluation, red teaming, and architecture review.",
+    proof: "A phase-gated architecture covering RAG foundations through secure ingestion, identity and ACL-aware retrieval, context assembly, response security, evaluation, red teaming, and architecture review.",
     principle: "Retrieval authorization occurs before enterprise context reaches the model; the LLM does not grant data access.",
     artifacts: ["phase-gated architecture documentation", "secure ingestion and retrieval patterns", "identity and ACL-aware retrieval design", "evaluation and red-team exercises"],
     serviceHref: "/services#ai-security-architecture",
@@ -29,7 +30,8 @@ const publicEngineering = [
     focus: "ai-security",
   },
   {
-    title: "Enterprise AI Integration Architecture Lab",
+    title: "Enterprise AI Integration Reference Architecture",
+    sourceName: "Enterprise AI Integration Architecture Lab",
     href: "https://github.com/S3curethecloud/enterprise-ai-integration-architecture-lab",
     type: "Enterprise integration architecture",
     proof: "A modular architecture for connecting AI to identity, policy repositories, CMDB-style systems, ticketing workflows, audit services, observability, and approval paths without bypassing enterprise controls.",
@@ -40,7 +42,8 @@ const publicEngineering = [
     focus: "ai-security",
   },
   {
-    title: "Agent Evaluation Platform",
+    title: "Agent Evaluation and Assurance Platform",
+    sourceName: "Agent Evaluation Platform",
     href: "https://github.com/S3curethecloud/securethecloud-agent-eval-platform",
     type: "Agent evaluation and assurance",
     proof: "A lab-safe evaluation platform for benchmark-driven testing of agent safety, factuality, RAG grounding, tool-call correctness, policy compliance, regression risk, and evidence readiness.",
@@ -51,10 +54,11 @@ const publicEngineering = [
     focus: "governance",
   },
   {
-    title: "Multi-Framework Agentic Evidence Lab",
+    title: "Multi-Framework Agentic Evidence Architecture",
+    sourceName: "Multi-Framework Agentic Evidence Lab",
     href: "https://github.com/S3curethecloud/multi-framework-agentic-evidence-lab",
     type: "Governed agent framework comparison",
-    proof: "A completed comparison lab that implements the same evidence-review workflow across LangChain, LangGraph, Strands, and ADK-style tracks using shared schemas, traces, benchmark questions, and a scoring rubric.",
+    proof: "A completed comparison architecture that implements the same evidence-review workflow across LangChain, LangGraph, Strands, and ADK-style tracks using shared schemas, traces, benchmark questions, and a scoring rubric.",
     principle: "Framework choices should be evaluated against the same governed workflow and evidence model rather than compared through unrelated demos.",
     artifacts: ["shared report and trace schemas", "human-review routing", "cross-framework benchmark execution", "comparison matrix and verification evidence"],
     serviceHref: "/services#governance-compliance",
@@ -63,6 +67,7 @@ const publicEngineering = [
   },
   {
     title: "SecureTheCloud Doctrine Control Plane",
+    sourceName: "SecureTheCloud Doctrine Control Plane",
     href: "https://github.com/S3curethecloud/securethecloud-doctrine-control-plane",
     type: "Governance doctrine and traceability",
     proof: "A canonical governance repository for portfolio doctrine, authority boundaries, machine-readable contracts, product packaging rules, change traceability, and SOC 2-aligned readiness evidence.",
@@ -89,7 +94,7 @@ export default function EvidencePage() {
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-500"><Link href="/" className="hover:text-white">Home</Link><span>/</span><span className="text-slate-300">Evidence</span></nav>
           <p className="mt-8 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Evidence and public engineering</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">Show the architecture. Show the controls. Show the evidence.</h1>
-          <p className="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">SecureTheCloud builds credibility through reviewable technical work: reference architectures, control models, implementation artifacts, evaluation harnesses, governance evidence, and public repositories that expose how the systems are designed.</p>
+          <p className="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">SecureTheCloud builds credibility through reviewable technical work: reference architectures, control models, implementation artifacts, evaluation harnesses, governance evidence, and public engineering that exposes how the systems are designed.</p>
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-400"><span>No invented customer logos</span><span>No fabricated metrics</span><span>No certification overclaims</span><span>Evidence before claims</span></div>
         </Container>
       </section>
@@ -104,9 +109,9 @@ export default function EvidencePage() {
 
       <section className="border-b border-white/10 bg-[#030711]">
         <Container className="py-14 sm:py-16 lg:py-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Selected public engineering</p>
-          <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">Repositories that expose the design and verification path.</h2>
-          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-400">These repositories are selected because their architecture boundaries, artifacts, and verification approach can be inspected directly. They are evidence of technical method, not substitutes for customer references.</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Selected architecture evidence</p>
+          <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">Technical proof translated for enterprise review.</h2>
+          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-400">Each evidence record explains the architecture problem, principle, and inspectable artifacts inside the SecureTheCloud buyer journey. Public source repositories remain available as supporting provenance for technical evaluators who want to go deeper.</p>
           <div className="mt-10 divide-y divide-white/10 border-y border-white/10">
             {publicEngineering.map((item) => (
               <article key={item.title} className="py-9 sm:py-10">
@@ -115,10 +120,13 @@ export default function EvidencePage() {
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">{item.type}</p>
                     <h3 className="mt-3 text-2xl font-semibold tracking-tight text-white">{item.title}</h3>
                     <div className="mt-5 flex flex-col gap-3 text-sm font-semibold">
-                      <a href={item.href} target="_blank" rel="noreferrer" className="text-cyan-300 hover:text-cyan-200">Inspect repository -&gt;</a>
-                      <Link href={item.serviceHref} className="text-slate-300 hover:text-white">Related service -&gt;</Link>
-                      <Link href={item.insightHref} className="text-slate-300 hover:text-white">Related architecture note -&gt;</Link>
+                      <Link href={item.serviceHref} className="text-cyan-300 hover:text-cyan-200">Related service -&gt;</Link>
+                      <Link href={item.insightHref} className="text-slate-300 hover:text-white">Read architecture note -&gt;</Link>
                       <Link href={`/request-demo?focus=${item.focus}&from=evidence`} className="text-slate-300 hover:text-white">Discuss this architecture pattern -&gt;</Link>
+                    </div>
+                    <div className="mt-6 border-t border-white/10 pt-4 text-xs leading-5 text-slate-500">
+                      <p>Public source: {item.sourceName}</p>
+                      <a href={item.href} target="_blank" rel="noreferrer" className="mt-2 inline-flex hover:text-slate-300">View public source repository ↗</a>
                     </div>
                   </div>
                   <div className="grid gap-7 md:grid-cols-3">
