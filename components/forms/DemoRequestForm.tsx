@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import InputField from "@/components/forms/InputField";
 import TextAreaField from "@/components/forms/TextAreaField";
 import { siteConfig } from "@/content/site";
@@ -35,6 +35,15 @@ export const consultationAreas = [
   "Other / not sure yet",
 ] as const;
 
+const focusAreaMap: Record<string, (typeof consultationAreas)[number]> = {
+  "ai-security": "Enterprise AI security architecture",
+  "cloud-governance": "Cloud governance and platform security",
+  "secure-adoption": "Secure AI adoption strategy",
+  governance: "AI governance and compliance readiness",
+  regulated: "Healthcare or regulated AI workflows",
+  advisory: "Executive advisory and solution design",
+};
+
 const buyerRoles = [
   "CISO / security leader",
   "CTO / CIO / technology executive",
@@ -58,17 +67,24 @@ export default function DemoRequestForm({
   redirectUrl = `${siteConfig.url}/request-demo/success`,
   className = "",
   defaultConsultationArea = "",
-  sourceContext = "securethecloud.dev",
+  sourceContext = "",
 }: DemoRequestFormProps) {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
+  const focus = searchParams.get("focus") ?? "";
+  const from = searchParams.get("from") ?? "";
+  const queryArea = focusAreaMap[focus] ?? "";
+  const candidateArea = defaultConsultationArea || queryArea;
   const validDefaultArea = consultationAreas.includes(
-    defaultConsultationArea as (typeof consultationAreas)[number]
+    candidateArea as (typeof consultationAreas)[number]
   )
-    ? defaultConsultationArea
+    ? candidateArea
     : "";
+  const resolvedSourceContext =
+    sourceContext || (from ? `securethecloud.dev:${from}` : "securethecloud.dev");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -123,7 +139,7 @@ export default function DemoRequestForm({
     >
       <input type="hidden" name="_redirect" value={redirectUrl} />
       <input type="hidden" name="_subject" value="SecureTheCloud consultation request" />
-      <input type="hidden" name="source" value={sourceContext} />
+      <input type="hidden" name="source" value={resolvedSourceContext} />
       <input type="hidden" name="requestType" value="enterprise consultation" />
 
       <label className="sr-only">
@@ -141,6 +157,11 @@ export default function DemoRequestForm({
         <p id="consultation-form-guidance" className="mt-3 text-sm leading-6 text-slate-400">
           Give us enough context to prepare for a useful architecture conversation. Fields marked with an asterisk are required.
         </p>
+        {validDefaultArea ? (
+          <p className="mt-3 border-l-2 border-cyan-300/60 pl-3 text-sm leading-6 text-slate-300">
+            We carried forward the consultation context from the page you were reviewing. You can change the selected area below.
+          </p>
+        ) : null}
       </div>
 
       <div className="mt-7 grid gap-5 sm:mt-8">
