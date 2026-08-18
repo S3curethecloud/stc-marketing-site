@@ -4,145 +4,158 @@ import {
   featuredInsightCards,
   researchInsightCards,
 } from "@/content/insights";
+import { getInsightAuthority } from "@/content/insight-authority";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
   title: "Insights",
   description:
-    "SecureTheCloud perspectives on AI governance, secure agent architecture, cloud governance, healthcare AI, regulated AI adoption, and enterprise AI security.",
+    "SecureTheCloud architecture briefs on AI governance, secure agent systems, cloud controls, regulated AI, healthcare workflows, and implementation-ready control design.",
   path: "/insights",
 });
 
-const themes = [
-  "AI governance",
-  "Secure agent architecture",
-  "Cloud governance",
-  "Healthcare AI",
-  "Regulated workflows",
-  "Implementation readiness",
+const taxonomy = [
+  "Enterprise architecture briefs",
+  "Agentic AI architecture notes",
+  "AI governance operating models",
+  "Cloud platform architecture",
+  "Regulated AI architecture",
+  "Control architecture",
 ] as const;
 
 export default function InsightsPage() {
   return (
     <>
-      <section className="relative overflow-hidden border-b border-white/10 bg-[#030711]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(168,85,247,0.25),transparent_30rem),radial-gradient(circle_at_85%_25%,rgba(56,189,248,0.18),transparent_30rem)]" />
-        <Container className="relative py-24 md:py-28">
-          <p className="text-sm font-black uppercase tracking-[0.45em] text-cyan-300">
-            Insights
+      <section className="border-b border-white/10 bg-[#030711]">
+        <Container className="py-16 sm:py-20 lg:py-24">
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">
+            Technical authority
           </p>
-          <h1 className="mt-6 max-w-5xl text-5xl font-black tracking-tight text-white md:text-7xl">
-            What we think about secure AI transformation.
+          <h1 className="mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">
+            Architecture thinking for leaders and engineers building governed AI systems.
           </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-            Perspectives for leaders building secure AI organizations across cloud, compliance, healthcare, and enterprise operations.
+          <p className="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
+            These notes focus on design decisions, control implications, evidence, implementation artifacts, and the operating tradeoffs behind secure enterprise AI.
           </p>
-
-          <div className="mt-9 flex flex-wrap gap-3">
-            {themes.map((theme) => (
-              <span
-                key={theme}
-                className="rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-bold text-cyan-100"
-              >
-                {theme}
-              </span>
+          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-400">
+            {taxonomy.map((item) => (
+              <span key={item}>{item}</span>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className="border-b border-white/10 bg-[#050816] py-16 md:py-20">
-        <Container>
-          <div className="grid gap-6 lg:grid-cols-2">
-            {featuredInsightCards.map((item) => (
-              <Link
-                key={item.title}
-                href={`/insights/${item.slug}`}
-                aria-label={`Read perspective: ${item.title}`}
-                className="group relative overflow-hidden rounded-[2.25rem] border border-violet-400/20 bg-[linear-gradient(135deg,rgba(88,28,135,0.62),rgba(3,7,17,0.88))] p-8 shadow-2xl shadow-violet-950/30 transition-transform hover:-translate-y-1 hover:border-cyan-300/40 focus:outline-none focus:ring-2 focus:ring-cyan-300/70"
-              >
-                <div className="absolute inset-y-0 right-0 hidden w-[45%] bg-[radial-gradient(circle_at_60%_50%,rgba(56,189,248,0.24),transparent_16rem)] md:block" />
-                <div className="relative">
-                  <p className="text-xs font-black uppercase tracking-[0.35em] text-cyan-300">
-                    {item.eyebrow}
-                  </p>
-                  <h2 className="mt-5 text-3xl font-black tracking-tight text-white md:text-4xl">
-                    {item.title}
-                  </h2>
-                  <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300">
-                    {item.description}
-                  </p>
-                  <p className="mt-8 text-sm font-black text-violet-200 transition-transform group-hover:translate-x-1">
-                    Read perspective -&gt;
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="bg-[#030711] py-16 md:py-24">
-        <Container>
-          <div className="mb-12 max-w-3xl">
-            <p className="text-sm font-black uppercase tracking-[0.45em] text-violet-300">
-              Research and perspectives
+      <section className="border-b border-white/10 bg-[#050816]">
+        <Container className="py-14 sm:py-16 lg:py-20">
+          <div className="mb-10 max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-violet-300">
+              Featured architecture notes
             </p>
-            <h2 className="mt-5 text-4xl font-black tracking-tight text-white sm:text-5xl">
-              Guidance for leaders moving AI from experimentation to governed implementation.
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              Start with the decision, not the technology trend.
             </h2>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {researchInsightCards.map((insight) => (
-              <Link
-                key={insight.title}
-                href={`/insights/${insight.slug}`}
-                aria-label={`Read insight: ${insight.title}`}
-                className="group min-h-[310px] rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,0.18),transparent_15rem)] p-6 shadow-2xl shadow-black/10 transition-transform hover:-translate-y-1 hover:border-cyan-300/30 focus:outline-none focus:ring-2 focus:ring-cyan-300/70"
-              >
-                <p className="text-xs font-black uppercase tracking-[0.3em] text-cyan-300">
-                  {insight.category}
-                </p>
-                <h3 className="mt-5 text-2xl font-black leading-8 text-white">
-                  {insight.title}
-                </h3>
-                <p className="mt-4 text-sm leading-6 text-slate-400">
-                  {insight.description}
-                </p>
-                <div className="mt-8 flex items-center justify-between text-sm font-bold">
-                  <span className="text-slate-500">{insight.readTime}</span>
-                  <span className="text-violet-300 transition-transform group-hover:translate-x-1">
-                    Read -&gt;
-                  </span>
-                </div>
-              </Link>
-            ))}
+          <div className="grid gap-10 lg:grid-cols-2">
+            {featuredInsightCards.map((item) => {
+              const authority = getInsightAuthority(item.slug);
+              return (
+                <article key={item.slug} className="border-t border-white/15 pt-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
+                    {authority?.taxonomy ?? item.eyebrow}
+                  </p>
+                  <h3 className="mt-3 text-2xl font-semibold leading-8 text-white sm:text-3xl sm:leading-9">
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 text-base leading-7 text-slate-400">{item.description}</p>
+                  {authority ? (
+                    <div className="mt-6 grid gap-5 sm:grid-cols-2">
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Problem</p>
+                        <p className="mt-2 text-sm leading-6 text-slate-300">{authority.problem}</p>
+                      </div>
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Architecture principle</p>
+                        <p className="mt-2 text-sm leading-6 text-slate-300">{authority.architecturePrinciple}</p>
+                      </div>
+                    </div>
+                  ) : null}
+                  <Link
+                    href={`/insights/${item.slug}`}
+                    className="mt-6 inline-flex text-sm font-semibold text-cyan-300 hover:text-cyan-200"
+                  >
+                    Read architecture note -&gt;
+                  </Link>
+                </article>
+              );
+            })}
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-[#030711]">
+        <Container className="py-14 sm:py-16 lg:py-20">
+          <div className="mb-10 max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">
+              Knowledge base
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              Problem → principle → controls → evidence → implementation.
+            </h2>
           </div>
 
-          <div className="mt-12 rounded-[2.25rem] border border-white/10 bg-white/[0.035] p-8">
-            <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-              <div>
-                <p className="text-sm font-black uppercase tracking-[0.45em] text-violet-300">
-                  Need a custom briefing?
-                </p>
-                <h2 className="mt-5 text-3xl font-black tracking-tight text-white md:text-4xl">
-                  Turn an AI security question into an executive-ready architecture discussion.
-                </h2>
-              </div>
-              <div>
-                <p className="text-base leading-7 text-slate-400">
-                  We support architecture briefings for leadership teams evaluating AI security, cloud governance, regulated workflows, and implementation readiness.
-                </p>
-                <Link
-                  href="/request-demo"
-                  className="mt-6 inline-flex rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-400 px-6 py-3 text-sm font-black text-white"
-                >
-                  Request Consultation
-                  <span className="ml-2" aria-hidden="true">-&gt;</span>
-                </Link>
-              </div>
+          <div className="divide-y divide-white/10 border-y border-white/10">
+            {researchInsightCards.map((insight) => {
+              const authority = getInsightAuthority(insight.slug);
+              return (
+                <article key={insight.slug} className="grid gap-5 py-8 md:grid-cols-[0.8fr_1.2fr_auto] md:items-start md:gap-8">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
+                      {authority?.taxonomy ?? insight.category}
+                    </p>
+                    <p className="mt-2 text-xs text-slate-500">{insight.readTime}</p>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold leading-7 text-white sm:text-2xl sm:leading-8">
+                      {insight.title}
+                    </h3>
+                    <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-400">{insight.description}</p>
+                    {authority ? (
+                      <p className="mt-4 text-sm leading-6 text-slate-300">
+                        <span className="font-semibold text-white">Decision focus:</span>{" "}
+                        {authority.leadershipDecisions[0]}
+                      </p>
+                    ) : null}
+                  </div>
+                  <Link
+                    href={`/insights/${insight.slug}`}
+                    className="text-sm font-semibold text-cyan-300 hover:text-cyan-200"
+                  >
+                    Open note -&gt;
+                  </Link>
+                </article>
+              );
+            })}
+          </div>
+
+          <div className="mt-14 grid gap-8 border-t border-white/10 pt-10 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-violet-300">
+                Architecture briefing
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                Turn a difficult AI design question into an architecture decision.
+              </h2>
+              <p className="mt-4 text-base leading-7 text-slate-400">
+                Bring the workflow, control gap, architecture tradeoff, or production blocker. We can help frame the decision, required artifacts, and implementation path.
+              </p>
             </div>
+            <Link
+              href="/request-demo"
+              className="inline-flex min-h-11 items-center justify-center rounded-md bg-cyan-300 px-5 py-3 text-sm font-semibold text-[#021018] hover:bg-cyan-200"
+            >
+              Request Architecture Consultation
+            </Link>
           </div>
         </Container>
       </section>
