@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/layout/Container";
 import { getInsightArticle, insightArticles } from "@/content/insights";
+import { getInsightAuthority } from "@/content/insight-authority";
 import { buildPageMetadata } from "@/lib/metadata";
 
 type InsightArticlePageProps = {
@@ -11,9 +12,7 @@ type InsightArticlePageProps = {
 };
 
 export function generateStaticParams() {
-  return insightArticles.map((article) => ({
-    slug: article.slug,
-  }));
+  return insightArticles.map((article) => ({ slug: article.slug }));
 }
 
 export async function generateMetadata({ params }: InsightArticlePageProps) {
@@ -23,7 +22,7 @@ export async function generateMetadata({ params }: InsightArticlePageProps) {
   if (!article) {
     return buildPageMetadata({
       title: "Insight",
-      description: "SecureTheCloud insight.",
+      description: "SecureTheCloud architecture insight.",
       path: "/insights",
     });
   }
@@ -35,158 +34,144 @@ export async function generateMetadata({ params }: InsightArticlePageProps) {
   });
 }
 
-export default async function InsightArticlePage({
-  params,
-}: InsightArticlePageProps) {
+function ListSection({ title, items }: { title: string; items: readonly string[] }) {
+  return (
+    <section className="border-t border-white/10 pt-7">
+      <h2 className="text-2xl font-semibold tracking-tight text-white">{title}</h2>
+      <ul className="mt-5 space-y-3 text-base leading-7 text-slate-300">
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+export default async function InsightArticlePage({ params }: InsightArticlePageProps) {
   const { slug } = await params;
   const article = getInsightArticle(slug);
 
-  if (!article) {
-    notFound();
-  }
+  if (!article) notFound();
 
-  const relatedArticles = insightArticles
-    .filter((item) => item.slug !== article.slug)
-    .slice(0, 3);
+  const authority = getInsightAuthority(article.slug);
+  const relatedArticles = insightArticles.filter((item) => item.slug !== article.slug).slice(0, 3);
 
   return (
     <>
-      <section className="relative overflow-hidden border-b border-white/10 bg-[#030711]">
-        <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient}`} />
-        <div className="absolute inset-0 bg-[#030711]/70" />
-
-        <Container className="relative py-20 md:py-28">
-          <Link
-            href="/insights"
-            className="inline-flex text-sm font-black text-cyan-300 hover:text-cyan-200"
-          >
-            &lt;- Back to insights
+      <section className="border-b border-white/10 bg-[#030711]">
+        <Container className="py-14 sm:py-16 lg:py-20">
+          <Link href="/insights" className="text-sm font-semibold text-cyan-300 hover:text-cyan-200">
+            &lt;- Technical authority
           </Link>
-
-          <p className="mt-10 text-sm font-black uppercase tracking-[0.45em] text-cyan-300">
-            {article.eyebrow}
+          <p className="mt-8 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">
+            {authority?.taxonomy ?? article.eyebrow}
           </p>
-
-          <h1 className="mt-6 max-w-5xl text-5xl font-black tracking-tight text-white md:text-7xl">
+          <h1 className="mt-4 max-w-5xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">
             {article.title}
           </h1>
-
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+          <p className="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
             {article.description}
           </p>
-
-          <div className="mt-8 flex flex-wrap gap-3 text-sm font-bold text-slate-400">
+          <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-500">
             <span>{article.category}</span>
-            <span>|</span>
             <span>{article.date}</span>
-            <span>|</span>
             <span>{article.readTime}</span>
           </div>
         </Container>
       </section>
 
-      <section className="bg-[#030711] py-16 md:py-24">
-        <Container>
-          <div className="grid gap-10 lg:grid-cols-[0.78fr_0.32fr]">
-            <main className="grid gap-8">
-              <article className="rounded-[2rem] border border-white/10 bg-white/[0.035] p-6 md:p-8">
-                <p className="text-sm font-black uppercase tracking-[0.35em] text-violet-300">
-                  Executive summary
-                </p>
-                <div className="mt-6 grid gap-5 text-lg leading-8 text-slate-300">
-                  {article.summary.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
-                </div>
-              </article>
+      <section className="bg-[#030711]">
+        <Container className="grid gap-12 py-14 sm:py-16 lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-16 lg:py-20">
+          <main className="space-y-10">
+            <section>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-violet-300">Problem</p>
+              <div className="mt-4 space-y-4 text-lg leading-8 text-slate-300">
+                {authority ? <p>{authority.problem}</p> : article.summary.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              </div>
+            </section>
 
-              <article className="rounded-[2rem] border border-white/10 bg-white/[0.035] p-6 md:p-8">
-                <h2 className="text-3xl font-black text-white">Key points</h2>
-                <ul className="mt-6 grid gap-4">
-                  {article.keyPoints.map((item) => (
-                    <li key={item} className="flex gap-3 text-base leading-7 text-slate-300">
-                      <span className="mt-1 text-cyan-300">✦</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
+            {authority ? (
+              <section className="border-t border-white/10 pt-7">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Architecture principle</p>
+                <p className="mt-4 text-xl leading-8 text-white">{authority.architecturePrinciple}</p>
+              </section>
+            ) : null}
 
-              <article className="rounded-[2rem] border border-violet-400/20 bg-violet-500/5 p-6 md:p-8">
-                <h2 className="text-3xl font-black text-white">
-                  Architecture implications
-                </h2>
-                <ul className="mt-6 grid gap-4">
-                  {article.architectureImplications.map((item) => (
-                    <li key={item} className="flex gap-3 text-base leading-7 text-slate-300">
-                      <span className="mt-1 text-violet-300">■</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
+            <ListSection title="Control implications" items={authority?.controlImplications ?? article.keyPoints} />
+            <ListSection title="Architecture and implementation guidance" items={article.architectureImplications} />
 
-              <article className="rounded-[2rem] border border-cyan-300/20 bg-cyan-300/5 p-6 md:p-8">
-                <h2 className="text-3xl font-black text-white">
-                  How SecureTheCloud helps
-                </h2>
-                <ul className="mt-6 grid gap-4">
-                  {article.howWeHelp.map((item) => (
-                    <li key={item} className="flex gap-3 text-base leading-7 text-slate-300">
-                      <span className="mt-1 text-cyan-300">✦</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+            {authority ? (
+              <>
+                <ListSection title="Design tradeoffs" items={authority.tradeoffs} />
+                <ListSection title="Evidence to design for" items={authority.evidence} />
+                <ListSection title="Implementation artifacts" items={authority.implementationArtifacts} />
 
-                <Link
-                  href="/request-demo"
-                  className="mt-8 inline-flex rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-400 px-6 py-3 text-sm font-black text-white"
-                >
-                  Request Consultation
-                  <span className="ml-2" aria-hidden="true">-&gt;</span>
-                </Link>
-              </article>
-            </main>
-
-            <aside className="space-y-6">
-              <div className="rounded-[2rem] border border-white/10 bg-white/[0.035] p-6">
-                <p className="text-xs font-black uppercase tracking-[0.3em] text-cyan-300">
-                  Article details
-                </p>
-                <div className="mt-5 grid gap-4 text-sm font-bold text-slate-300">
+                <section className="grid gap-8 border-t border-white/10 pt-8 md:grid-cols-2">
                   <div>
-                    <p className="text-slate-500">Category</p>
-                    <p className="mt-1 text-white">{article.category}</p>
+                    <h2 className="text-2xl font-semibold text-white">What leadership should decide</h2>
+                    <ul className="mt-5 space-y-3 text-base leading-7 text-slate-300">
+                      {authority.leadershipDecisions.map((item) => <li key={item}>{item}</li>)}
+                    </ul>
                   </div>
                   <div>
-                    <p className="text-slate-500">Published</p>
-                    <p className="mt-1 text-white">{article.date}</p>
+                    <h2 className="text-2xl font-semibold text-white">What engineering should build</h2>
+                    <ul className="mt-5 space-y-3 text-base leading-7 text-slate-300">
+                      {authority.engineeringBuild.map((item) => <li key={item}>{item}</li>)}
+                    </ul>
                   </div>
-                  <div>
-                    <p className="text-slate-500">Read time</p>
-                    <p className="mt-1 text-white">{article.readTime}</p>
-                  </div>
+                </section>
+              </>
+            ) : null}
+
+            <section className="border-t border-white/10 pt-8">
+              <h2 className="text-2xl font-semibold text-white">How SecureTheCloud engages</h2>
+              <ul className="mt-5 space-y-3 text-base leading-7 text-slate-300">
+                {article.howWeHelp.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+              <Link
+                href="/request-demo"
+                className="mt-7 inline-flex min-h-11 items-center justify-center rounded-md bg-cyan-300 px-5 py-3 text-sm font-semibold text-[#021018] hover:bg-cyan-200"
+              >
+                Request Architecture Consultation
+              </Link>
+            </section>
+          </main>
+
+          <aside className="space-y-8 lg:sticky lg:top-28 lg:self-start">
+            {authority ? (
+              <div className="border-t border-white/15 pt-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Related pathways</p>
+                <div className="mt-4 space-y-3 text-sm font-semibold">
+                  <Link href={authority.serviceHref} className="block text-cyan-300 hover:text-cyan-200">
+                    {authority.serviceLabel} -&gt;
+                  </Link>
+                  <Link href={authority.industryHref} className="block text-slate-300 hover:text-white">
+                    {authority.industryLabel} -&gt;
+                  </Link>
                 </div>
               </div>
+            ) : null}
 
-              <div className="rounded-[2rem] border border-white/10 bg-white/[0.035] p-6">
-                <h2 className="text-2xl font-black text-white">Related insights</h2>
-                <div className="mt-5 grid gap-4">
-                  {relatedArticles.map((item) => (
-                    <Link
-                      key={item.slug}
-                      href={`/insights/${item.slug}`}
-                      className="rounded-2xl border border-white/10 bg-black/20 p-4 text-sm font-bold text-slate-200 hover:border-cyan-300/40 hover:text-cyan-200"
-                    >
-                      {item.title}
-                      <span className="ml-2" aria-hidden="true">-&gt;</span>
-                    </Link>
-                  ))}
-                </div>
+            <div className="border-t border-white/15 pt-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Article details</p>
+              <dl className="mt-4 space-y-3 text-sm">
+                <div><dt className="text-slate-500">Category</dt><dd className="text-white">{article.category}</dd></div>
+                <div><dt className="text-slate-500">Published</dt><dd className="text-white">{article.date}</dd></div>
+                <div><dt className="text-slate-500">Read time</dt><dd className="text-white">{article.readTime}</dd></div>
+              </dl>
+            </div>
+
+            <div className="border-t border-white/15 pt-5">
+              <h2 className="text-lg font-semibold text-white">Related architecture notes</h2>
+              <div className="mt-4 space-y-4">
+                {relatedArticles.map((item) => (
+                  <Link key={item.slug} href={`/insights/${item.slug}`} className="block text-sm leading-6 text-slate-300 hover:text-cyan-200">
+                    {item.title} -&gt;
+                  </Link>
+                ))}
               </div>
-            </aside>
-          </div>
+            </div>
+          </aside>
         </Container>
       </section>
     </>
