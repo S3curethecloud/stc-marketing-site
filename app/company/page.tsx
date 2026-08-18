@@ -102,7 +102,7 @@ export default function CompanyPage() {
             </div>
             <div className="grid gap-0 border-t border-white/10 md:grid-cols-2">
               {principles.map((principle) => (
-                <article key={principle.title} className="border-b border-white/10 py-6 md:px-6 md:first:pl-0 md:nth-[2]:pr-0 md:nth-[3]:pl-0 md:nth-[4]:pr-0">
+                <article key={principle.title} className="border-b border-white/10 py-6 md:px-6">
                   <h3 className="text-lg font-semibold text-white">{principle.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-slate-400">{principle.body}</p>
                 </article>
