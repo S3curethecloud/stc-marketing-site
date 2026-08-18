@@ -7,39 +7,25 @@ import Container from "@/components/layout/Container";
 export default function SiteFooter() {
   return (
     <footer className="border-t border-white/10 bg-[#02040b]">
-      <Container className="py-14 lg:py-16">
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_2fr_0.95fr]">
+      <Container className="py-12 lg:py-14">
+        <div className="grid gap-10 lg:grid-cols-[1.15fr_2fr_1fr]">
           <div>
-            <Link
-              href="/"
-              aria-label={`${siteConfig.name} homepage`}
-              className="inline-flex transition-opacity hover:opacity-90"
-            >
+            <Link href="/" aria-label={`${siteConfig.name} homepage`} className="inline-flex transition-opacity hover:opacity-90">
               <BrandLogo variant="footer" showTagline />
             </Link>
-
-            <p className="mt-5 max-w-md text-sm leading-6 text-slate-400">
-              We help enterprises design, govern, and implement secure AI systems that drive innovation with trust.
+            <p className="mt-5 max-w-sm text-sm leading-6 text-slate-400">
+              Enterprise AI architecture, cloud governance, security, and implementation guidance for organizations operating under real technical and regulatory constraints.
             </p>
-
-            <div className="mt-6 flex gap-3 text-xs font-black text-slate-300">
-              <span className="rounded-full border border-white/10 px-3 py-2 transition-colors hover:border-cyan-300/40 hover:text-cyan-200">in</span>
-              <span className="rounded-full border border-white/10 px-3 py-2 transition-colors hover:border-cyan-300/40 hover:text-cyan-200">x</span>
-              <span className="rounded-full border border-white/10 px-3 py-2 transition-colors hover:border-cyan-300/40 hover:text-cyan-200">yt</span>
-            </div>
           </div>
 
           <div className="grid gap-8 sm:grid-cols-3">
             {footerNavGroups.map((group) => (
               <div key={group.title}>
-                <h3 className="text-sm font-black text-white">{group.title}</h3>
+                <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-300">{group.title}</h3>
                 <ul className="mt-4 space-y-3 text-sm text-slate-400">
                   {group.items.map((item) => (
                     <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        className="transition-colors hover:text-cyan-200"
-                      >
+                      <Link href={item.href} className="transition-colors hover:text-white">
                         {item.label}
                       </Link>
                     </li>
@@ -49,25 +35,21 @@ export default function SiteFooter() {
             ))}
           </div>
 
-          <div className="rounded-[2rem] border border-violet-400/20 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.16),transparent_12rem)] p-6 shadow-2xl shadow-violet-950/20">
-            <h3 className="text-xl font-black text-white">Let&apos;s build securely.</h3>
+          <div className="border-t border-white/10 pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-300">Engage SecureTheCloud</p>
+            <h3 className="mt-4 text-2xl font-semibold tracking-tight text-white">Discuss an architecture challenge.</h3>
             <p className="mt-3 text-sm leading-6 text-slate-400">
-              Talk to our experts about your AI security, cloud governance, and secure adoption goals.
+              Bring the business goal, implementation pressure, and control requirements. We will help clarify the architecture path.
             </p>
-            <Link
-              href={siteConfig.primaryCta.href}
-              className="mt-6 inline-flex rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-400 px-5 py-3 text-sm font-black text-white"
-            >
-              Request Consultation
+            <Link href={siteConfig.primaryCta.href} className="mt-5 inline-flex items-center text-sm font-semibold text-cyan-300 hover:text-cyan-200">
+              Request architecture consultation
               <span className="ml-2" aria-hidden="true">-&gt;</span>
             </Link>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
-          </p>
+        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <p>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
           <p>Privacy Policy | Terms of Use | Cookie Policy</p>
         </div>
       </Container>
