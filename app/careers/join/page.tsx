@@ -18,40 +18,24 @@ const reasons = [
 
 export default function CareersJoinPage() {
   return (
-    <section className="relative overflow-hidden bg-[#030711] py-16 md:py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(168,85,247,0.25),transparent_30rem),radial-gradient(circle_at_85%_25%,rgba(56,189,248,0.18),transparent_30rem)]" />
-      <Container className="relative">
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+    <section className="border-b border-white/10 bg-[#030711]">
+      <Container className="py-16 sm:py-20 lg:py-24">
+        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-14">
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.45em] text-cyan-300">
-              Talent network
-            </p>
-            <h1 className="mt-6 text-5xl font-black tracking-tight text-white sm:text-7xl">
-              Join the SecureTheCloud talent network.
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-slate-300">
-              We are building a team of architects, engineers, consultants, and operators who can help enterprises secure AI adoption, cloud governance, and regulated AI workflows.
-            </p>
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Talent network</p>
+            <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">Join the SecureTheCloud talent network.</h1>
+            <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">We are building a team of architects, engineers, consultants, and operators who can help enterprises secure AI adoption, cloud governance, and regulated AI workflows.</p>
 
-            <div className="mt-8 rounded-[2rem] border border-white/10 bg-white/[0.035] p-6">
-              <p className="text-sm font-black uppercase tracking-[0.25em] text-violet-300">
-                Why join early
-              </p>
-              <ul className="mt-5 grid gap-3">
-                {reasons.map((item) => (
-                  <li key={item} className="flex gap-3 text-sm leading-6 text-slate-300">
-                    <span className="mt-1 text-cyan-300">✦</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
+            <div className="mt-9 border-y border-white/10 py-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-violet-300">Why join early</p>
+              <ul className="mt-5 grid gap-3 text-sm leading-6 text-slate-300">
+                {reasons.map((item) => <li key={item}>— {item}</li>)}
               </ul>
             </div>
 
-            <div className="mt-6 rounded-[2rem] border border-cyan-300/20 bg-cyan-300/5 p-6">
-              <h2 className="text-lg font-black text-white">What happens next</h2>
-              <p className="mt-3 text-sm leading-6 text-slate-400">
-                We review your background and role interest. If there is a fit for a future role, advisory conversation, contract path, or collaboration opportunity, we will follow up.
-              </p>
+            <div className="mt-8 border-l-2 border-white/15 pl-4 text-sm leading-6 text-slate-400">
+              <h2 className="font-semibold text-white">What happens next</h2>
+              <p className="mt-2">We review your background and role interest. If there is a fit for a future role, advisory conversation, contract path, or collaboration opportunity, we will follow up.</p>
             </div>
           </div>
 
