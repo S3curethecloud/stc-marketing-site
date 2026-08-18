@@ -229,8 +229,8 @@ export default function HomePage() {
               <p className="text-xs font-black uppercase tracking-[0.32em] text-cyan-300 sm:text-sm sm:tracking-[0.4em]">
                 Enterprise AI Security Services
               </p>
-              <h1 className="mt-4 max-w-4xl text-[2.35rem] font-black leading-[0.98] tracking-tight text-white sm:mt-5 sm:text-6xl lg:text-7xl">
-                Lead secure AI adoption with <span className="whitespace-nowrap">enterprise-grade</span> architecture.
+              <h1 className="mt-4 max-w-4xl text-[2.28rem] font-black leading-[0.98] tracking-tight text-white min-[390px]:text-[2.35rem] sm:mt-5 sm:text-6xl lg:text-7xl">
+                Lead secure AI adoption with <span className="whitespace-nowrap">enterprise‑grade</span> architecture.
               </h1>
               <p className="mt-4 max-w-3xl text-base leading-7 text-slate-300 sm:mt-6 sm:text-lg sm:leading-8 lg:text-xl">
                 SecureTheCloud helps enterprises design and implement secure AI systems with confidence. We deliver AI security architecture, cloud governance, secure AI adoption, and implementation-ready technical design across distributed client environments.
