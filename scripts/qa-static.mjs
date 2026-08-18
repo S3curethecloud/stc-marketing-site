@@ -89,7 +89,7 @@ function normalizeInternalHref(href, currentRoute) {
 
 let checkedLinks = 0;
 for (const [currentRoute, html] of htmlByRoute) {
-  const hrefs = [...html.matchAll(/\shref=["']([^"']+)["']/g)].map((match) => match[1]);
+  const hrefs = [...html.matchAll(/<a\b[^>]*\shref=["']([^"']+)["'][^>]*>/gi)].map((match) => match[1]);
   for (const href of hrefs) {
     const target = normalizeInternalHref(href, currentRoute);
     if (!target) continue;
@@ -128,12 +128,11 @@ if (!fs.existsSync(robotsPath)) fail("robots.txt missing from export");
 if (fs.existsSync(sitemapPath)) {
   const sitemap = fs.readFileSync(sitemapPath, "utf8");
   for (const route of requiredRoutes) {
-    if (!sitemap.includes(`https://securethecloud.dev${route === "/" ? "" : route}`)) {
-      fail(`sitemap missing required route: ${route}`);
-    }
+    const expected = route === "/" ? "https://securethecloud.dev/" : `https://securethecloud.dev${route}`;
+    if (!sitemap.includes(expected)) fail(`sitemap missing required route: ${route}`);
   }
   if (sitemap.includes("/request-demo/success")) fail("sitemap must not include consultation success page");
-  else pass("sitemap includes buyer routes and excludes consultation success page");
+  else if (!process.exitCode) pass("sitemap includes buyer routes and excludes consultation success page");
 }
 
 const requestHtml = htmlByRoute.get("/request-demo") ?? "";
