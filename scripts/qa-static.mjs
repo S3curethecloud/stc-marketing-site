@@ -135,12 +135,21 @@ if (fs.existsSync(sitemapPath)) {
   else if (!process.exitCode) pass("sitemap includes buyer routes and excludes consultation success page");
 }
 
+// `/request-demo` intentionally keeps the form behind a Suspense boundary because
+// the form reads optional buyer context with `useSearchParams()` client-side. Static
+// export therefore guarantees the server-owned consultation shell, while the form
+// contract is verified separately against the client component source below.
 const requestHtml = htmlByRoute.get("/request-demo") ?? "";
-if (!requestHtml.includes("Architecture consultation intake")) fail("consultation intake content missing from static export");
-else pass("consultation intake is present in static export");
+if (!requestHtml.includes("Bring the AI initiative.")) {
+  fail("consultation page shell missing from static export");
+} else {
+  pass("consultation page shell is present in static export");
+}
 
 const formSource = fs.readFileSync(path.join(root, "components/forms/DemoRequestForm.tsx"), "utf8");
 const formContractChecks = [
+  ["form accessibility label", 'aria-label="Request consultation form"'],
+  ["intake heading", "Architecture consultation intake"],
   ["Formspree action", "https://formspree.io/f/mzdjyodg"],
   ["consultation area field", 'name="consultationArea"'],
   ["buyer role field", 'name="buyerRole"'],
@@ -148,6 +157,7 @@ const formContractChecks = [
   ["problem statement field", 'name="problemStatement"'],
   ["source-context field", 'name="source"'],
   ["query context parsing", "useSearchParams"],
+  ["success routing", 'router.push("/request-demo/success")'],
 ];
 for (const [label, token] of formContractChecks) {
   if (!formSource.includes(token)) fail(`consultation form contract missing ${label}`);
