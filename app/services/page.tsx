@@ -133,13 +133,37 @@ export default function ServicesPage() {
                     <Link href={`/request-demo?focus=${service.focus}&from=services-${service.id}`} className="mt-6 inline-flex text-sm font-semibold text-cyan-300 hover:text-cyan-200">Request this architecture consultation -&gt;</Link>
                   </div>
 
-                  <div className="grid gap-8 md:grid-cols-2">
-                    <div><h4 className="text-sm font-semibold text-white">This is for you when</h4><ul className="mt-4 space-y-3 text-sm leading-6 text-slate-400">{service.triggers.map((item) => <li key={item}>— {item}</li>)}</ul></div>
-                    <div><h4 className="text-sm font-semibold text-white">Typical deliverables</h4><ul className="mt-4 space-y-3 text-sm leading-6 text-slate-400">{service.deliverables.map((item) => <li key={item}>— {item}</li>)}</ul></div>
-                    <div className="border-t border-white/10 pt-6 md:col-span-2">
-                      <h4 className="text-sm font-semibold text-white">Continue due diligence</h4>
-                      <p className="mt-3 text-sm leading-6 text-slate-400">{service.scope}</p>
-                      <div className="mt-5 flex flex-wrap gap-x-5 gap-y-3">{service.related.map(([label, href]) => <Link key={href} href={href} className="text-sm font-medium text-slate-300 hover:text-cyan-200">{label} -&gt;</Link>)}</div>
+                  <div className="border-t border-white/10">
+                    <div className="grid gap-7 border-b border-white/10 py-6 md:grid-cols-2 md:gap-10">
+                      <div>
+                        <h4 className="text-sm font-semibold text-white">When to engage</h4>
+                        <ul className="mt-4 space-y-2.5 text-sm leading-6 text-slate-400">
+                          {service.triggers.map((item) => <li key={item}>— {item}</li>)}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="text-sm font-semibold text-white">What you receive</h4>
+                        <ul className="mt-4 space-y-2.5 text-sm leading-6 text-slate-400">
+                          {service.deliverables.map((item) => <li key={item}>— {item}</li>)}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="py-6">
+                      <h4 className="text-sm font-semibold text-white">Relevant technical depth</h4>
+                      <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-400">{service.scope}</p>
+                      <div className="mt-5 flex flex-wrap gap-x-5 gap-y-3">
+                        {service.related.map(([label, href]) => (
+                          <Link
+                            key={href}
+                            href={href}
+                            className="text-sm font-medium text-slate-300 hover:text-cyan-200"
+                          >
+                            {label} -&gt;
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>

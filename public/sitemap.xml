@@ -8,6 +8,9 @@
   <url><loc>https://securethecloud.dev/company</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://securethecloud.dev/careers</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://securethecloud.dev/request-demo</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://securethecloud.dev/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://securethecloud.dev/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://securethecloud.dev/cookies</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 
   <url><loc>https://securethecloud.dev/insights/why-secure-ai-adoption-needs-architecture-before-acceleration</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://securethecloud.dev/insights/designing-secure-agentic-systems-with-explicit-control-boundaries</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
