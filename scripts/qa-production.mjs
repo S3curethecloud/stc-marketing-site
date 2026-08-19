@@ -7,7 +7,7 @@ const checks = [
   ["/insights", "Technical"],
   ["/evidence", "Evidence"],
   ["/company", "Company"],
-  ["/request-demo", "Architecture consultation intake"],
+  ["/request-demo", "Request architecture consultation"],
 ];
 
 let failed = false;
