@@ -1,32 +1,57 @@
+import { brand } from "./brand";
+
 export const siteConfig = {
-  name: "SecureTheCloud",
-  shortName: "STC",
-  platformName: "Enterprise AI Security Architecture Services",
-  fullName: "SecureTheCloud Enterprise AI Security Architecture Services",
-  category: "Enterprise AI Security, Cloud Governance, and Secure AI Adoption Services",
-  suiteName: "Secure AI Architecture and Governance Services",
-  domain: "securethecloud.dev",
-  url: "https://securethecloud.dev",
+  name: brand.name,
+  shortName: brand.shortName,
+
+  platformName:
+    "Enterprise AI, Cloud, Security & Governance",
+
+  fullName:
+    `${brand.name} Enterprise AI, Cloud, Security & Governance`,
+
+  category:
+    "Enterprise AI Architecture, Cloud Platforms, Cybersecurity, and Governance",
+
+  suiteName:
+    "Enterprise AI, Cloud, Security & Governance",
+
+  domain: brand.domain,
+  url: brand.url,
+
   description:
-    "SecureTheCloud helps enterprises design, govern, and implement secure AI systems across cloud, healthcare, regulated, and distributed client environments.",
+    "IKEVAR architects and engineers secure, governed enterprise systems across AI, cloud, security, identity, data, and autonomous workflows.",
+
   tagline:
-    "Lead secure AI adoption with enterprise-grade architecture, governance, and implementation-ready design.",
+    brand.promise,
+
+  brandSignature:
+    brand.tagline,
+
   primaryCta: {
-    label: "Request Consultation",
+    label: "Start an Architecture Conversation",
     href: "/request-demo",
   },
+
   secondaryCta: {
-    label: "Explore Services",
+    label: "Explore Capabilities",
     href: "/services",
   },
+
   contact: {
-    salesEmail: "contact@securethecloud.dev",
+    salesEmail: brand.email,
     demoPath: "/request-demo",
   },
+
   social: {
-    linkedin: "https://www.linkedin.com/company/securethecloud-dev/",
-    youtube: "https://www.youtube.com/@SecureTheCloud-dev",
-    x: "https://x.com/s3curethecloud",
-    ogImage: "/images/portfolio/securethecloud-enterprise-product-portfolio.webp",
+    linkedin: brand.social.linkedin,
+    youtube: brand.social.youtube,
+    x: brand.social.x,
+    github: brand.social.github,
+    ogImage:
+      "/brand/ikevar/ikevar-social-preview.png",
   },
+
+  legacy:
+    brand.legacy,
 } as const;
