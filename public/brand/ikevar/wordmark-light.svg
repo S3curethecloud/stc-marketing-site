@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 420">
+      <defs>
+        <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#FFFFFF"/>
+          <stop offset="35%" stop-color="#D7DBE2"/>
+          <stop offset="70%" stop-color="#777E88"/>
+          <stop offset="100%" stop-color="#F7F8FA"/>
+        </linearGradient>
+        <linearGradient id="accent" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0%" stop-color="#1E3A5F"/>
+          <stop offset="55%" stop-color="#00D5C7"/>
+          <stop offset="100%" stop-color="#7C3AED"/>
+        </linearGradient>
+      </defs>
+      <rect width="100%" height="100%" fill="#FFFFFF"/>
+      <g transform="translate(35,18) scale(0.75)">
+        <path d="M130 82 H190 V430 H130 Z" fill="url(#metal)"/>
+        <path d="M198 252 L342 82 H420 L266 260 Z" fill="url(#metal)"/>
+        <path d="M250 260 L420 430 H338 L198 296 Z" fill="url(#metal)"/>
+        <path d="M196 332 L278 414 H196 Z" fill="url(#accent)"/>
+        <path d="M188 332 L188 418 H161 Z" fill="#1E3A5F" opacity="0.40"/>
+      </g>
+      <text x="470" y="222" fill="#12161F" font-family="Inter, Arial, sans-serif"
+            font-size="160" font-weight="500" letter-spacing="34">IKEVAR</text>
+      
+    </svg>
