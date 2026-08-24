@@ -1,58 +1,66 @@
 export const securityContent = {
   meta: {
-    title: "Security | SecureTheCloud",
+    title: "Security | IKEVAR",
     description:
-      "Understand the SecureTheCloud security model, tenant isolation boundaries, deterministic authorization doctrine, audit integrity model, and runtime governance posture.",
+      "Understand the IKEVAR security architecture approach across identity, authorization, trust boundaries, evidence, governance, cloud platforms, and autonomous systems.",
   },
+
   hero: {
     eyebrow: "SECURITY",
-    headline: "Security Built Into the Runtime Control Path",
+    headline: "Security Engineered Into the Architecture",
     subheadline:
-      "SecureTheCloud is built around deterministic authorization, explicit trust boundaries, verifiable decision records, and tamper-evident governance.",
+      "IKEVAR treats security as an architectural property of enterprise systems: identity, authorization, data boundaries, policy, evidence, operational controls, and accountability must be explicit before production risk expands.",
     primaryCta: {
-      label: "Request Security Review",
+      label: "Request Security Architecture Review",
       href: "/request-demo",
     },
   },
+
   overview: {
-    title: "A Runtime-First Security Model",
+    title: "Security Begins With Explicit System Boundaries",
     body:
-      "SecureTheCloud secures AI agent execution by making authorization explicit, policy-backed, and verifiable before action occurs. The goal is not to observe behavior after the fact, but to govern execution at the moment of decision.",
+      "IKEVAR designs security around the systems, identities, data paths, control planes, trust relationships, and consequential actions that make up an enterprise environment. The objective is to make authority, access, risk, and accountability explicit rather than relying on implicit trust or post-event reconstruction.",
   },
+
   tenantIsolation: {
-    title: "Tenant Isolation and Context Separation",
+    title: "Identity, Workload, and Trust Separation",
     body:
-      "SecureTheCloud separates control-plane authority from tenant runtime context. Administrative access, tenant selection, tenant-bound keys, and runtime tokens are distinct layers by design.",
+      "Enterprise systems should separate human identity, workload identity, administrative authority, application context, data access, and autonomous-system permissions. IKEVAR uses explicit trust boundaries and least-privilege patterns so one identity or execution context does not silently inherit authority from another.",
     bullets: [
-      "Admin access is not runtime access",
-      "Tenant activation must be explicit",
-      "Runtime tokens remain tenant-scoped and principal-scoped",
-      "Platform-wide views remain separate from tenant-scoped execution context",
+      "Human and non-human identities remain distinguishable",
+      "Administrative authority is separated from workload execution",
+      "Access is scoped to business, system, data, and environment context",
+      "Cross-system trust requires explicit verification and policy",
     ],
   },
+
   authorization: {
-    title: "Deterministic Authorization Doctrine",
+    title: "Explicit Authorization Before Consequential Action",
     body:
-      "Policy authority remains explicit. Runtime requests are evaluated through a deterministic control path that includes risk synthesis, impact analysis, policy decisioning, and decision recording. No hidden path should bypass policy enforcement.",
+      "Authentication establishes identity; it does not grant unrestricted authority. IKEVAR architectures place policy and authorization decisions at the control points where users, workloads, agents, models, tools, data, and infrastructure interact. Higher-impact actions should require stronger policy evaluation, contextual controls, or human approval.",
   },
+
   audit: {
-    title: "Verifiable Decisions and Tamper-Evident Governance",
+    title: "Evidence That Makes Decisions Reconstructible",
     body:
-      "SecureTheCloud uses deterministic decision records and hash-linked governance trails so approvals, denials, issuance events, revocations, and administrative changes remain reconstructible and independently verifiable.",
+      "Security decisions should leave evidence that can be reviewed after the fact without depending on narrative reconstruction. IKEVAR designs for traceable policy outcomes, approvals, exceptions, identity context, system events, architecture decisions, and operational evidence that support security review, governance, investigation, and assurance.",
   },
+
   deployment: {
-    title: "Designed for Real Operating Environments",
+    title: "Designed for Real Enterprise Operating Environments",
     body:
-      "SecureTheCloud is designed to support controlled runtime operation, multi-tenant governance, Kubernetes expansion, and cross-zone trust models without collapsing security boundaries between control plane and execution plane.",
+      "Security architecture must survive production realities across cloud platforms, Kubernetes, APIs, enterprise data, AI systems, third-party integrations, regulated workflows, and autonomous execution. IKEVAR designs security controls with deployment, observability, resilience, ownership, operational handoff, and failure behavior in mind.",
   },
+
   closing: {
-    title: "Security That Governs Before Execution",
+    title: "Govern Authority Before Systems Exercise It",
     body:
-      "SecureTheCloud treats runtime enforcement, policy authority, and governance integrity as first-class security primitives for autonomous systems.",
+      "Whether the actor is a person, service, workload, model, or autonomous agent, consequential authority should remain explicit, bounded, observable, and reviewable. IKEVAR combines architecture, engineering, cybersecurity, governance, and evidence so trust does not depend on assumptions.",
   },
+
   cta: {
     primaryCta: {
-      label: "Talk to SecureTheCloud",
+      label: "Start a Security Architecture Conversation",
       href: "/request-demo",
     },
     secondaryCta: {

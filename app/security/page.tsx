@@ -38,7 +38,7 @@ export default function SecurityPage() {
       <Section>
         <Container>
           <SectionIntro
-            eyebrow="TENANT ISOLATION"
+            eyebrow="IDENTITY AND TRUST BOUNDARIES"
             title={c.tenantIsolation.title}
             body={c.tenantIsolation.body}
           />
@@ -59,7 +59,7 @@ export default function SecurityPage() {
       <Section className="border-y border-white/10 bg-white/[0.02]">
         <Container>
           <SectionIntro
-            eyebrow="DETERMINISTIC AUTHORIZATION"
+            eyebrow="POLICY AND AUTHORIZATION"
             title={c.authorization.title}
             body={c.authorization.body}
           />
@@ -69,7 +69,7 @@ export default function SecurityPage() {
       <Section>
         <Container>
           <SectionIntro
-            eyebrow="AUDIT AND INTEGRITY"
+            eyebrow="EVIDENCE AND INTEGRITY"
             title={c.audit.title}
             body={c.audit.body}
           />
@@ -79,7 +79,7 @@ export default function SecurityPage() {
       <Section className="border-y border-white/10 bg-white/[0.02]">
         <Container>
           <SectionIntro
-            eyebrow="DEPLOYMENT AND HOSTING"
+            eyebrow="OPERATIONAL SECURITY"
             title={c.deployment.title}
             body={c.deployment.body}
           />
@@ -89,7 +89,7 @@ export default function SecurityPage() {
       <Section>
         <Container>
           <SectionIntro
-            eyebrow="CLOSING"
+            eyebrow="SECURITY PRINCIPLE"
             title={c.closing.title}
             body={c.closing.body}
           />
@@ -97,8 +97,8 @@ export default function SecurityPage() {
       </Section>
 
       <CTASection
-        headline="Review the SecureTheCloud security model in a private walkthrough."
-        subheadline="See how deterministic authorization, zero-trust runtime posture, and verifiable governance records fit together across the platform."
+        headline="Review the IKEVAR security architecture approach."
+        subheadline="See how identity, authorization, trust boundaries, evidence, governance, and operational controls fit together across enterprise systems."
         primaryCta={c.cta.primaryCta}
         secondaryCta={c.cta.secondaryCta}
       />
