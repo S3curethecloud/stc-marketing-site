@@ -6,7 +6,7 @@ import { siteConfig } from "@/content/site";
 export const metadata = buildPageMetadata({
   title: "Privacy Policy",
   description:
-    "How SecureTheCloud handles information submitted through securethecloud.dev and related website interactions.",
+    "How IKEVAR handles information submitted through ikevar.com and related website interactions.",
   path: "/privacy",
 });
 
@@ -25,13 +25,13 @@ export default function PrivacyPolicyPage() {
             </h1>
 
             <p className="mt-6 text-base leading-7 text-slate-300">
-              This policy explains how SecureTheCloud handles information
-              submitted through securethecloud.dev and related website
+              This policy explains how IKEVAR handles information
+              submitted through ikevar.com and related website
               interactions.
             </p>
 
             <p className="mt-4 text-sm text-slate-500">
-              Last updated: August 18, 2026
+              Last updated: August 23, 2026
             </p>
           </div>
         </Container>
@@ -45,7 +45,7 @@ export default function PrivacyPolicyPage() {
                 Information you provide
               </h2>
               <p className="mt-4">
-                SecureTheCloud may receive information you choose to provide
+                IKEVAR may receive information you choose to provide
                 through consultation, recruiting, or other contact forms. This
                 may include your name, business email address, company, role,
                 project context, consultation interests, timeline, and other
@@ -61,7 +61,7 @@ export default function PrivacyPolicyPage() {
                 Consultation requests submitted through this website are
                 processed using Formspree, a third-party form-processing
                 service. Information entered into the consultation form is
-                transmitted to that service so SecureTheCloud can receive and
+                transmitted to that service so IKEVAR can receive and
                 respond to the request.
               </p>
             </section>
@@ -116,7 +116,7 @@ export default function PrivacyPolicyPage() {
               <p className="mt-4">
                 The website may link to third-party services such as Formspree,
                 LinkedIn, YouTube, X, and GitHub. Those services operate under
-                their own privacy practices and terms. SecureTheCloud does not
+                their own privacy practices and terms. IKEVAR does not
                 control their independent processing activities.
               </p>
             </section>
@@ -143,7 +143,7 @@ export default function PrivacyPolicyPage() {
                 Data retention
               </h2>
               <p className="mt-4">
-                SecureTheCloud aims to retain submitted information only for as
+                IKEVAR aims to retain submitted information only for as
                 long as reasonably necessary for the business purpose for which
                 it was provided, operational follow-up, security, or applicable
                 recordkeeping requirements.

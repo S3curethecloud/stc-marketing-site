@@ -5,7 +5,7 @@ import { siteConfig } from "@/content/site";
 export const metadata = buildPageMetadata({
   title: "Terms of Use",
   description:
-    "Terms governing access to and use of the SecureTheCloud public website.",
+    "Terms governing access to and use of the IKEVAR public website.",
   path: "/terms",
 });
 
@@ -25,11 +25,11 @@ export default function TermsOfUsePage() {
 
             <p className="mt-6 text-base leading-7 text-slate-300">
               These terms govern access to and use of the public
-              SecureTheCloud website.
+              IKEVAR website.
             </p>
 
             <p className="mt-4 text-sm text-slate-500">
-              Last updated: August 18, 2026
+              Last updated: August 23, 2026
             </p>
           </div>
         </Container>
@@ -43,7 +43,7 @@ export default function TermsOfUsePage() {
                 Website purpose
               </h2>
               <p className="mt-4">
-                securethecloud.dev provides information about SecureTheCloud,
+                ikevar.com provides information about IKEVAR,
                 its architecture and advisory services, technical perspectives,
                 evidence resources, careers, and related business activities.
               </p>
@@ -57,7 +57,7 @@ export default function TermsOfUsePage() {
                 Accessing this website, reviewing its technical materials, or
                 submitting an inquiry does not by itself create a consulting,
                 employment, partnership, fiduciary, attorney-client, or other
-                professional relationship with SecureTheCloud.
+                professional relationship with IKEVAR.
               </p>
             </section>
 
@@ -91,9 +91,9 @@ export default function TermsOfUsePage() {
                 Intellectual property
               </h2>
               <p className="mt-4">
-                Unless otherwise stated, SecureTheCloud website copy, branding,
+                Unless otherwise stated, IKEVAR website copy, branding,
                 visual design, architecture illustrations, and original
-                materials are owned by or licensed to SecureTheCloud. Public
+                materials are owned by or licensed to IKEVAR. Public
                 repositories and third-party materials remain subject to the
                 licenses or terms identified with those resources.
               </p>
@@ -106,7 +106,7 @@ export default function TermsOfUsePage() {
               <p className="mt-4">
                 The website may link to external platforms including GitHub,
                 LinkedIn, YouTube, X, and other third-party resources.
-                SecureTheCloud is not responsible for the availability,
+                IKEVAR is not responsible for the availability,
                 security, content, or independent practices of third-party
                 websites.
               </p>
@@ -117,7 +117,7 @@ export default function TermsOfUsePage() {
                 Availability and changes
               </h2>
               <p className="mt-4">
-                SecureTheCloud may modify, suspend, remove, or update public
+                IKEVAR may modify, suspend, remove, or update public
                 website content, services, links, or functionality as business
                 and technical requirements change.
               </p>
@@ -129,7 +129,7 @@ export default function TermsOfUsePage() {
               </h2>
               <p className="mt-4">
                 The public website and its informational content are provided
-                on an as-available basis. SecureTheCloud does not represent that
+                on an as-available basis. IKEVAR does not represent that
                 every page, link, technical example, or third-party resource
                 will always be available, current, or suitable for a particular
                 implementation.
@@ -155,7 +155,7 @@ export default function TermsOfUsePage() {
             <p className="border-t border-white/10 pt-8 text-xs leading-6 text-slate-500">
               These website terms do not replace terms contained in a signed
               statement of work, services agreement, employment agreement, or
-              other written contract with SecureTheCloud.
+              other written contract with IKEVAR.
             </p>
           </div>
         </Container>

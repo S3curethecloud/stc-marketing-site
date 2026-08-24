@@ -6,7 +6,7 @@ import { siteConfig } from "@/content/site";
 export const metadata = buildPageMetadata({
   title: "Cookie Policy",
   description:
-    "Information about cookies and similar browser technologies on securethecloud.dev.",
+    "Information about cookies and similar browser technologies on ikevar.com.",
   path: "/cookies",
 });
 
@@ -26,11 +26,11 @@ export default function CookiePolicyPage() {
 
             <p className="mt-6 text-base leading-7 text-slate-300">
               This policy explains the current use of cookies and similar
-              browser technologies on securethecloud.dev.
+              browser technologies on ikevar.com.
             </p>
 
             <p className="mt-4 text-sm text-slate-500">
-              Last updated: August 18, 2026
+              Last updated: August 23, 2026
             </p>
           </div>
         </Container>
@@ -44,7 +44,7 @@ export default function CookiePolicyPage() {
                 Current website posture
               </h2>
               <p className="mt-4">
-                SecureTheCloud does not currently describe or intentionally
+                IKEVAR does not currently describe or intentionally
                 operate the public website as an advertising-tracking or
                 behavioral-profiling platform.
               </p>
@@ -72,10 +72,10 @@ export default function CookiePolicyPage() {
                 Third-party destinations
               </h2>
               <p className="mt-4">
-                When you leave securethecloud.dev for services such as LinkedIn,
+                When you leave ikevar.com for services such as LinkedIn,
                 YouTube, X, GitHub, or another third-party site, that provider
                 may use cookies or similar technologies under its own policies.
-                SecureTheCloud does not control those third-party technologies.
+                IKEVAR does not control those third-party technologies.
               </p>
             </section>
 
@@ -108,7 +108,7 @@ export default function CookiePolicyPage() {
                 Future changes
               </h2>
               <p className="mt-4">
-                If SecureTheCloud later introduces analytics, consent
+                If IKEVAR later introduces analytics, consent
                 management, advertising technology, or other non-essential
                 tracking mechanisms, this policy should be updated to describe
                 those technologies and any applicable choices before relying on

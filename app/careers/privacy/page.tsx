@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/metadata";
 export const metadata = buildPageMetadata({
   title: "Careers Privacy Notice",
   description:
-    "How SecureTheCloud handles candidate interest, resume links, recruiting review, and future restricted resume intake.",
+    "How IKEVAR handles candidate interest, resume links, recruiting review, and future restricted resume intake.",
   path: "/careers/privacy",
 });
 
@@ -21,7 +21,7 @@ const collectedItems = [
 const safeguards = [
   "The public careers form does not upload resume files to the website.",
   "Resume files are not stored in GitHub, Cloudflare Pages, or the static website repository.",
-  "If resume file collection becomes necessary, SecureTheCloud intends to use a restricted Google Drive intake folder.",
+  "If resume file collection becomes necessary, IKEVAR intends to use a restricted Google Drive intake folder.",
   "Access to candidate materials should be limited to approved recruiting reviewers.",
   "Public sharing links should not be used for candidate resume folders.",
 ] as const;
@@ -49,7 +49,7 @@ export default function CareersPrivacyPage() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-            SecureTheCloud uses the careers form to understand candidate interest in future roles, advisory opportunities, contract paths, and collaboration conversations. This notice explains how candidate information is handled.
+            IKEVAR uses the careers form to understand candidate interest in future roles, advisory opportunities, contract paths, and collaboration conversations. This notice explains how candidate information is handled.
           </p>
 
           <div className="mt-10 grid gap-6">
@@ -89,7 +89,7 @@ export default function CareersPrivacyPage() {
                 Deletion-first recruiting posture
               </h2>
               <p className="mt-5 text-base leading-8 text-slate-300">
-                SecureTheCloud does not intend to keep not-selected candidate resumes indefinitely. If a candidate is not selected, resume files are deleted once the decision is final.
+                IKEVAR does not intend to keep not-selected candidate resumes indefinitely. If a candidate is not selected, resume files are deleted once the decision is final.
               </p>
               <ul className="mt-6 grid gap-4">
                 {deletionRules.map((item) => (
@@ -115,7 +115,7 @@ export default function CareersPrivacyPage() {
                 Requesting deletion
               </h2>
               <p className="mt-5 text-base leading-8 text-slate-300">
-                Candidates may request deletion of submitted recruiting materials. SecureTheCloud will remove resume files and unnecessary recruiting records where available and operationally practical.
+                Candidates may request deletion of submitted recruiting materials. IKEVAR will remove resume files and unnecessary recruiting records where available and operationally practical.
               </p>
             </article>
           </div>
@@ -139,7 +139,7 @@ export default function CareersPrivacyPage() {
           </div>
 
           <p className="mt-8 text-xs leading-5 text-slate-500">
-            This notice describes SecureTheCloud's recruiting intake practice. It is not a full employment policy manual or legal advice.
+            This notice describes IKEVAR's recruiting intake practice. It is not a full employment policy manual or legal advice.
           </p>
         </div>
       </Container>
