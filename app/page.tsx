@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Container from "@/components/layout/Container";
+import { ikevarProducts } from "@/content/ikevar-products";
 import { siteConfig } from "@/content/site";
 import { insightArticles } from "@/content/insights";
 
@@ -194,6 +195,95 @@ export default function HomePage() {
                 </Link>
               ))}
             </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-b border-white/10 bg-[#030711]">
+        <Container className="py-16 sm:py-20 lg:py-24">
+          <div className="grid gap-8 border-b border-white/10 pb-10 lg:grid-cols-[1fr_0.7fr] lg:items-end lg:gap-16">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
+                Products
+              </p>
+
+              <h2 className="mt-5 max-w-3xl text-3xl font-semibold tracking-[-0.03em] text-white sm:text-4xl lg:text-[2.8rem] lg:leading-[1.08]">
+                Five systems for governing enterprise intelligence.
+              </h2>
+            </div>
+
+            <p className="max-w-xl text-sm leading-6 text-slate-400 lg:justify-self-end lg:text-right">
+              IKEVAR products address distinct questions across architecture,
+              enterprise policy, consequence intelligence, autonomous trust,
+              and human-AI productivity.
+            </p>
+          </div>
+
+          <div className="divide-y divide-white/10">
+            {ikevarProducts.map((product) => (
+              <Link
+                key={product.id}
+                href={product.href}
+                className="group grid gap-6 py-9 sm:py-10 lg:grid-cols-[4rem_1fr_1.15fr_12rem_auto] lg:items-start lg:gap-8"
+              >
+                <span className="text-xs font-semibold text-cyan-300">
+                  {product.number}
+                </span>
+
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-cyan-300">
+                    {product.category}
+                  </p>
+
+                  <h3 className="mt-3 text-2xl font-semibold tracking-[-0.02em] text-white transition-colors group-hover:text-cyan-200 sm:text-3xl">
+                    {product.name}
+                  </h3>
+
+                  <p className="mt-2 text-sm font-medium text-slate-300">
+                    {product.descriptor}
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-base font-semibold leading-6 text-white">
+                    {product.question}
+                  </p>
+
+                  <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-400">
+                    {product.summary}
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+                    Role
+                  </p>
+
+                  <p className="mt-2 text-sm font-medium text-slate-300">
+                    {product.role}
+                  </p>
+                </div>
+
+                <span
+                  className="text-sm font-semibold text-cyan-300 transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                >
+                  -&gt;
+                </span>
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex justify-end border-t border-white/10 pt-7">
+            <Link
+              href="/products"
+              className="inline-flex items-center text-sm font-semibold text-cyan-300 transition-colors hover:text-cyan-200"
+            >
+              Explore the full IKEVAR portfolio
+              <span className="ml-2" aria-hidden="true">
+                -&gt;
+              </span>
+            </Link>
           </div>
         </Container>
       </section>
