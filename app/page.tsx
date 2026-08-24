@@ -36,19 +36,40 @@ const approach = [
 const featuredInsights = insightArticles.slice(0, 3);
 
 function ArchitectureSignal() {
+  const domains = [
+    ["01", "AI & autonomous systems"],
+    ["02", "Cloud & platform engineering"],
+    ["03", "Security & identity"],
+    ["04", "Governance & evidence"],
+  ] as const;
+
   return (
     <div className="border border-white/10 bg-[#07101d] p-6 sm:p-8">
-      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">Architecture view</p>
+      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
+        Enterprise architecture view
+      </p>
+
       <div className="mt-8 grid gap-0 border border-white/10 sm:grid-cols-2">
-        {["AI gateway", "Identity & policy", "Retrieval controls", "Evidence & observability"].map((item, index) => (
-          <div key={item} className="flex min-h-24 items-center justify-between border-b border-white/10 px-5 py-5 last:border-b-0 sm:border-r sm:[&:nth-child(2n)]:border-r-0 sm:[&:nth-last-child(-n+2)]:border-b-0">
-            <span className="text-sm font-medium text-slate-200">{item}</span>
-            <span className="text-xs text-cyan-300">0{index + 1}</span>
+        {domains.map(([number, label]) => (
+          <div
+            key={number}
+            className="flex min-h-24 items-center justify-between border-b border-white/10 px-5 py-5 last:border-b-0 sm:border-r sm:[&:nth-child(2n)]:border-r-0 sm:[&:nth-last-child(-n+2)]:border-b-0"
+          >
+            <span className="max-w-[12rem] text-sm font-medium text-slate-200">
+              {label}
+            </span>
+
+            <span className="text-xs font-semibold text-cyan-300">
+              {number}
+            </span>
           </div>
         ))}
       </div>
+
       <p className="mt-6 max-w-xl text-sm leading-6 text-slate-400">
-        The model is intentionally simple: authorization and policy decisions happen before AI is allowed to access enterprise data, tools, or sensitive workflows.
+        IKEVAR connects architecture, engineering, security, governance,
+        identity, data, and operational evidence into implementation-ready
+        enterprise systems.
       </p>
     </div>
   );
@@ -58,27 +79,53 @@ export default function HomePage() {
   return (
     <>
       <section className="border-b border-white/10 bg-[#030711]">
-        <Container className="py-16 sm:py-20 lg:py-24">
-          <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16">
+        <Container className="py-20 sm:py-24 lg:py-28">
+          <div className="grid gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-20">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Enterprise AI architecture and security</p>
-              <h1 className="mt-5 max-w-4xl text-[2.3rem] font-semibold leading-[1.04] tracking-[-0.035em] text-white sm:text-5xl lg:text-[3.6rem]">
-                Lead secure AI adoption with enterprise-grade architecture.
-              </h1>
-              <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-                SecureTheCloud helps enterprises design, govern, and operationalize AI systems across cloud, security, identity, data, and regulated environments.
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
+                Enterprise AI, Cloud, Security & Governance
               </p>
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-                <Link href={siteConfig.primaryCta.href} className="inline-flex min-h-12 items-center justify-center bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-cyan-200">
-                  Request architecture consultation
-                  <span className="ml-2" aria-hidden="true">-&gt;</span>
+
+              <h1 className="mt-6 max-w-4xl text-[2.8rem] font-semibold leading-[0.98] tracking-[-0.045em] text-white sm:text-6xl lg:text-[4.5rem]">
+                Engineered trust.
+                <span className="block text-slate-300">
+                  Governed intelligence.
+                </span>
+              </h1>
+
+              <p className="mt-7 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
+                IKEVAR architects and engineers secure, governed enterprise
+                systems across AI, cloud, security, identity, data, and
+                autonomous workflows.
+              </p>
+
+              <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+                <Link
+                  href={siteConfig.primaryCta.href}
+                  className="inline-flex min-h-12 items-center justify-center bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-cyan-200"
+                >
+                  Start an architecture conversation
+                  <span className="ml-2" aria-hidden="true">
+                    -&gt;
+                  </span>
                 </Link>
-                <Link href="/services" className="inline-flex min-h-12 items-center text-sm font-semibold text-slate-200 hover:text-cyan-200">
-                  Explore services
-                  <span className="ml-2" aria-hidden="true">-&gt;</span>
+
+                <Link
+                  href="/products"
+                  className="inline-flex min-h-12 items-center text-sm font-semibold text-slate-200 transition-colors hover:text-cyan-200"
+                >
+                  Explore products
+                  <span className="ml-2" aria-hidden="true">
+                    -&gt;
+                  </span>
                 </Link>
               </div>
+
+              <p className="mt-8 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">
+                {siteConfig.brandSignature}
+              </p>
             </div>
+
             <ArchitectureSignal />
           </div>
         </Container>
