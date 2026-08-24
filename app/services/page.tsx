@@ -3,9 +3,9 @@ import Container from "@/components/layout/Container";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "Enterprise AI Security Services",
+  title: "Enterprise Architecture & Engineering Services",
   description:
-    "SecureTheCloud provides enterprise AI security architecture, cloud governance, secure AI adoption, compliance readiness, regulated workflow architecture, and executive advisory services.",
+    "IKEVAR provides enterprise architecture and engineering services across AI, cloud, cybersecurity, governance, autonomous systems, regulated workflows, and implementation readiness.",
   path: "/services",
 });
 
@@ -96,9 +96,9 @@ export default function ServicesPage() {
       <section className="border-b border-white/10 bg-[#030711]">
         <Container className="py-16 sm:py-20 lg:py-24">
           <div className="max-w-5xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Services / Decision paths</p>
-            <h1 className="mt-5 text-[2.4rem] font-semibold leading-[1.05] tracking-[-0.035em] text-white sm:text-5xl lg:text-[3.5rem]">Architecture services for secure AI programs operating under real constraints.</h1>
-            <p className="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">We help senior technology, security, cloud, AI, and governance leaders turn ambiguous requirements into clear architecture decisions, control models, and implementation-ready direction.</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Services / Architecture paths</p>
+            <h1 className="mt-5 text-[2.4rem] font-semibold leading-[1.05] tracking-[-0.035em] text-white sm:text-5xl lg:text-[3.5rem]">Architecture and engineering services for complex enterprise systems.</h1>
+            <p className="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">We help technology, security, cloud, AI, governance, and enterprise leaders turn ambiguous objectives into explicit architecture decisions, engineering patterns, control models, and implementation-ready direction.</p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Link href="/request-demo?from=services" className="inline-flex min-h-12 items-center justify-center bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 hover:bg-cyan-200">Request architecture consultation -&gt;</Link>
               <a href="#services" className="inline-flex min-h-12 items-center text-sm font-semibold text-slate-200 hover:text-cyan-200">Review service areas -&gt;</a>
@@ -110,7 +110,7 @@ export default function ServicesPage() {
       <section className="border-b border-white/10 bg-[#050816]">
         <Container className="py-14 sm:py-16">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-            <div><p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Engagement depth</p><h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">Not every engagement needs the same level of intervention.</h2><p className="mt-5 text-base leading-7 text-slate-400">We scale from decision support to implementation-ready engineering based on the problem, team maturity, risk, and delivery context.</p></div>
+            <div><p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Engagement depth</p><h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">Not every enterprise problem needs the same level of intervention.</h2><p className="mt-5 text-base leading-7 text-slate-400">We scale from decision support to architecture definition and implementation-ready engineering based on the problem, system maturity, risk, operating constraints, and delivery context.</p></div>
             <div className="border-t border-white/10">{engagementDepth.map((item) => <div key={item.title} className="border-b border-white/10 py-6"><h3 className="text-lg font-semibold text-white">{item.title}</h3><p className="mt-2 text-sm leading-6 text-slate-400">{item.body}</p></div>)}</div>
           </div>
         </Container>
@@ -118,7 +118,7 @@ export default function ServicesPage() {
 
       <section id="services" className="bg-[#030711]">
         <Container className="py-14 sm:py-16 lg:py-20">
-          <div className="max-w-3xl"><p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Service architecture</p><h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">Know when to engage us, what we will work through, and what your teams will receive.</h2></div>
+          <div className="max-w-3xl"><p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Service architecture</p><h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">Know when to engage us, what architecture decisions we will work through, and what your teams will receive.</h2></div>
 
           <div className="mt-12 border-t border-white/10">
             {services.map((service) => (

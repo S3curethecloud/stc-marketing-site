@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/metadata";
 export const metadata = buildPageMetadata({
   title: "Industries",
   description:
-    "SecureTheCloud helps healthcare, financial services, technology, retail, and regulated organizations design secure AI and cloud architectures for real operating constraints.",
+    "IKEVAR helps healthcare, financial services, enterprise technology, customer operations, and regulated organizations design secure, governed enterprise systems for real operating constraints.",
   path: "/industries",
 });
 
@@ -79,15 +79,15 @@ export default function IndustriesPage() {
       <section className="border-b border-white/10 bg-[#030711]">
         <Container className="py-16 sm:py-20 lg:py-24">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Industries / Operating context</p>
-          <h1 className="mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">Architecture for environments where AI has to survive real scrutiny.</h1>
-          <p className="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">SecureTheCloud works with high-trust environments where data sensitivity, operational accountability, security review, and implementation constraints shape what responsible AI adoption actually looks like.</p>
+          <h1 className="mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">Architecture for environments where enterprise systems must survive real scrutiny.</h1>
+          <p className="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">IKEVAR works with high-trust environments where data sensitivity, operational accountability, security review, governance obligations, and implementation constraints shape what enterprise systems are allowed to become.</p>
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-400"><span>Sensitive data</span><span>Human review</span><span>Identity and authorization</span><span>Audit evidence</span><span>Implementation readiness</span></div>
         </Container>
       </section>
 
       <section className="border-b border-white/10 bg-[#030711]">
         <Container className="py-14 sm:py-16 lg:py-20">
-          <div className="mb-10 max-w-3xl"><p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Industry architecture priorities</p><h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Start with the operating constraints, then design the AI system.</h2></div>
+          <div className="mb-10 max-w-3xl"><p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Industry architecture priorities</p><h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Start with the operating constraints, then design the enterprise system.</h2></div>
           <div className="divide-y divide-white/10 border-y border-white/10">
             {industries.map((industry) => (
               <article id={industry.id} key={industry.id} className="py-10 sm:py-12">
@@ -116,14 +116,14 @@ export default function IndustriesPage() {
 
       <section className="border-b border-white/10 bg-[#050816]">
         <Container className="py-14 sm:py-16 lg:py-20">
-          <div className="max-w-3xl"><p className="text-xs font-semibold uppercase tracking-[0.28em] text-violet-300">Architecture perspectives</p><h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">What an enterprise architecture engagement can look like.</h2><p className="mt-4 text-base leading-7 text-slate-400">The scenarios below are illustrative architecture patterns, not customer case studies or claims. They show how SecureTheCloud approaches common enterprise design problems and the artifacts that support a decision.</p></div>
+          <div className="max-w-3xl"><p className="text-xs font-semibold uppercase tracking-[0.28em] text-violet-300">Architecture perspectives</p><h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">What an enterprise architecture engagement can look like.</h2><p className="mt-4 text-base leading-7 text-slate-400">The scenarios below are illustrative architecture patterns, not customer case studies or claims. They show how IKEVAR approaches common enterprise design problems and the artifacts that support a decision.</p></div>
           <div className="mt-10 grid gap-10 lg:grid-cols-3">{architecturePerspectives.map((perspective) => <article key={perspective.title} className="border-t border-white/15 pt-6"><p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">{perspective.label}</p><h3 className="mt-3 text-xl font-semibold leading-7 text-white">{perspective.title}</h3><dl className="mt-6 space-y-5 text-sm leading-6"><div><dt className="font-semibold text-white">Situation</dt><dd className="mt-1 text-slate-400">{perspective.situation}</dd></div><div><dt className="font-semibold text-white">Architecture response</dt><dd className="mt-1 text-slate-400">{perspective.response}</dd></div><div><dt className="font-semibold text-white">Artifacts</dt><dd className="mt-1 text-slate-400">{perspective.artifacts}</dd></div><div><dt className="font-semibold text-white">Decision supported</dt><dd className="mt-1 text-slate-400">{perspective.decision}</dd></div></dl></article>)}</div>
         </Container>
       </section>
 
       <section className="bg-[#030711]">
         <Container className="grid gap-8 py-14 sm:py-16 lg:grid-cols-[1fr_auto] lg:items-end lg:py-20">
-          <div className="max-w-3xl"><p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Architecture consultation</p><h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Bring us the constraint, workflow, or decision that is slowing secure adoption.</h2><p className="mt-4 text-base leading-7 text-slate-400">We can help frame the trust boundaries, controls, artifacts, and implementation decisions required to move from AI ambition to a defensible architecture.</p></div>
+          <div className="max-w-3xl"><p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Architecture consultation</p><h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Bring us the constraint, workflow, or decision that is slowing the architecture down.</h2><p className="mt-4 text-base leading-7 text-slate-400">We can help frame the trust boundaries, controls, artifacts, engineering decisions, and rollout conditions required to move from enterprise ambition to a defensible architecture.</p></div>
           <Link href="/request-demo?from=industries" className="inline-flex min-h-11 items-center justify-center rounded-md bg-cyan-300 px-5 py-3 text-sm font-semibold text-[#021018] hover:bg-cyan-200">Request Architecture Consultation</Link>
         </Container>
       </section>
