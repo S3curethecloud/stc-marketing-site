@@ -3,26 +3,41 @@ import Container from "@/components/layout/Container";
 import { siteConfig } from "@/content/site";
 import { insightArticles } from "@/content/insights";
 
-const focusAreas = [
+const capabilityAreas = [
   {
-    title: "AI security architecture",
-    body: "Secure-by-design patterns for GenAI, RAG, agents, gateways, identity, data boundaries, and runtime controls.",
+    number: "01",
+    title: "AI & Autonomous Systems",
+    body:
+      "Agentic platforms, GenAI systems, RAG, orchestration, AI gateways, model boundaries, tool governance, evaluation, and autonomous-system architecture.",
     href: "/services#ai-security-architecture",
   },
   {
-    title: "Cloud governance",
-    body: "Identity, policy, secrets, platform controls, and operating models across distributed cloud environments.",
+    number: "02",
+    title: "Cloud & Platform Engineering",
+    body:
+      "Cloud foundations, platform engineering, Kubernetes, distributed systems, API architecture, identity integration, observability, and production operating models.",
     href: "/services#cloud-governance",
   },
   {
-    title: "AI governance and evidence",
-    body: "Policy-backed control models, traceability, observability, evaluation evidence, and compliance readiness.",
+    number: "03",
+    title: "Cybersecurity & Zero Trust",
+    body:
+      "Security architecture, zero-trust controls, IAM, runtime authorization, workload identity, data protection, threat modeling, and secure system boundaries.",
+    href: "/security",
+  },
+  {
+    number: "04",
+    title: "Governance, Risk & Assurance",
+    body:
+      "AI governance, policy architecture, risk controls, Responsible AI, evidence, assurance, compliance readiness, and architecture review.",
     href: "/services#governance-compliance",
   },
   {
-    title: "Regulated AI workflows",
-    body: "Reviewable, human-governed AI workflows for healthcare and other high-compliance environments.",
-    href: "/services#regulated-ai",
+    number: "05",
+    title: "Enterprise Architecture & Transformation",
+    body:
+      "Ambiguous business requirements translated into target states, architecture decisions, roadmaps, ADRs, operating models, and implementation-ready designs.",
+    href: "/architecture",
   },
 ] as const;
 
@@ -132,19 +147,53 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-white/10 bg-[#050816]">
-        <Container className="py-14 sm:py-16 lg:py-20">
-          <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">What we solve</p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">Architecture and governance for AI programs operating under real constraints.</h2>
-          </div>
-          <div className="mt-10 grid border-t border-white/10 md:grid-cols-2">
-            {focusAreas.map((area, index) => (
-              <Link key={area.title} href={area.href} className={`group border-b border-white/10 py-7 md:px-6 ${index % 2 === 0 ? "md:border-r" : ""}`}>
-                <h3 className="text-xl font-semibold text-white group-hover:text-cyan-200">{area.title}</h3>
-                <p className="mt-3 max-w-xl text-sm leading-6 text-slate-400">{area.body}</p>
-                <span className="mt-5 inline-flex text-sm font-medium text-cyan-300">Learn more -&gt;</span>
-              </Link>
-            ))}
+        <Container className="py-16 sm:py-20 lg:py-24">
+          <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-20">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
+                What we architect
+              </p>
+
+              <h2 className="mt-5 max-w-xl text-3xl font-semibold tracking-[-0.03em] text-white sm:text-4xl lg:text-[2.55rem] lg:leading-[1.1]">
+                Enterprise systems built across technology, security,
+                governance, and operations.
+              </h2>
+
+              <p className="mt-6 max-w-lg text-base leading-7 text-slate-400">
+                IKEVAR combines architecture and engineering across the
+                control planes that determine whether enterprise systems
+                can operate securely, reliably, and at scale.
+              </p>
+            </div>
+
+            <div className="border-t border-white/10">
+              {capabilityAreas.map((area) => (
+                <Link
+                  key={area.number}
+                  href={area.href}
+                  className="group grid gap-4 border-b border-white/10 py-7 sm:grid-cols-[3.5rem_14rem_1fr_auto] sm:items-start sm:gap-6"
+                >
+                  <span className="text-xs font-semibold text-cyan-300">
+                    {area.number}
+                  </span>
+
+                  <h3 className="text-lg font-semibold text-white transition-colors group-hover:text-cyan-200">
+                    {area.title}
+                  </h3>
+
+                  <p className="max-w-2xl text-sm leading-6 text-slate-400">
+                    {area.body}
+                  </p>
+
+                  <span
+                    className="text-sm font-semibold text-cyan-300 transition-transform group-hover:translate-x-1"
+                    aria-hidden="true"
+                  >
+                    -&gt;
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
