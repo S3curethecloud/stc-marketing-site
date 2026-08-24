@@ -4,7 +4,7 @@ import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
   title: "Career Interest Received",
-  description: "SecureTheCloud received your career interest submission.",
+  description: "IKEVAR received your career interest submission.",
   path: "/careers/join/success",
 });
 
@@ -14,7 +14,7 @@ export default function CareerInterestSuccessPage() {
       <Container className="py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Interest received</p>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">Thank you for considering SecureTheCloud.</h1>
+          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">Thank you for considering IKEVAR.</h1>
           <p className="mt-6 text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">We received your career interest submission. We will review your background and keep your information in mind for future roles, advisory paths, contract work, or collaboration opportunities.</p>
 
           <div className="mt-9 border-y border-white/10 py-7">

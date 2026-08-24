@@ -6,13 +6,13 @@ import { buildPageMetadata } from "@/lib/metadata";
 export const metadata = buildPageMetadata({
   title: "Careers",
   description:
-    "Build secure AI systems, cloud governance architectures, and implementation-ready designs for enterprise clients with SecureTheCloud.",
+    "Build enterprise AI, cloud, security, governance, and architecture systems with IKEVAR.",
   path: "/careers",
 });
 
 const traits = [
   "Client-facing architecture leadership",
-  "Secure AI and cloud governance depth",
+  "AI, cloud, security, and governance depth",
   "Executive and technical communication",
   "Implementation-ready design discipline",
   "High-trust delivery mindset",
@@ -50,10 +50,10 @@ export default function CareersPage() {
           <div className="max-w-5xl">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Careers</p>
             <h1 className="mt-5 text-[2.4rem] font-semibold leading-[1.05] tracking-[-0.035em] text-white sm:text-5xl lg:text-[3.5rem]">
-              Build what is next. Secure AI systems that power the enterprise era.
+              Build the systems that power the intelligent enterprise.
             </h1>
             <p className="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-              We are building a team of architects, engineers, strategists, and advisors who can help clients turn AI ambition into governed implementation.
+              We are building a team of architects, engineers, strategists, and advisors who can turn complex enterprise objectives into secure, governed, implementation-ready systems.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
               <a href="#roles" className="inline-flex min-h-12 items-center justify-center bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 hover:bg-cyan-200">
@@ -88,7 +88,7 @@ export default function CareersPage() {
                 Client trust, technical depth, and implementation focus.
               </h2>
               <p className="mt-5 text-base leading-7 text-slate-400">
-                SecureTheCloud is for people who can operate with precision across business goals, architecture decisions, security constraints, and delivery realities.
+                IKEVAR is for people who can operate with precision across business objectives, architecture decisions, engineering constraints, security boundaries, governance requirements, and delivery realities.
               </p>
             </div>
 
@@ -149,7 +149,7 @@ export default function CareersPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">Talent network</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">Do not see the right role yet?</h2>
             <p className="mt-4 text-base leading-7 text-slate-400">
-              Join the SecureTheCloud talent network. Share your background and the kind of work you want to do across AI security, cloud governance, secure engineering, healthcare AI, or client advisory.
+              Join the IKEVAR talent network. Share your background and the kind of work you want to do across enterprise AI, cloud platforms, cybersecurity, governance, architecture, engineering, regulated systems, or client advisory.
             </p>
           </div>
           <Link href="/careers/join" className="inline-flex min-h-12 items-center justify-center bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 hover:bg-cyan-200">

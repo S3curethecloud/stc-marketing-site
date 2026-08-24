@@ -13,7 +13,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: CareerRolePageProps) {
   const { slug } = await params;
   const role = getCareerRole(slug);
-  if (!role) return buildPageMetadata({ title: "Career Role", description: "SecureTheCloud career role.", path: "/careers" });
+  if (!role) return buildPageMetadata({ title: "Career Role", description: "IKEVAR career role.", path: "/careers" });
   return buildPageMetadata({ title: role.title, description: role.summary, path: `/careers/${role.slug}` });
 }
 
@@ -56,7 +56,7 @@ export default async function CareerRolePage({ params }: CareerRolePageProps) {
 
               <article className="py-8"><h2 className="text-2xl font-semibold text-white">Preferred experience</h2><ul className="mt-5 grid gap-3 text-base leading-7 text-slate-300">{role.preferred.map((item) => <li key={item}>— {item}</li>)}</ul></article>
 
-              <article className="py-8"><h2 className="text-2xl font-semibold text-white">Additional information</h2><div className="mt-4 grid gap-4 text-base leading-7 text-slate-300"><p>SecureTheCloud is building a future talent bench. These role pages are intended for interest collection and early conversations. Formal openings, employment terms, compensation, benefits, and legal notices will be published when active hiring plans are finalized.</p><p>We welcome people from different backgrounds and career paths. We evaluate interest based on role fit, judgment, communication, integrity, technical depth, and ability to help clients solve complex AI, cloud, security, and governance problems.</p></div></article>
+              <article className="py-8"><h2 className="text-2xl font-semibold text-white">Additional information</h2><div className="mt-4 grid gap-4 text-base leading-7 text-slate-300"><p>IKEVAR is building a future talent bench across enterprise architecture, AI, cloud, security, governance, engineering, and advisory disciplines. These role pages are intended for interest collection and early conversations. Formal openings, employment terms, compensation, benefits, and legal notices will be published when active hiring plans are finalized.</p><p>We welcome people from different backgrounds and career paths. We evaluate interest based on role fit, judgment, communication, integrity, technical depth, and ability to help clients solve complex AI, cloud, security, and governance problems.</p></div></article>
             </main>
 
             <aside className="space-y-8">

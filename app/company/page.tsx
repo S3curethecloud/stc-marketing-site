@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/metadata";
 export const metadata = buildPageMetadata({
   title: "Company",
   description:
-    "SecureTheCloud is an enterprise AI security architecture and cloud governance services firm helping organizations move from AI ambition to governed implementation.",
+    "IKEVAR architects and engineers secure, governed enterprise systems across AI, cloud, cybersecurity, identity, data, governance, and autonomous workflows.",
   path: "/company",
 });
 
@@ -18,10 +18,10 @@ const principles = [
 
 const operatingModel = [
   "Executive and technical discovery",
-  "AI security and cloud governance assessment",
+  "Enterprise architecture and control assessment",
   "Target-state architecture design",
   "Control, policy, and evidence mapping",
-  "Delivery roadmap and implementation guidance",
+  "Engineering roadmap and implementation guidance",
 ] as const;
 
 const audiences = [
@@ -34,9 +34,9 @@ const audiences = [
 ] as const;
 
 const differentiators = [
-  { value: "Founder-led", label: "Architecture depth with direct senior delivery focus." },
-  { value: "Services-first", label: "Consulting, advisory, design, and implementation readiness." },
-  { value: "Governance-native", label: "Security, compliance, policy, and evidence built into the design path." },
+  { value: "Architecture-led", label: "Enterprise decisions grounded in explicit systems, boundaries, dependencies, and operating constraints." },
+  { value: "Engineering-oriented", label: "Architecture is translated into implementation patterns, technical artifacts, and production-ready guidance." },
+  { value: "Governance-native", label: "Security, policy, evidence, accountability, and operational control are built into the design path." },
 ] as const;
 
 export default function CompanyPage() {
@@ -48,10 +48,10 @@ export default function CompanyPage() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Company</p>
               <h1 className="mt-5 max-w-4xl text-[2.4rem] font-semibold leading-[1.05] tracking-[-0.035em] text-white sm:text-5xl lg:text-[3.5rem]">
-                Built to help enterprises secure the AI era.
+                Architecture and engineering for the intelligent enterprise.
               </h1>
               <p className="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-                SecureTheCloud is an enterprise AI security architecture and cloud governance services firm. We help organizations translate ambiguous AI, security, cloud, and compliance needs into scalable, maintainable, implementation-ready technical designs.
+                IKEVAR architects and engineers secure, governed enterprise systems across AI, cloud, cybersecurity, identity, data, and autonomous workflows. We help organizations turn strategic ambition and technical ambiguity into systems that can be implemented, governed, validated, and operated with confidence.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <Link href="/request-demo?focus=advisory&from=company" className="inline-flex min-h-12 items-center justify-center bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 hover:bg-cyan-200">
@@ -97,8 +97,8 @@ export default function CompanyPage() {
           <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">What we believe</p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">Secure AI adoption needs more than enthusiasm.</h2>
-              <p className="mt-5 text-base leading-7 text-slate-400">Enterprises need a disciplined path from opportunity to architecture, governance, validation, and implementation.</p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">Enterprise intelligence needs more than technology adoption.</h2>
+              <p className="mt-5 text-base leading-7 text-slate-400">Enterprises need a disciplined path from business objective to architecture, engineering, governance, evidence, validation, and production operation.</p>
             </div>
             <div className="grid gap-0 border-t border-white/10 md:grid-cols-2">
               {principles.map((principle) => (
@@ -117,7 +117,7 @@ export default function CompanyPage() {
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Who we serve</p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">Built for leaders responsible for high-trust AI transformation.</h2>
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">Built for leaders responsible for high-trust enterprise transformation.</h2>
             </div>
             <div className="grid gap-x-8 gap-y-0 sm:grid-cols-2">
               {audiences.map((audience) => (
@@ -131,7 +131,7 @@ export default function CompanyPage() {
       <section className="border-b border-white/10 bg-[#030711]">
         <Container className="grid gap-10 py-14 sm:py-16 lg:grid-cols-[0.72fr_1.28fr] lg:py-20">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">Evaluate SecureTheCloud</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">Evaluate IKEVAR</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">Do not take the positioning on faith. Follow the technical trail.</h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-2">
@@ -154,7 +154,7 @@ export default function CompanyPage() {
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">Build with us</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">Bring the ambition. We will help shape the architecture.</h2>
-            <p className="mt-4 text-base leading-7 text-slate-400">Talk to SecureTheCloud about secure AI adoption, cloud governance, regulated workflows, and implementation-ready technical design.</p>
+            <p className="mt-4 text-base leading-7 text-slate-400">Talk to IKEVAR about enterprise AI, cloud platforms, cybersecurity, governance, autonomous systems, regulated environments, and implementation-ready architecture.</p>
           </div>
           <Link href="/request-demo?focus=advisory&from=company" className="inline-flex min-h-12 items-center justify-center bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 hover:bg-cyan-200">
             Request architecture consultation -&gt;

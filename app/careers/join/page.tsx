@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/metadata";
 export const metadata = buildPageMetadata({
   title: "Join the Talent Network",
   description:
-    "Express interest in future SecureTheCloud roles across AI security architecture, cloud governance, secure AI engineering, AI governance consulting, and healthcare AI workflow architecture.",
+    "Express interest in future IKEVAR roles across enterprise architecture, AI, cloud, cybersecurity, governance, engineering, regulated systems, and client advisory.",
   path: "/careers/join",
 });
 
@@ -23,8 +23,8 @@ export default function CareersJoinPage() {
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-14">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Talent network</p>
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">Join the SecureTheCloud talent network.</h1>
-            <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">We are building a team of architects, engineers, consultants, and operators who can help enterprises secure AI adoption, cloud governance, and regulated AI workflows.</p>
+            <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">Join the IKEVAR talent network.</h1>
+            <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">We are building a team of architects, engineers, consultants, strategists, and operators who can help enterprises design, secure, govern, engineer, and validate complex technology systems.</p>
 
             <div className="mt-9 border-y border-white/10 py-7">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-violet-300">Why join early</p>
