@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/metadata";
 export const metadata = buildPageMetadata({
   title: "Evidence and Public Engineering",
   description:
-    "Reference architectures, control models, governance evidence, and public engineering work that show how SecureTheCloud approaches enterprise AI security, governance, RAG, evaluation, and implementation readiness.",
+    "Reference architectures, control models, governance evidence, and public engineering work that show how IKEVAR approaches enterprise AI, cloud, security, governance, autonomous systems, and implementation readiness.",
   path: "/evidence",
 });
 
@@ -13,7 +13,7 @@ const proofModel = [
   { title: "Reference architectures", body: "System boundaries, identity flows, retrieval patterns, gateways, control points, and implementation decisions expressed as architecture rather than marketing claims." },
   { title: "Control models", body: "Policy, authorization, governance, review, evidence, and runtime expectations translated into technical control structures that engineering teams can reason about." },
   { title: "Implementation artifacts", body: "ADRs, test harnesses, evidence records, schemas, trace models, verification scripts, readiness gates, and delivery documentation that make architecture reviewable." },
-  { title: "Public engineering", body: "Selected public repositories expose the design assumptions, boundaries, verification discipline, and technical artifacts behind SecureTheCloud architecture work." },
+  { title: "Public engineering", body: "Selected public repositories expose the design assumptions, boundaries, verification discipline, and technical artifacts behind IKEVAR architecture and engineering work." },
 ] as const;
 
 const publicEngineering = [
@@ -83,7 +83,7 @@ const evidenceBoundaries = [
   "Public labs and reference implementations demonstrate architecture patterns and engineering discipline; they are not representations of customer production environments unless explicitly stated.",
   "Mock evidence, simulated services, and deterministic test harnesses are labeled as such in their source repositories.",
   "SOC 2-aligned readiness artifacts do not claim SOC 2 certification or replace an independent examination.",
-  "Repository evidence is used to show how SecureTheCloud designs, tests, governs, and documents systems—not to manufacture customer outcomes or performance claims.",
+  "Repository evidence is used to show how IKEVAR designs, tests, governs, and documents systems—not to manufacture customer outcomes or performance claims.",
 ] as const;
 
 export default function EvidencePage() {
@@ -94,7 +94,7 @@ export default function EvidencePage() {
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-500"><Link href="/" className="hover:text-white">Home</Link><span>/</span><span className="text-slate-300">Evidence</span></nav>
           <p className="mt-8 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Evidence and public engineering</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">Show the architecture. Show the controls. Show the evidence.</h1>
-          <p className="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">SecureTheCloud builds credibility through reviewable technical work: reference architectures, control models, implementation artifacts, evaluation harnesses, governance evidence, and public engineering that exposes how the systems are designed.</p>
+          <p className="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">IKEVAR builds credibility through reviewable technical work: reference architectures, control models, implementation artifacts, evaluation harnesses, governance evidence, and public engineering that exposes how systems are designed, governed, tested, and prepared for implementation.</p>
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-400"><span>No invented customer logos</span><span>No fabricated metrics</span><span>No certification overclaims</span><span>Evidence before claims</span></div>
         </Container>
       </section>
@@ -111,7 +111,7 @@ export default function EvidencePage() {
         <Container className="py-14 sm:py-16 lg:py-20">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Selected architecture evidence</p>
           <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">Technical proof translated for enterprise review.</h2>
-          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-400">Each evidence record explains the architecture problem, principle, and inspectable artifacts inside the SecureTheCloud buyer journey. Public source repositories remain available as supporting provenance for technical evaluators who want to go deeper.</p>
+          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-400">Each evidence record explains the architecture problem, governing principle, and inspectable artifacts inside the IKEVAR evaluation path. Public source repositories remain available as supporting provenance for technical evaluators who want to go deeper.</p>
           <div className="mt-10 divide-y divide-white/10 border-y border-white/10">
             {publicEngineering.map((item) => (
               <article key={item.title} className="py-9 sm:py-10">
@@ -150,7 +150,7 @@ export default function EvidencePage() {
 
       <section className="bg-[#030711]">
         <Container className="grid gap-8 py-14 sm:py-16 lg:grid-cols-[1fr_auto] lg:items-end lg:py-20">
-          <div className="max-w-3xl"><p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">From evidence to engagement</p><h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Bring us the architecture problem you need to make reviewable.</h2><p className="mt-4 text-base leading-7 text-slate-400">We can help turn AI security, governance, RAG, agent, cloud, or regulated-workflow requirements into architecture decisions, control models, evidence expectations, and implementation-ready artifacts.</p><div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold"><Link href="/services" className="text-slate-300 hover:text-white">Explore services -&gt;</Link><Link href="/industries" className="text-slate-300 hover:text-white">Add industry context -&gt;</Link><Link href="/insights" className="text-slate-300 hover:text-white">Read architecture notes -&gt;</Link></div></div>
+          <div className="max-w-3xl"><p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">From evidence to engagement</p><h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Bring us the architecture problem you need to make reviewable.</h2><p className="mt-4 text-base leading-7 text-slate-400">We can help turn enterprise AI, cloud, security, governance, autonomous-system, or regulated-workflow requirements into architecture decisions, control models, evidence expectations, and implementation-ready artifacts.</p><div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold"><Link href="/services" className="text-slate-300 hover:text-white">Explore services -&gt;</Link><Link href="/industries" className="text-slate-300 hover:text-white">Add industry context -&gt;</Link><Link href="/insights" className="text-slate-300 hover:text-white">Read architecture notes -&gt;</Link></div></div>
           <Link href="/request-demo?from=evidence" className="inline-flex min-h-11 items-center justify-center rounded-md bg-cyan-300 px-5 py-3 text-sm font-semibold text-[#021018] hover:bg-cyan-200">Request Architecture Consultation</Link>
         </Container>
       </section>

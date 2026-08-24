@@ -10,7 +10,7 @@ import { buildPageMetadata } from "@/lib/metadata";
 export const metadata = buildPageMetadata({
   title: "Insights",
   description:
-    "SecureTheCloud architecture briefs on AI governance, secure agent systems, cloud controls, regulated AI, healthcare workflows, and implementation-ready control design.",
+    "IKEVAR architecture briefs on enterprise AI, autonomous systems, cloud platforms, cybersecurity, governance, regulated environments, and implementation-ready control design.",
   path: "/insights",
 });
 
@@ -32,10 +32,10 @@ export default function InsightsPage() {
             Technical authority
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">
-            Architecture thinking for leaders and engineers building governed AI systems.
+            Architecture intelligence for leaders and engineers building governed enterprise systems.
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-            These notes focus on design decisions, control implications, evidence, implementation artifacts, and the operating tradeoffs behind secure enterprise AI.
+            These notes focus on architecture decisions, control implications, evidence, implementation artifacts, and the operating tradeoffs behind secure, governed enterprise systems.
           </p>
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-400">
             {taxonomy.map((item) => (
@@ -144,7 +144,7 @@ export default function InsightsPage() {
                 Architecture briefing
               </p>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                Turn a difficult AI design question into an architecture decision.
+                Turn a difficult enterprise technology question into an architecture decision.
               </h2>
               <p className="mt-4 text-base leading-7 text-slate-400">
                 Bring the workflow, control gap, architecture tradeoff, or production blocker. We can help frame the decision, required artifacts, and implementation path.

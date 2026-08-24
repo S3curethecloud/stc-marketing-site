@@ -16,7 +16,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: InsightArticlePageProps) {
   const { slug } = await params;
   const article = getInsightArticle(slug);
-  if (!article) return buildPageMetadata({ title: "Insight", description: "SecureTheCloud architecture insight.", path: "/insights" });
+  if (!article) return buildPageMetadata({ title: "Insight", description: "IKEVAR architecture insight.", path: "/insights" });
   return buildPageMetadata({ title: article.title, description: article.description, path: `/insights/${article.slug}` });
 }
 
@@ -67,7 +67,7 @@ export default async function InsightArticlePage({ params }: InsightArticlePageP
 
             <section className="border-t border-white/10 pt-8">
               <h2 className="text-2xl font-semibold text-white">Continue from architecture thinking to action</h2>
-              <p className="mt-4 text-base leading-7 text-slate-400">Use the related service to understand engagement scope, the industry path to add operating context, and Evidence to inspect how SecureTheCloud turns architecture ideas into reviewable technical artifacts.</p>
+              <p className="mt-4 text-base leading-7 text-slate-400">Use the related service to understand engagement scope, the industry path to add operating context, and Evidence to inspect how IKEVAR turns architecture ideas into reviewable technical artifacts.</p>
               <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold">
                 {authority ? <><Link href={authority.serviceHref} className="text-cyan-300 hover:text-cyan-200">{authority.serviceLabel} -&gt;</Link><Link href={authority.industryHref} className="text-slate-300 hover:text-white">{authority.industryLabel} -&gt;</Link></> : null}
                 <Link href="/evidence" className="text-slate-300 hover:text-white">Inspect technical evidence -&gt;</Link>
