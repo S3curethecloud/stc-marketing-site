@@ -77,7 +77,7 @@ export default function ProductDropdown() {
                   All Products
                 </div>
                 <div className="mt-1 text-xs leading-5 text-stc-muted">
-                  View the full SecureTheCloud product portfolio.
+                  Explore the full IKEVAR enterprise product portfolio.
                 </div>
               </Link>
 

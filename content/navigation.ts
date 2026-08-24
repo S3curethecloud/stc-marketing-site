@@ -1,3 +1,5 @@
+import { ikevarProducts } from "./ikevar-products";
+
 export type NavItem = {
   label: string;
   href: string;
@@ -9,32 +11,13 @@ export type FooterNavGroup = {
   items: NavItem[];
 };
 
-export const productNavItems: NavItem[] = [
-  {
-    label: "Aegis Runtime",
-    href: "/products/aegis-runtime",
-    description:
-      "Runtime authority and deterministic governance for AI-agent actions before execution.",
-  },
-  {
-    label: "Kubernetes Sentinel",
-    href: "/products/kubernetes",
-    description:
-      "Enterprise Kubernetes governance, runtime enforcement, workload intelligence, and deterministic policy orchestration.",
-  },
-  {
-    label: "Agent Blackbox",
-    href: "/products/agent-blackbox",
-    description:
-      "Audit-ready evidence capture, replay, and investigation for autonomous systems.",
-  },
-  {
-    label: "RiskDNA",
-    href: "/products/riskdna",
-    description:
-      "Predictive risk scoring, blast-radius intelligence, and autonomous-action exposure analysis.",
-  },
-];
+export const productNavItems: NavItem[] = ikevarProducts.map(
+  (product) => ({
+    label: product.name,
+    href: product.href,
+    description: `${product.category}. ${product.question}`,
+  }),
+);
 
 export const mainNavItems: NavItem[] = [
   {

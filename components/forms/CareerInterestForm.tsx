@@ -78,14 +78,14 @@ export default function CareerInterestForm({
   return (
     <form aria-label="Career interest form" action={action} method="POST" onSubmit={handleSubmit} className={`border border-white/10 bg-[#060a15]/90 p-5 sm:p-7 ${className}`}>
       <input type="hidden" name="_redirect" value={redirectUrl} />
-      <input type="hidden" name="_subject" value="SecureTheCloud career interest" />
-      <input type="hidden" name="source" value="securethecloud.dev/careers" />
+      <input type="hidden" name="_subject" value={`${siteConfig.name} career interest`} />
+      <input type="hidden" name="source" value={`${siteConfig.domain}/careers`} />
       <input type="hidden" name="requestType" value="career interest" />
       <label className="sr-only">Leave this field empty<input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" /></label>
 
       <div>
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Talent intake</p>
-        <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl">Express interest in joining SecureTheCloud.</h2>
+        <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl">Express interest in joining IKEVAR.</h2>
         <p className="mt-3 text-sm leading-6 text-slate-400">Share your background, role interest, and portfolio links. We will use this to understand fit for future hiring, advisory, contract, or collaboration conversations.</p>
       </div>
 
@@ -99,7 +99,7 @@ export default function CareerInterestForm({
         <label className="grid gap-2 text-sm font-medium text-white/90"><span>Primary experience area</span><select required name="experienceArea" defaultValue="" className={selectClassName}><option value="" disabled>Select an area</option>{experienceAreas.map((area) => <option key={area} value={area}>{area}</option>)}</select></label>
         <label className="grid gap-2 text-sm font-medium text-white/90"><span>Availability</span><select required name="availability" defaultValue="" className={selectClassName}><option value="" disabled>Select availability</option>{availability.map((item) => <option key={item} value={item}>{item}</option>)}</select></label>
 
-        <TextAreaField label="Why are you interested in SecureTheCloud?" name="interestReason" rows={5} required placeholder="Tell us what you want to build, what role fits you, and why SecureTheCloud's AI security and cloud governance mission interests you." />
+        <TextAreaField label="Why are you interested in IKEVAR?" name="interestReason" rows={5} required placeholder="Tell us what you want to build, what role fits you, and why IKEVAR's enterprise AI, cloud, security, governance, and architecture mission interests you." />
         <TextAreaField label="Relevant experience" name="experienceSummary" rows={5} placeholder="Summarize your experience across cybersecurity, cloud, AI, governance, healthcare, consulting, engineering, or client delivery." />
 
         {errorMessage ? <p className="border border-red-400/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">{errorMessage}</p> : null}

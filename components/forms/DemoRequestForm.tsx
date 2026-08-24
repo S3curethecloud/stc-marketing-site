@@ -71,7 +71,9 @@ export default function DemoRequestForm({
   const queryArea = focusAreaMap[focus] ?? "";
   const candidateArea = defaultConsultationArea || queryArea;
   const validDefaultArea = consultationAreas.includes(candidateArea as (typeof consultationAreas)[number]) ? candidateArea : "";
-  const resolvedSourceContext = sourceContext || (from ? `securethecloud.dev:${from}` : "securethecloud.dev");
+  const resolvedSourceContext =
+    sourceContext ||
+    (from ? `${siteConfig.domain}:${from}` : siteConfig.domain);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -108,7 +110,7 @@ export default function DemoRequestForm({
       className={`w-full min-w-0 max-w-full overflow-hidden border border-white/10 bg-[#060a15]/90 p-5 sm:p-7 ${className}`}
     >
       <input type="hidden" name="_redirect" value={redirectUrl} />
-      <input type="hidden" name="_subject" value="SecureTheCloud consultation request" />
+      <input type="hidden" name="_subject" value={`${siteConfig.name} consultation request`} />
       <input type="hidden" name="source" value={resolvedSourceContext} />
       <input type="hidden" name="requestType" value="enterprise consultation" />
 

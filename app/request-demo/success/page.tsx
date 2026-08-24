@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/metadata";
 export const metadata = {
   ...buildPageMetadata({
     title: "Consultation Request Received",
-    description: "SecureTheCloud received your enterprise AI security architecture and cloud governance consultation request.",
+    description: "IKEVAR received your enterprise architecture consultation request.",
     path: "/request-demo/success",
   }),
   robots: { index: false, follow: false },
@@ -18,7 +18,7 @@ export default function RequestDemoSuccessPage() {
         <div className="mx-auto max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Request received</p>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">Your architecture context is in the right place.</h1>
-          <p className="mt-6 text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">We received your consultation request. SecureTheCloud will review the context you provided and use it to determine the most useful first conversation for your AI security, cloud governance, or secure adoption initiative.</p>
+          <p className="mt-6 text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">We received your consultation request. IKEVAR will review the context you provided and determine the most useful first conversation for your architecture, engineering, security, governance, cloud, or AI initiative.</p>
 
           <div className="mt-9 border-y border-white/10 py-7">
             <h2 className="text-xl font-semibold text-white">Prepare these three things</h2>

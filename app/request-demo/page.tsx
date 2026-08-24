@@ -6,7 +6,7 @@ import { buildPageMetadata } from "@/lib/metadata";
 export const metadata = buildPageMetadata({
   title: "Request Enterprise AI Architecture Consultation",
   description:
-    "Request a SecureTheCloud consultation for enterprise AI security architecture, cloud governance, secure AI adoption, and implementation-ready technical design.",
+    "Request an IKEVAR architecture consultation for enterprise AI, cloud, security, governance, autonomous systems, and implementation-ready technical design.",
   path: "/request-demo",
 });
 
@@ -35,10 +35,10 @@ export default function RequestDemoPage() {
                 Request architecture consultation
               </p>
               <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">
-                Bring the AI initiative. We&apos;ll help make the architecture defensible.
+                Bring the enterprise challenge. We&apos;ll help engineer the architecture path.
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-                Use this intake when you need serious help with enterprise AI security architecture, cloud governance, secure AI adoption, regulated workflows, or implementation-ready technical design.
+                Use this intake when you need architecture and engineering help across enterprise AI, cloud platforms, cybersecurity, governance, autonomous systems, regulated workflows, or implementation-ready technical design.
               </p>
 
               <div className="mt-9 border-y border-white/10 py-7">
