@@ -48,6 +48,18 @@ export const brand = {
         "AI Platform Architect",
     },
 
+    covenant: {
+      name: "COVENANT",
+      description:
+        "Enterprise Constitution Compiler",
+    },
+
+    futurestate: {
+      name: "FUTURESTATE",
+      description:
+        "Enterprise Change Consequence Twin",
+    },
+
     ata: {
       name: "ATA",
       description:

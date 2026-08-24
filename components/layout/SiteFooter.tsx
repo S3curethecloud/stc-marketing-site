@@ -15,14 +15,16 @@ const footerGroups = [
     ],
   },
   {
-  title: "Products",
-  items: [
-    { label: "NEXUS", href: "/products" },
-    { label: "ATA", href: "/products" },
-    { label: "Humanize Enterprise", href: "/products" },
-    { label: "Explore Products", href: "/products" },
-  ],
-},
+    title: "Products",
+    items: [
+      { label: "NEXUS", href: "/products#nexus" },
+      { label: "COVENANT", href: "/products#covenant" },
+      { label: "FUTURESTATE", href: "/products#futurestate" },
+      { label: "ATA", href: "/products#ata" },
+      { label: "Humanize Enterprise", href: "/products#humanize-enterprise" },
+      { label: "Explore Products", href: "/products" },
+    ],
+  },
   {
     title: "Industries",
     items: [
