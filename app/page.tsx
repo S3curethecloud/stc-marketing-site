@@ -330,7 +330,7 @@ export default function HomePage() {
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Insights</p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">Architecture perspectives for enterprise AI leaders.</h2>
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">Architecture intelligence for enterprise technology leaders.</h2>
             </div>
             <Link href="/insights" className="text-sm font-semibold text-cyan-300 hover:text-cyan-200">View all insights -&gt;</Link>
           </div>
@@ -353,12 +353,12 @@ export default function HomePage() {
         <Container className="py-14 sm:py-16 lg:py-20">
           <div className="grid gap-8 border-y border-white/10 py-10 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Engage SecureTheCloud</p>
-              <h2 className="mt-4 max-w-3xl text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">Bring us the architecture decision that is slowing the program down.</h2>
-              <p className="mt-4 max-w-2xl text-base leading-7 text-slate-400">We will help clarify the security boundaries, governance decisions, technical patterns, and implementation path.</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">Engineered trust. Governed intelligence.</p>
+              <h2 className="mt-4 max-w-3xl text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">Build the architecture for what comes next.</h2>
+              <p className="mt-4 max-w-2xl text-base leading-7 text-slate-400">Bring us the business objective, technical constraint, security boundary, or autonomous-system challenge. IKEVAR will help define the architecture path.</p>
             </div>
             <Link href={siteConfig.primaryCta.href} className="inline-flex min-h-12 items-center justify-center bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 hover:bg-cyan-200">
-              Request consultation
+              Start an architecture conversation
               <span className="ml-2" aria-hidden="true">-&gt;</span>
             </Link>
           </div>
