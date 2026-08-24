@@ -43,10 +43,26 @@ const capabilityAreas = [
 ] as const;
 
 const approach = [
-  ["01", "Discover", "Clarify the business goal, operating environment, data sensitivity, regulatory obligations, and implementation constraints."],
-  ["02", "Architect", "Define trust boundaries, identity flows, platform patterns, policy controls, retrieval authorization, and evidence requirements."],
-  ["03", "Implement", "Translate decisions into reference architecture, ADRs, control configurations, backlog-ready guidance, and delivery artifacts."],
-  ["04", "Validate", "Review policy behavior, observability, security assumptions, operational readiness, and governance handoffs before production."],
+  [
+    "01",
+    "Discover",
+    "Clarify the business objective, operating environment, stakeholders, data sensitivity, regulatory obligations, technical constraints, and decision context.",
+  ],
+  [
+    "02",
+    "Architect",
+    "Define target-state architecture, trust boundaries, identity flows, platform patterns, policy controls, data paths, evidence requirements, and governing decisions.",
+  ],
+  [
+    "03",
+    "Engineer",
+    "Translate architecture decisions into reference implementations, ADRs, control configurations, integration patterns, backlog-ready guidance, and production-oriented technical artifacts.",
+  ],
+  [
+    "04",
+    "Validate",
+    "Evaluate security assumptions, policy behavior, observability, resilience, operational readiness, evidence quality, and rollout conditions before production adoption.",
+  ],
 ] as const;
 
 const featuredInsights = insightArticles.slice(0, 3);
@@ -293,8 +309,8 @@ export default function HomePage() {
           <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">How we work</p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">From ambiguity to implementation-ready decisions.</h2>
-              <p className="mt-5 text-base leading-7 text-slate-400">A repeatable architecture process that connects executive intent, technical constraints, governance, and delivery.</p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">From ambiguity to engineered enterprise systems.</h2>
+              <p className="mt-5 text-base leading-7 text-slate-400">A repeatable architecture and engineering method that connects executive intent, technical constraints, governance, implementation, evidence, and production readiness.</p>
             </div>
             <div className="border-t border-white/10">
               {approach.map(([number, title, body]) => (
