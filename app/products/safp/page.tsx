@@ -6,6 +6,10 @@ export const metadata = buildPageMetadata({
   description:
     "Historical federation-readiness architecture for signed assertions, trust registries, and cross-boundary governance.",
   path: "/products/safp",
+  robots: {
+    index: false,
+    follow: true,
+  },
 });
 
 export default function LegacyProductPage() {

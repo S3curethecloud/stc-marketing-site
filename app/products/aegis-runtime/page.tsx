@@ -6,6 +6,10 @@ export const metadata = buildPageMetadata({
   description:
     "Historical zero-trust runtime and deterministic governance architecture for AI-agent execution.",
   path: "/products/aegis-runtime",
+  robots: {
+    index: false,
+    follow: true,
+  },
 });
 
 export default function LegacyProductPage() {

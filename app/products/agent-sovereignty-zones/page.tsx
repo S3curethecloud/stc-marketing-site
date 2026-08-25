@@ -6,6 +6,10 @@ export const metadata = buildPageMetadata({
   description:
     "Historical cross-boundary trust and federation architecture for sovereign autonomous-system environments.",
   path: "/products/agent-sovereignty-zones",
+  robots: {
+    index: false,
+    follow: true,
+  },
 });
 
 export default function LegacyProductPage() {

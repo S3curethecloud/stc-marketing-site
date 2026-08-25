@@ -6,6 +6,10 @@ export const metadata = buildPageMetadata({
   description:
     "Historical claim-to-evidence verification and source-of-truth alignment architecture.",
   path: "/products/veracity",
+  robots: {
+    index: false,
+    follow: true,
+  },
 });
 
 export default function LegacyProductPage() {

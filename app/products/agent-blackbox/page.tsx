@@ -6,6 +6,10 @@ export const metadata = buildPageMetadata({
   description:
     "Historical evidence, replay, audit, and investigation architecture for governed autonomous systems.",
   path: "/products/agent-blackbox",
+  robots: {
+    index: false,
+    follow: true,
+  },
 });
 
 export default function LegacyProductPage() {

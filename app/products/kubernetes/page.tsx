@@ -6,6 +6,10 @@ export const metadata = buildPageMetadata({
   description:
     "Historical Kubernetes runtime-governance and enforcement architecture for autonomous-system workloads.",
   path: "/products/kubernetes",
+  robots: {
+    index: false,
+    follow: true,
+  },
 });
 
 export default function LegacyProductPage() {

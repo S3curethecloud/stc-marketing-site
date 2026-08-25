@@ -6,6 +6,10 @@ export const metadata = buildPageMetadata({
   description:
     "Historical offline risk-intelligence and model-readiness architecture for governed autonomous-system analysis.",
   path: "/products/sagemaker-risk-intelligence",
+  robots: {
+    index: false,
+    follow: true,
+  },
 });
 
 export default function LegacyProductPage() {

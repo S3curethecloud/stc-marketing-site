@@ -6,6 +6,10 @@ export const metadata = buildPageMetadata({
   description:
     "Historical risk and trust exchange architecture for autonomous-agent ecosystems and evidence review.",
   path: "/products/agent-risk-exchange",
+  robots: {
+    index: false,
+    follow: true,
+  },
 });
 
 export default function LegacyProductPage() {

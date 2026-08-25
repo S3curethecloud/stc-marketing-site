@@ -6,6 +6,10 @@ export const metadata = buildPageMetadata({
   description:
     "Historical governed secret-custody and controlled reference-retrieval architecture.",
   path: "/products/secret-vault",
+  robots: {
+    index: false,
+    follow: true,
+  },
 });
 
 export default function LegacyProductPage() {

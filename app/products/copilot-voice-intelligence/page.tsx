@@ -6,6 +6,10 @@ export const metadata = buildPageMetadata({
   description:
     "Historical evidence-navigation and readiness-intelligence architecture for governed explanations and authority-boundary review.",
   path: "/products/copilot-voice-intelligence",
+  robots: {
+    index: false,
+    follow: true,
+  },
 });
 
 export default function LegacyProductPage() {

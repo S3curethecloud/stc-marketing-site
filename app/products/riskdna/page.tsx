@@ -6,6 +6,10 @@ export const metadata = buildPageMetadata({
   description:
     "Historical runtime risk-intelligence and blast-radius analysis architecture for autonomous actions.",
   path: "/products/riskdna",
+  robots: {
+    index: false,
+    follow: true,
+  },
 });
 
 export default function LegacyProductPage() {

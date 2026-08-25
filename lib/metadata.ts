@@ -6,6 +6,7 @@ type MetadataInput = {
   description: string;
   path?: string;
   image?: string;
+  robots?: Metadata["robots"];
 };
 
 export function buildPageMetadata({
@@ -13,6 +14,7 @@ export function buildPageMetadata({
   description,
   path = "",
   image = siteConfig.social.ogImage,
+  robots,
 }: MetadataInput): Metadata {
   const url = `${siteConfig.url}${path}`;
   const imageUrl = image.startsWith("http")
@@ -22,6 +24,7 @@ export function buildPageMetadata({
   return {
     title,
     description,
+    robots,
     alternates: {
       canonical: url,
     },
