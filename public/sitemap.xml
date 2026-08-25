@@ -1,42 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://securethecloud.dev/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://securethecloud.dev/services</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://securethecloud.dev/industries</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://securethecloud.dev/insights</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://securethecloud.dev/evidence</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://securethecloud.dev/company</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://securethecloud.dev/careers</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://securethecloud.dev/request-demo</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://securethecloud.dev/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://securethecloud.dev/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://securethecloud.dev/cookies</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://ikevar.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
 
-  <url><loc>https://securethecloud.dev/insights/why-secure-ai-adoption-needs-architecture-before-acceleration</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://securethecloud.dev/insights/designing-secure-agentic-systems-with-explicit-control-boundaries</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://securethecloud.dev/insights/building-ai-governance-that-scales-with-enterprise-ambition</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://securethecloud.dev/insights/designing-secure-agent-architectures-for-the-enterprise-era</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://securethecloud.dev/insights/modernizing-cloud-platforms-for-secure-ai-innovation</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://securethecloud.dev/insights/implementing-ai-in-regulated-industries-with-confidence</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://securethecloud.dev/insights/designing-reviewable-ai-workflows-for-clinical-environments</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://securethecloud.dev/insights/turning-ai-risk-frameworks-into-buildable-control-architecture</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ikevar.com/services</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://ikevar.com/industries</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ikevar.com/insights</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ikevar.com/evidence</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ikevar.com/company</loc><changefreq>monthly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://ikevar.com/careers</loc><changefreq>monthly</changefreq><priority>0.60</priority></url>
+  <url><loc>https://ikevar.com/request-demo</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
 
-  <url><loc>https://securethecloud.dev/ecosystem</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://securethecloud.dev/platform</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://securethecloud.dev/architecture</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://securethecloud.dev/security</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://securethecloud.dev/use-cases</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ikevar.com/architecture</loc><changefreq>monthly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://ikevar.com/security</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ikevar.com/use-cases</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ikevar.com/products</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
-  <url><loc>https://securethecloud.dev/products</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://securethecloud.dev/products/aegis-runtime</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://securethecloud.dev/products/kubernetes</loc><changefreq>monthly</changefreq><priority>0.65</priority></url>
-  <url><loc>https://securethecloud.dev/products/agent-sovereignty-zones</loc><changefreq>monthly</changefreq><priority>0.65</priority></url>
-  <url><loc>https://securethecloud.dev/products/agent-blackbox</loc><changefreq>monthly</changefreq><priority>0.65</priority></url>
-  <url><loc>https://securethecloud.dev/products/agent-risk-exchange</loc><changefreq>monthly</changefreq><priority>0.65</priority></url>
-  <url><loc>https://securethecloud.dev/products/riskdna</loc><changefreq>monthly</changefreq><priority>0.65</priority></url>
-  <url><loc>https://securethecloud.dev/products/veracity</loc><changefreq>monthly</changefreq><priority>0.65</priority></url>
-  <url><loc>https://securethecloud.dev/products/safp</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://securethecloud.dev/products/secret-vault</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://securethecloud.dev/products/sagemaker-risk-intelligence</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://securethecloud.dev/products/copilot-voice-intelligence</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ikevar.com/privacy</loc><changefreq>yearly</changefreq><priority>0.30</priority></url>
+  <url><loc>https://ikevar.com/terms</loc><changefreq>yearly</changefreq><priority>0.30</priority></url>
+  <url><loc>https://ikevar.com/cookies</loc><changefreq>yearly</changefreq><priority>0.30</priority></url>
+
+  <url><loc>https://ikevar.com/insights/why-secure-ai-adoption-needs-architecture-before-acceleration</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ikevar.com/insights/designing-secure-agentic-systems-with-explicit-control-boundaries</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ikevar.com/insights/building-ai-governance-that-scales-with-enterprise-ambition</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ikevar.com/insights/designing-secure-agent-architectures-for-the-enterprise-era</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ikevar.com/insights/modernizing-cloud-platforms-for-secure-ai-innovation</loc><changefreq>monthly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://ikevar.com/insights/implementing-ai-in-regulated-industries-with-confidence</loc><changefreq>monthly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://ikevar.com/insights/designing-reviewable-ai-workflows-for-clinical-environments</loc><changefreq>monthly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://ikevar.com/insights/turning-ai-risk-frameworks-into-buildable-control-architecture</loc><changefreq>monthly</changefreq><priority>0.70</priority></url>
 </urlset>
