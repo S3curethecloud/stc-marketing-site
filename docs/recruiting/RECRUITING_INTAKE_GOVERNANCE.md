@@ -1,12 +1,12 @@
-# SecureTheCloud Recruiting Intake Governance
+# IKEVAR Recruiting Intake Governance
 
 ## Purpose
 
-This document defines the SecureTheCloud recruiting intake model for candidate resume handling, portfolio review, access control, retention, deletion, and future Google Drive resume intake.
+This document defines the IKEVAR recruiting intake model for candidate resume handling, portfolio review, access control, retention, deletion, and future Google Drive resume intake.
 
-SecureTheCloud does not accept resume file uploads through the public website. The careers form collects candidate interest and may collect a resume, LinkedIn, GitHub, portfolio, or personal website link.
+IKEVAR does not accept resume file uploads through the public website. The careers form collects candidate interest and may collect a resume, LinkedIn, GitHub, portfolio, or personal website link.
 
-When SecureTheCloud reaches active hiring maturity, candidate resume files may be collected through a restricted Google Drive intake folder.
+When IKEVAR reaches active hiring maturity, candidate resume files may be collected through a restricted Google Drive intake folder.
 
 ---
 
@@ -27,12 +27,12 @@ Current form data may be transmitted through the configured form provider. Recru
 
 ## Future Google Drive Intake Model
 
-When resume file collection becomes necessary, SecureTheCloud will use a restricted Google Drive folder controlled by the SecureTheCloud workspace account.
+When resume file collection becomes necessary, IKEVAR will use a restricted Google Drive folder controlled by the IKEVAR workspace account.
 
 Recommended folder structure:
 
 ```text
-SecureTheCloud Recruiting/
+IKEVAR Recruiting/
   01 - Candidate Intake/
     2026/
       Lead Enterprise AI Security Architect/
@@ -68,7 +68,7 @@ Google Drive recruiting folders must be restricted.
 
 Minimum access model:
 
-Owner: SecureTheCloud workspace administrator or recruiting owner.
+Owner: IKEVAR workspace administrator or recruiting owner.
 Editor access: recruiting owner only.
 Viewer access: approved hiring reviewers only.
 Public links: disabled.
@@ -109,7 +109,7 @@ Background-check documents unless a later formal HR process requires them
 Unnecessary sensitive personal information
 Resume Retention and Deletion Policy
 
-SecureTheCloud's recruiting posture is deletion-first.
+IKEVAR's recruiting posture is deletion-first.
 
 If a candidate is not selected:
 
@@ -163,4 +163,4 @@ Resume files are deleted when a candidate is not selected.
 Candidates should not submit passwords, credentials, PHI, or highly sensitive production data.
 Governance Status
 
-This document is operational governance for SecureTheCloud recruiting intake. It is not a substitute for legal advice, an employment policy manual, or a full HR compliance program.
+This document is operational governance for IKEVAR recruiting intake. It is not a substitute for legal advice, an employment policy manual, or a full HR compliance program.
