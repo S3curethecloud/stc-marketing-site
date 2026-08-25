@@ -30,6 +30,23 @@ const archivePrinciples = [
   },
 ] as const;
 
+const supplementalLegacyArtifacts = [
+  {
+    name: "SageMaker Risk Intelligence Pipeline",
+    href: "/archive/architecture-accelerators/sagemaker-risk-intelligence",
+    eyebrow: "OFFLINE RISK INTELLIGENCE",
+    description:
+      "Historical offline risk-intelligence and model-readiness architecture for governed autonomous-system risk analysis.",
+  },
+  {
+    name: "Secret Vault",
+    href: "/archive/architecture-accelerators/secret-vault",
+    eyebrow: "GOVERNED SECRET CUSTODY",
+    description:
+      "Historical secret-custody and controlled reference-retrieval architecture for trust, federation, and runtime governance patterns.",
+  },
+] as const;
+
 export default function ArchitectureAcceleratorsArchivePage() {
   return (
     <>
@@ -79,7 +96,7 @@ export default function ArchitectureAcceleratorsArchivePage() {
 
                 <div className="mt-8">
                   <Link
-                    href={product.href}
+                    href={`/archive/architecture-accelerators${product.href.replace("/products", "")}`}
                     className="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-3 text-sm font-black text-white transition-colors hover:border-cyan-300/60 hover:text-cyan-200"
                   >
                     Review legacy accelerator
@@ -90,6 +107,45 @@ export default function ArchitectureAcceleratorsArchivePage() {
                 </div>
               </article>
             ))}
+          </div>
+
+          <div className="mt-16">
+            <p className="text-xs font-black uppercase tracking-[0.3em] text-cyan-300">
+              Additional historical artifacts
+            </p>
+
+            <div className="mt-6 grid gap-6 lg:grid-cols-2">
+              {supplementalLegacyArtifacts.map((artifact) => (
+                <article
+                  key={artifact.href}
+                  className="rounded-[2rem] border border-white/10 bg-white/[0.035] p-8 shadow-2xl shadow-black/10"
+                >
+                  <p className="text-xs font-black uppercase tracking-[0.3em] text-cyan-300">
+                    {artifact.eyebrow}
+                  </p>
+
+                  <h2 className="mt-4 text-2xl font-black tracking-tight text-white">
+                    {artifact.name}
+                  </h2>
+
+                  <p className="mt-4 text-base leading-7 text-slate-400">
+                    {artifact.description}
+                  </p>
+
+                  <div className="mt-8">
+                    <Link
+                      href={artifact.href}
+                      className="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-3 text-sm font-black text-white transition-colors hover:border-cyan-300/60 hover:text-cyan-200"
+                    >
+                      Review legacy accelerator
+                      <span className="ml-2" aria-hidden="true">
+                        -&gt;
+                      </span>
+                    </Link>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </Container>
       </Section>
