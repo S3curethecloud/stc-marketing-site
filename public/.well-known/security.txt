@@ -1,4 +1,4 @@
-Contact: mailto:contact@securethecloud.dev
+Contact: mailto:contact@ikevar.com
 Expires: 2027-08-17T23:59:59Z
-Canonical: https://securethecloud.dev/.well-known/security.txt
+Canonical: https://ikevar.com/.well-known/security.txt
 Preferred-Languages: en

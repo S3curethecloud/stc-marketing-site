@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
+
 Disallow: /request-demo/success
 Disallow: /careers/join/success
 
-Sitemap: https://securethecloud.dev/sitemap.xml
+Sitemap: https://ikevar.com/sitemap.xml
