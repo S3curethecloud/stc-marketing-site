@@ -23,8 +23,8 @@ export default function AegisRuntimePage() {
         eyebrow={c.hero.eyebrow}
         headline={c.hero.headline}
         subheadline={c.hero.subheadline}
-        primaryCta={c.hero.primaryCta}
-        secondaryCta={c.hero.secondaryCta}
+        primaryCta={{ label: "Explore Current IKEVAR Products", href: "/products" }}
+        secondaryCta={{ label: "View Historical Ecosystem", href: "/archive/control-plane-ecosystem" }}
       />
 
       <Section>

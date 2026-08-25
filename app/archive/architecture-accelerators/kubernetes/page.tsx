@@ -162,7 +162,7 @@ export default function KubernetesPage() {
         eyebrow="KUBERNETES GOVERNANCE"
         headline="Bring Zero-Trust Runtime Enforcement Into Kubernetes"
         subheadline="Kubernetes Sentinel extends the core runtime model into cluster, workload, identity, and runtime policy domains — without destabilizing the existing control-plane baseline."
-        primaryCta={{ label: "Request Kubernetes Preview", href: "/request-demo" }}
+        primaryCta={{ label: "Explore Current IKEVAR Products", href: "/products" }}
         secondaryCta={{ label: "View Architecture", href: "/architecture" }}
       />
 
@@ -313,7 +313,7 @@ export default function KubernetesPage() {
       <CTASection
         headline="Bring SecureTheCloud governance into your Kubernetes runtime."
         subheadline="Connect clusters, enforce policy, surface workload risk, and export security-relevant telemetry without destabilizing your core control-plane baseline."
-        primaryCta={{ label: "Request Kubernetes Preview", href: "/request-demo" }}
+        primaryCta={{ label: "Explore Current IKEVAR Products", href: "/products" }}
         secondaryCta={{ label: "View Architecture", href: "/architecture" }}
       />
     </>
