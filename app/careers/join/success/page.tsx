@@ -6,6 +6,10 @@ export const metadata = buildPageMetadata({
   title: "Career Interest Received",
   description: "IKEVAR received your career interest submission.",
   path: "/careers/join/success",
+  robots: {
+    index: false,
+    follow: true,
+  },
 });
 
 export default function CareerInterestSuccessPage() {

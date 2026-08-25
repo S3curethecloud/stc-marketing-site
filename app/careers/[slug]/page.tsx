@@ -14,7 +14,15 @@ export async function generateMetadata({ params }: CareerRolePageProps) {
   const { slug } = await params;
   const role = getCareerRole(slug);
   if (!role) return buildPageMetadata({ title: "Career Role", description: "IKEVAR career role.", path: "/careers" });
-  return buildPageMetadata({ title: role.title, description: role.summary, path: `/careers/${role.slug}` });
+  return buildPageMetadata({
+    title: role.title,
+    description: role.summary,
+    path: `/careers/${role.slug}`,
+    robots: {
+      index: false,
+      follow: true,
+    },
+  });
 }
 
 export default async function CareerRolePage({ params }: CareerRolePageProps) {

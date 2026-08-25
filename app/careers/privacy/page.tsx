@@ -7,6 +7,10 @@ export const metadata = buildPageMetadata({
   description:
     "How IKEVAR handles candidate interest, resume links, recruiting review, and future restricted resume intake.",
   path: "/careers/privacy",
+  robots: {
+    index: false,
+    follow: true,
+  },
 });
 
 const collectedItems = [

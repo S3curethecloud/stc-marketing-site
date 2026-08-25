@@ -7,6 +7,10 @@ export const metadata = buildPageMetadata({
   description:
     "Express interest in future IKEVAR roles across enterprise architecture, AI, cloud, cybersecurity, governance, engineering, regulated systems, and client advisory.",
   path: "/careers/join",
+  robots: {
+    index: false,
+    follow: true,
+  },
 });
 
 const reasons = [
