@@ -1,12 +1,14 @@
 import Link from "next/link";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
+import { buildPageMetadata } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = buildPageMetadata({
   title: "Ecosystem Archive",
   description:
     "Historical SecureTheCloud ecosystem architecture retained by IKEVAR.",
-};
+  path: "/ecosystem",
+});
 
 export default function EcosystemArchiveNoticePage() {
   return (

@@ -1,12 +1,14 @@
 import Link from "next/link";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
+import { buildPageMetadata } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = buildPageMetadata({
   title: "Platform Archive",
   description:
     "Historical SecureTheCloud platform architecture retained by IKEVAR as technical provenance.",
-};
+  path: "/platform",
+});
 
 export default function PlatformArchiveNoticePage() {
   return (

@@ -24,7 +24,7 @@ export function buildPageMetadata({
   return {
     title,
     description,
-    robots,
+    ...(robots !== undefined ? { robots } : {}),
     alternates: {
       canonical: url,
     },
