@@ -1,82 +1,92 @@
 export const architectureContent = {
   meta: {
-    title: "Architecture | SecureTheCloud",
+    title: "Enterprise Architecture | IKEVAR",
     description:
-      "Understand the SecureTheCloud architecture: runtime authorization, control-plane governance, OPA decision authority, deterministic decision records, Kubernetes enforcement, and cross-zone trust.",
+      "Explore the IKEVAR enterprise architecture approach across AI, cloud, cybersecurity, governance, identity, data, autonomous systems, and implementation readiness.",
   },
+
   hero: {
-    eyebrow: "ARCHITECTURE",
-    headline: "A Deterministic Control Path for Autonomous Systems",
+    eyebrow: "ENTERPRISE ARCHITECTURE",
+    headline: "Architecture That Turns Enterprise Ambition Into Governed Systems",
     subheadline:
-      "SecureTheCloud is built around explicit decision authority, runtime truth, control-plane governance, and verifiable records that keep AI agent execution bounded before action occurs.",
+      "IKEVAR connects business objectives, technical design, security boundaries, governance obligations, implementation constraints, and operational readiness into architecture that teams can build, review, and defend.",
     primaryCta: {
-      label: "Request Architecture Review",
+      label: "Request Architecture Consultation",
       href: "/request-demo",
     },
     secondaryCta: {
-      label: "Request Private Demo",
-      href: "/request-demo",
+      label: "Explore Capabilities",
+      href: "/services",
     },
   },
+
   requestFlow: {
-    title: "Every Action Passes Through an Explicit Decision Path",
+    title: "From Ambiguity to Implementation-Ready Architecture",
     body:
-      "SecureTheCloud is not a post-event interpretation layer. It is a runtime control system that evaluates, authorizes, explains, and records action before execution.",
+      "IKEVAR begins with the business objective and operating constraints, then turns them into explicit architecture decisions, trust boundaries, control requirements, implementation artifacts, validation criteria, and rollout conditions.",
     steps: [
-      "Agent Request",
-      "RiskDNA Evaluation",
-      "Blast Radius Simulation",
-      "OPA Policy Decision",
-      "Deterministic Decision Record",
-      "Audit Anchor",
-      "Execution or Denial",
+      "Business Objective",
+      "Operating Constraints",
+      "Architecture Boundaries",
+      "Control Requirements",
+      "Architecture Decisions",
+      "Implementation Artifacts",
+      "Validation and Rollout",
     ],
   },
+
   runtimeSplit: {
-    title: "Control Plane Governance and Runtime Execution Remain Separate",
+    title: "Business, Control, Execution, and Evidence Responsibilities Stay Explicit",
     body:
-      "The control plane governs provisioning, policy lifecycle, and tenant administration. Runtime enforces execution. Frontend surfaces render truth but do not invent it. This separation is a core operating rule of the platform.",
+      "Enterprise systems become difficult to govern when business authority, technical execution, policy decisions, data access, model behavior, and evidence responsibilities collapse into the same layer. IKEVAR separates these responsibilities so ownership, authority, failure behavior, and review paths remain clear.",
   },
+
   opa: {
-    title: "OPA Remains the Sole Decision Authority",
+    title: "Decision Authority Must Be Deliberate and Enforceable",
     body:
-      "Policy evaluation remains explicit. SecureTheCloud synthesizes context, but OPA remains the final allow or deny authority in the decision path.",
+      "Authorization, policy, approval, and governance decisions should occur at explicit control points. Whether the implementation uses policy engines, identity systems, application controls, human approval, or autonomous-action governance, authority must remain attributable, reviewable, and enforceable.",
   },
+
   ddr: {
-    title: "Every Approval and Denial Produces a Deterministic Record",
+    title: "Material Architecture Decisions Need Reviewable Evidence",
     body:
-      "The deterministic decision record preserves reason codes, risk factors, policy revision, and execution context so decisions remain explainable even without an interpretation layer.",
+      "Architecture decisions should preserve the problem, alternatives, constraints, rationale, security consequences, implementation implications, and evidence required for validation. This gives engineering, security, governance, and leadership teams a shared decision record.",
   },
+
   aegisCore: {
-    title: "Aegis Core Extends Governance Into the Execution Environment",
+    title: "Architecture Must Connect to Engineering",
     body:
-      "Aegis Runtime establishes the governance baseline. Aegis Core extends that governed model into workload boundaries, Kubernetes enforcement, assertion validation, and runtime trust controls.",
+      "IKEVAR architecture is designed to produce implementation-ready outputs: reference architectures, control models, trust-boundary diagrams, ADRs, interface contracts, evaluation plans, deployment patterns, and delivery roadmaps that engineering teams can consume.",
   },
+
   kubernetes: {
-    title: "Kubernetes Extends the Baseline, Not Replaces It",
+    title: "Platform Decisions Must Survive Real Operating Environments",
     body:
-      "Kubernetes Sentinel is positioned as a serious ecosystem extension that carries the existing governance model into clusters, workloads, and workload identity without changing the baseline doctrine.",
+      "Cloud platforms, Kubernetes, APIs, enterprise data, AI services, identity systems, third-party integrations, and autonomous workflows introduce operational realities that architecture must address before production. Deployment, observability, resilience, ownership, and failure modes are part of the design.",
   },
+
   crossZone: {
-    title: "Trust Between Systems Requires Verification, Not Assumption",
+    title: "Trust Across Systems Requires Explicit Verification",
     body:
-      "Agent Sovereignty Zones extends the baseline runtime into cross-domain trust through signed assertions, explicit trust registries, local policy verification, and dual audit anchoring.",
+      "Enterprise systems increasingly cross identity domains, clouds, business units, data boundaries, model providers, tools, and autonomous workflows. IKEVAR designs explicit trust relationships, authorization boundaries, evidence paths, and escalation conditions rather than relying on inherited or implicit trust.",
   },
+
   closing: {
-    title: "Architecture Built for Governed Execution",
+    title: "Architecture Should Make the Enterprise More Buildable",
     body:
-      "SecureTheCloud is designed to make runtime execution explicit, bounded, deterministic, and explainable for organizations operating autonomous systems in real environments.",
+      "The purpose of enterprise architecture is not to produce diagrams that sit outside delivery. IKEVAR uses architecture to reduce ambiguity, expose risk, align stakeholders, constrain unsafe choices, and create a defensible path from concept to implementation.",
   },
+
   cta: {
-    headline: "Review the architecture behind runtime governance.",
+    headline: "Bring us the architecture problem that needs a defensible path forward.",
     subheadline:
-      "Walk through the SecureTheCloud runtime path, governance model, and product-layer architecture with the team.",
+      "We can help translate business objectives, technical constraints, security boundaries, governance requirements, and implementation uncertainty into architecture decisions and engineering-ready artifacts.",
     primaryCta: {
-      label: "Request Architecture Review",
+      label: "Request Architecture Consultation",
       href: "/request-demo",
     },
     secondaryCta: {
-      label: "View Product Portfolio",
+      label: "View IKEVAR Products",
       href: "/products",
     },
   },

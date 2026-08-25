@@ -42,7 +42,7 @@ export const insightArticles: readonly InsightArticle[] = [
       "Separate experimentation environments from production-grade AI operating patterns.",
     ],
     howWeHelp: [
-      "SecureTheCloud helps leadership teams translate AI ambition into implementation-ready architecture.",
+      "IKEVAR helps leadership teams translate AI ambition into implementation-ready architecture.",
       "We design AI security reference architectures, control maps, governance workflows, and delivery roadmaps.",
       "We help teams align cloud, security, compliance, product, and engineering stakeholders before adoption pressure creates unmanaged risk.",
     ],
@@ -75,7 +75,7 @@ export const insightArticles: readonly InsightArticle[] = [
       "Build logs that support investigation, audit, replay, and control testing.",
     ],
     howWeHelp: [
-      "SecureTheCloud designs agentic system boundaries for enterprise environments.",
+      "IKEVAR designs agentic system boundaries for enterprise environments.",
       "We help teams define AI gateways, tool-use policies, approval flows, evidence trails, and runtime governance models.",
       "We translate agent risk into buildable architecture patterns.",
     ],
@@ -108,7 +108,7 @@ export const insightArticles: readonly InsightArticle[] = [
       "Governance metrics should measure implementation readiness, not just policy completion.",
     ],
     howWeHelp: [
-      "SecureTheCloud helps organizations design AI governance operating models that connect policy to architecture.",
+      "IKEVAR helps organizations design AI governance operating models that connect policy to architecture.",
       "We build control maps, intake workflows, evidence structures, and implementation roadmaps.",
       "We help leaders move from AI governance theory to repeatable execution.",
     ],
@@ -141,7 +141,7 @@ export const insightArticles: readonly InsightArticle[] = [
       "Require policy decisions before sensitive tool execution.",
     ],
     howWeHelp: [
-      "SecureTheCloud helps teams design secure enterprise agent architectures.",
+      "IKEVAR helps teams design secure enterprise agent architectures.",
       "We define identity models, tool-control patterns, runtime governance, and evidence trails.",
       "We make agent architecture reviewable by security, cloud, compliance, and engineering teams.",
     ],
@@ -174,7 +174,7 @@ export const insightArticles: readonly InsightArticle[] = [
       "Define approved patterns for model APIs, vector stores, data pipelines, and application integrations.",
     ],
     howWeHelp: [
-      "SecureTheCloud helps organizations modernize cloud governance for AI-enabled workloads.",
+      "IKEVAR helps organizations modernize cloud governance for AI-enabled workloads.",
       "We design platform security patterns, cloud control models, and AI-ready architecture roadmaps.",
       "We help teams balance innovation speed with enterprise-grade guardrails.",
     ],
@@ -207,7 +207,7 @@ export const insightArticles: readonly InsightArticle[] = [
       "Use governance checkpoints before production rollout.",
     ],
     howWeHelp: [
-      "SecureTheCloud helps regulated teams design AI workflows that are secure, reviewable, and implementation-ready.",
+      "IKEVAR helps regulated teams design AI workflows that are secure, reviewable, and implementation-ready.",
       "We support healthcare, financial, and high-compliance environments with architecture, governance, and evidence models.",
       "We help leaders adopt AI without losing control of risk, data, or accountability.",
     ],
@@ -240,7 +240,7 @@ export const insightArticles: readonly InsightArticle[] = [
       "Design exception paths for uncertainty, escalation, and manual review.",
     ],
     howWeHelp: [
-      "SecureTheCloud helps healthcare and behavioral health teams design reviewable AI workflows.",
+      "IKEVAR helps healthcare and behavioral health teams design reviewable AI workflows.",
       "We create architecture patterns for intake, charting support, documentation assistance, and operational AI use cases.",
       "We help teams preserve privacy, auditability, and human oversight.",
     ],
@@ -273,7 +273,7 @@ export const insightArticles: readonly InsightArticle[] = [
       "Create implementation-ready control libraries that engineering teams can adopt.",
     ],
     howWeHelp: [
-      "SecureTheCloud helps organizations turn AI risk frameworks into buildable control architecture.",
+      "IKEVAR helps organizations turn AI risk frameworks into buildable control architecture.",
       "We produce control maps, evidence registers, architecture decisions, and implementation roadmaps.",
       "We help governance, security, compliance, and engineering teams work from the same control model.",
     ],

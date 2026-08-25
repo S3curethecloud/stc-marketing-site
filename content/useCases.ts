@@ -1,16 +1,17 @@
 export const useCasesContent = {
   meta: {
-    title: "Use Cases | SecureTheCloud",
+    title: "Enterprise Architecture Scenarios | IKEVAR",
     description:
-      "Explore SecureTheCloud use cases across financial automation, cloud operations, Kubernetes enforcement, regulated environments, and multi-agent trust.",
+      "Explore IKEVAR architecture scenarios across enterprise AI, cloud modernization, regulated workflows, autonomous systems, security, governance, and high-trust operating environments.",
   },
+
   hero: {
-    eyebrow: "USE CASES",
-    headline: "Where Runtime Governance Matters Most",
+    eyebrow: "ARCHITECTURE SCENARIOS",
+    headline: "Where Enterprise Architecture Has to Resolve Real Constraints",
     subheadline:
-      "SecureTheCloud is built for teams operating autonomous systems, high-trust workflows, and environments where execution must be governed before it happens.",
+      "IKEVAR works on enterprise problems where business ambition, technology, security, governance, identity, data, and implementation realities must be designed together.",
     primaryCta: {
-      label: "Request Private Demo",
+      label: "Request Architecture Consultation",
       href: "/request-demo",
     },
     secondaryCta: {
@@ -18,53 +19,56 @@ export const useCasesContent = {
       href: "/architecture",
     },
   },
+
   sections: [
     {
-      eyebrow: "FINANCIAL AUTOMATION",
-      title: "Govern High-Risk Transactions Before Execution",
+      eyebrow: "ENTERPRISE AI",
+      title: "Move AI From Experimentation Into Governed Production",
       body:
-        "Use SecureTheCloud to govern refunds, payments, and sensitive transactional workflows through explicit authorization, risk-aware decisioning, and verifiable runtime records.",
+        "Design identity, data access, model integration, retrieval, tool use, evaluation, human review, evidence, and operating controls before AI adoption expands across business workflows.",
     },
     {
-      eyebrow: "CLOUD OPERATIONS",
-      title: "Control AI-Driven Infrastructure Changes",
+      eyebrow: "CLOUD AND PLATFORM",
+      title: "Modernize Platforms Without Weakening Control",
       body:
-        "Apply deterministic policy enforcement and blast-radius awareness to infrastructure automation so cloud actions remain governed instead of merely observed.",
+        "Align cloud architecture, workload identity, network paths, secrets, platform engineering, observability, resilience, and policy so modernization improves delivery without creating unmanaged operating risk.",
     },
     {
-      eyebrow: "KUBERNETES ENFORCEMENT",
-      title: "Extend Governance Into Cluster and Workload Boundaries",
+      eyebrow: "AUTONOMOUS SYSTEMS",
+      title: "Bound Authority Before Software Can Take Consequential Action",
       body:
-        "Kubernetes Sentinel expands the baseline runtime model into clusters, service accounts, workloads, and SIEM-connected detection flows.",
+        "Define agent identity, tool permissions, policy gates, approval paths, execution boundaries, evidence capture, exception handling, and escalation before autonomous systems are allowed to influence enterprise state.",
     },
     {
-      eyebrow: "REGULATED ENVIRONMENTS",
-      title: "Preserve Explainability and Audit Readiness in High-Trust Domains",
+      eyebrow: "REGULATED WORKFLOWS",
+      title: "Make High-Trust Systems Reviewable and Defensible",
       body:
-        "SecureTheCloud keeps access and execution decisions explicit, reconstructible, and policy-backed for teams operating under compliance, evidence, and traceability requirements.",
+        "Translate regulatory, privacy, security, audit, human-review, and evidence obligations into architecture requirements that engineering teams can implement and reviewers can inspect.",
     },
     {
-      eyebrow: "MULTI-AGENT TRUST",
-      title: "Coordinate Autonomous Systems Without Implicit Trust",
+      eyebrow: "GOVERNANCE TO ENGINEERING",
+      title: "Turn Policy and Risk Requirements Into Buildable Controls",
       body:
-        "Agent Sovereignty Zones enables agents to interact across governed trust boundaries without collapsing control into shared infrastructure or unverified assumptions.",
+        "Map governance obligations, security requirements, risk frameworks, ownership, control objectives, evidence sources, testing expectations, and rollout conditions directly into the system architecture.",
     },
   ],
+
   closing: {
-    title: "Use Runtime Governance Where the Cost of Wrong Execution Is High",
+    title: "Use Architecture Where the Cost of Ambiguity Is High",
     body:
-      "SecureTheCloud is built for environments where action must be authorized, governed, and explainable before execution — not reconstructed after damage has already occurred.",
+      "IKEVAR is most valuable when the enterprise cannot safely separate technology design from security, governance, operational accountability, and implementation reality.",
   },
+
   cta: {
-    headline: "See the Use Cases Behind Governed Autonomy",
+    headline: "Bring us the enterprise scenario that needs an architecture decision.",
     subheadline:
-      "Walk through the operating patterns, risk models, and architecture paths behind SecureTheCloud use cases.",
+      "We can help frame the operating constraints, trust boundaries, control requirements, technical options, evidence expectations, and implementation path.",
     primaryCta: {
-      label: "Request Private Demo",
+      label: "Request Architecture Consultation",
       href: "/request-demo",
     },
     secondaryCta: {
-      label: "Talk to Engineering",
+      label: "Explore Enterprise Architecture",
       href: "/architecture",
     },
   },
