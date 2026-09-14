@@ -19,15 +19,6 @@ type KudijaWaitlistFormProps = {
   action?: string;
 };
 
-const interestOptions = [
-  "Early product access",
-  "Private beta testing",
-  "Trading research / strategy evaluation",
-  "Market data or broker integration",
-  "Institutional / prop desk evaluation",
-  "Product updates only",
-] as const;
-
 export default function KudijaWaitlistForm({
   className = "",
   action = "https://formspree.io/f/mzdjyodg",
@@ -54,9 +45,7 @@ export default function KudijaWaitlistForm({
         body: formData,
       });
 
-      const data = (await response
-        .json()
-        .catch(() => ({}))) as FormspreeResponse;
+      const data = (await response.json().catch(() => ({}))) as FormspreeResponse;
 
       if (!response.ok) {
         setErrorMessage(
@@ -77,29 +66,18 @@ export default function KudijaWaitlistForm({
     }
   }
 
-  const fieldClassName =
-    "min-h-12 w-full rounded-lg border border-white/10 bg-[#07101a] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 hover:border-white/20 focus-visible:border-emerald-300 focus-visible:ring-2 focus-visible:ring-emerald-300/20";
-
   return (
     <form
-      aria-label="KUDIJA early access form"
+      aria-label="KUDIJA launch notification form"
       action={action}
       method="POST"
       onSubmit={handleSubmit}
-      className={`rounded-2xl border border-white/10 bg-[#050a12]/95 p-5 shadow-2xl shadow-black/30 sm:p-7 ${className}`}
+      className={`w-full ${className}`}
     >
-      <input
-        type="hidden"
-        name="_subject"
-        value="KUDIJA early access request"
-      />
+      <input type="hidden" name="_subject" value="KUDIJA launch notification signup" />
       <input type="hidden" name="source" value="kudija.ikevar.com" />
       <input type="hidden" name="product" value="KUDIJA" />
-      <input
-        type="hidden"
-        name="requestType"
-        value="KUDIJA early access"
-      />
+      <input type="hidden" name="requestType" value="KUDIJA launch notification" />
 
       <label className="sr-only">
         Leave this field empty
@@ -111,104 +89,55 @@ export default function KudijaWaitlistForm({
         />
       </label>
 
-      <div>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-emerald-300">
-          Launch list
-        </p>
-        <h2 className="mt-3 text-2xl font-semibold tracking-[-0.03em] text-white sm:text-3xl">
-          Get early access to KUDIJA.
-        </h2>
-        <p className="mt-3 max-w-xl text-sm leading-6 text-slate-400">
-          Join the private launch list for product previews, beta access, and
-          controlled testing opportunities.
-        </p>
-      </div>
+      <label htmlFor="kudija-launch-email" className="sr-only">
+        Email address
+      </label>
 
-      <div className="mt-6 grid gap-4">
-        <div className="grid gap-4 sm:grid-cols-2">
-          <label className="grid gap-2 text-sm font-medium text-slate-200">
-            Name
-            <input
-              className={fieldClassName}
-              type="text"
-              name="fullName"
-              autoComplete="name"
-              placeholder="Your name"
-            />
-          </label>
-
-          <label className="grid gap-2 text-sm font-medium text-slate-200">
-            Email
-            <input
-              className={fieldClassName}
-              type="email"
-              name="email"
-              autoComplete="email"
-              required
-              aria-required="true"
-              placeholder="you@company.com"
-            />
-          </label>
-        </div>
-
-        <label className="grid gap-2 text-sm font-medium text-slate-200">
-          What are you most interested in?
-          <select
-            className={fieldClassName}
-            name="interest"
-            defaultValue=""
+      <div className="flex flex-col gap-2 rounded-xl border border-white/15 bg-[#07101a]/95 p-2 shadow-2xl shadow-black/30 sm:flex-row sm:items-center">
+        <div className="flex min-h-12 flex-1 items-center gap-3 px-3">
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            className="h-5 w-5 shrink-0 fill-none stroke-slate-500"
+          >
+            <path d="M3 6.75A2.75 2.75 0 0 1 5.75 4h12.5A2.75 2.75 0 0 1 21 6.75v10.5A2.75 2.75 0 0 1 18.25 20H5.75A2.75 2.75 0 0 1 3 17.25V6.75Z" strokeWidth="1.5" />
+            <path d="m4.25 6 6.05 5.05a2.65 2.65 0 0 0 3.4 0L19.75 6" strokeWidth="1.5" />
+          </svg>
+          <input
+            id="kudija-launch-email"
+            type="email"
+            name="email"
+            autoComplete="email"
+            inputMode="email"
             required
             aria-required="true"
-          >
-            <option value="" disabled>
-              Select an interest
-            </option>
-            {interestOptions.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-        </label>
-
-        <label className="grid gap-2 text-sm font-medium text-slate-200">
-          Company / desk
-          <input
-            className={fieldClassName}
-            type="text"
-            name="company"
-            autoComplete="organization"
-            placeholder="Optional"
+            placeholder="Enter your email"
+            className="min-h-12 w-full bg-transparent text-sm text-white outline-none placeholder:text-slate-600"
           />
-        </label>
-
-        <div aria-live="polite" aria-atomic="true">
-          {errorMessage ? (
-            <p
-              role="alert"
-              className="rounded-lg border border-red-400/20 bg-red-500/10 px-4 py-3 text-sm text-red-200"
-            >
-              {errorMessage}
-            </p>
-          ) : isSubmitting ? (
-            <p className="text-sm text-slate-400">
-              Joining the KUDIJA launch list...
-            </p>
-          ) : null}
         </div>
 
         <button
           type="submit"
           disabled={isSubmitting}
-          className="inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-emerald-300 px-5 py-3 text-sm font-semibold text-[#03130d] transition hover:bg-emerald-200 focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050a12] disabled:cursor-not-allowed disabled:opacity-70"
+          className="inline-flex min-h-12 items-center justify-center gap-3 rounded-lg bg-emerald-300 px-6 py-3 text-sm font-semibold text-[#03130d] transition hover:bg-emerald-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-200 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07101a] disabled:cursor-not-allowed disabled:opacity-70"
         >
-          {isSubmitting ? "Joining..." : "Join the launch list"}
+          {isSubmitting ? "Joining..." : "Notify me"}
+          {!isSubmitting ? <span aria-hidden="true">→</span> : null}
         </button>
+      </div>
 
-        <p className="text-xs leading-5 text-slate-500">
-          Product updates only. Do not submit credentials, account numbers,
-          trading secrets, customer data, or other sensitive information.
-        </p>
+      <div aria-live="polite" aria-atomic="true" className="mt-3 min-h-5">
+        {errorMessage ? (
+          <p role="alert" className="text-sm text-red-300">
+            {errorMessage}
+          </p>
+        ) : isSubmitting ? (
+          <p className="text-sm text-slate-500">Adding you to the launch list...</p>
+        ) : (
+          <p className="text-xs leading-5 text-slate-500">
+            Launch updates and selected early-access invitations. No trading credentials or account data.
+          </p>
+        )}
       </div>
     </form>
   );
